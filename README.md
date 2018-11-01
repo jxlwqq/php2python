@@ -2,6 +2,8 @@
 
 Python alternatives for PHP internal (built-in) functions.
 
+* [php2go](https://github.com/syyongx/php2go)
+* [php2python](https://github.com/jxlwqq/php2python)
 
 ## Array Functions
 
