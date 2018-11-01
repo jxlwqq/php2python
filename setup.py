@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='php2python',
-      version='1.0',
+      version='0.0.1',
       description='Python alternatives for PHP functions',
       url='https://github.com/jxlwqq/php2python',
       author='jxlwqq',
