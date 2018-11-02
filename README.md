@@ -76,7 +76,7 @@ Python alternatives for PHP internal (built-in) functions.
 * [ ] <strike>[list](http://php.net/manual/en/function.list.php) — Assign variables as if they were an array</strike>, `Built-in function in Python`
 * [ ] [natcasesort](http://php.net/manual/en/function.natcasesort.php) — Sort an array using a case insensitive "natural order" algorithm
 * [ ] [natsort](http://php.net/manual/en/function.natsort.php) — Sort an array using a "natural order" algorithm
-* [ ] <strike>[next](http://php.net/manual/en/function.next.php) — Advance the internal pointer of an array<strike>, `Built-in function in Python`
+* [ ] <strike>[next](http://php.net/manual/en/function.next.php) — Advance the internal pointer of an array</strike>, `Built-in function in Python`
 * [ ] [pos](http://php.net/manual/en/function.pos.php) — Alias of current
 * [ ] [prev](http://php.net/manual/en/function.prev.php) — Rewind the internal array pointer
 * [ ] <strike>[range](http://php.net/manual/en/function.range.php) — Create an array containing a range of elements</strike>, `Built-in function in Python`
