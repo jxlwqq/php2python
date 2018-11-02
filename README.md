@@ -492,9 +492,9 @@ Python alternatives for PHP internal (built-in) functions.
 * [ ] [symlink](http://php.net/manual/en/function.symlink.php) — Creates a symbolic link
 * [ ] [tempnam](http://php.net/manual/en/function.tempnam.php) — Create file with unique file name
 * [ ] [tmpfile](http://php.net/manual/en/function.tmpfile.php) — Creates a temporary file
-* [ ] [touch](http://php.net/manual/en/function.touch.php) — Sets access and modification time of file
-* [ ] [umask](http://php.net/manual/en/function.umask.php) — Changes the current umask
-* [ ] [unlink](http://php.net/manual/en/function.unlink.php) — Deletes a file
+* [x] [touch](http://php.net/manual/en/function.touch.php) — Sets access and modification time of file
+* [x] [umask](http://php.net/manual/en/function.umask.php) — Changes the current umask
+* [x] [unlink](http://php.net/manual/en/function.unlink.php) — Deletes a file
 
 ## Misc. Functions
 
@@ -503,7 +503,7 @@ Python alternatives for PHP internal (built-in) functions.
 * [ ] [constant](http://php.net/manual/en/function.constant.php) — Returns the value of a constant
 * [ ] [define](http://php.net/manual/en/function.define.php) — Defines a named constant
 * [ ] [defined](http://php.net/manual/en/function.defined.php) — Checks whether a given named constant exists
-* [ ] [die](http://php.net/manual/en/function.die.php) — Equivalent to exit
+* [x] [die](http://php.net/manual/en/function.die.php) — Equivalent to exit
 * [ ] <strike>[eval](http://php.net/manual/en/function.eval.php) — Evaluate a string as PHP code</strike>
 * [ ] <strike>[exit](http://php.net/manual/en/function.exit.php) — Output a message and terminate the current script</strike>
 * [ ] [get_browser](http://php.net/manual/en/function.get-browser.php) — Tells what the user's browser is capable of
@@ -512,7 +512,7 @@ Python alternatives for PHP internal (built-in) functions.
 * [ ] [highlight_string](http://php.net/manual/en/function.highlight-string.php) — Syntax highlighting of a string
 * [ ] [hrtime](http://php.net/manual/en/function.hrtime.php) — Get the system's high resolution time
 * [ ] [ignore_user_abort](http://php.net/manual/en/function.ignore-user-abort.php) — Set whether a client disconnect should abort script execution
-* [ ] [pack](http://php.net/manual/en/function.pack.php) — Pack data into binary string
+* [x] [pack](http://php.net/manual/en/function.pack.php) — Pack data into binary string
 * [ ] [php_check_syntax](http://php.net/manual/en/function.php-check-syntax.php) — Check the PHP syntax of (and execute) the specified file
 * [ ] [php_strip_whitespace](http://php.net/manual/en/function.php-strip-whitespace.php) — Return source with stripped comments and whitespace
 * [ ] [sapi_windows_cp_conv](http://php.net/manual/en/function.sapi-windows-cp-conv.php) — Convert string from one codepage to another
@@ -521,10 +521,10 @@ Python alternatives for PHP internal (built-in) functions.
 * [ ] [sapi_windows_cp_set](http://php.net/manual/en/function.sapi-windows-cp-set.php) — Set process codepage
 * [ ] [sapi_windows_vt100_support](http://php.net/manual/en/function.sapi-windows-vt100-support.php) — Get or set VT100 support for the specified stream associated to an output buffer of a Windows console.
 * [ ] [show_source](http://php.net/manual/en/function.show-source.php) — Alias of highlight_file
-* [ ] [sleep](http://php.net/manual/en/function.sleep.php) — Delay execution
-* [ ] [sys_getloadavg](http://php.net/manual/en/function.sys-getloadavg.php) — Gets system load average
+* [x] [sleep](http://php.net/manual/en/function.sleep.php) — Delay execution
+* [x] [sys_getloadavg](http://php.net/manual/en/function.sys-getloadavg.php) — Gets system load average
 * [ ] [time_nanosleep](http://php.net/manual/en/function.time-nanosleep.php) — Delay for a number of seconds and nanoseconds
-* [ ] [time_sleep_until](http://php.net/manual/en/function.time-sleep-until.php) — Make the script sleep until the specified time
-* [ ] [uniqid](http://php.net/manual/en/function.uniqid.php) — Generate a unique ID
-* [ ] [unpack](http://php.net/manual/en/function.unpack.php) — Unpack data from binary string
-* [ ] [usleep](http://php.net/manual/en/function.usleep.php) — Delay execution in microseconds
+* [x] [time_sleep_until](http://php.net/manual/en/function.time-sleep-until.php) — Make the script sleep until the specified time
+* [x] [uniqid](http://php.net/manual/en/function.uniqid.php) — Generate a unique ID
+* [x] [unpack](http://php.net/manual/en/function.unpack.php) — Unpack data from binary string
+* [x] [usleep](http://php.net/manual/en/function.usleep.php) — Delay execution in microseconds
