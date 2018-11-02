@@ -33,7 +33,6 @@ import syslog as py_syslog
 import fcntl
 import fnmatch as py_fnmatch
 
-
 """
 Array Functions
 """
@@ -1888,7 +1887,6 @@ def fileatime(filename):
     return os.path.getatime(filename)
 
 
-
 def filectime(filename):
     return os.path.getctime(filename)
 
@@ -1901,38 +1899,32 @@ def fileinode(filename):
     return os.stat(filename).st_ino
 
 
-
 def filemtime(filename):
     return os.path.getmtime(filename)
-
 
 
 def fileowner(filename):
     return os.stat(filename).st_uid
 
 
-
 def fileperms(filename):
     return os.stat(filename).st_mode
-
 
 
 def filesize(filename):
     return os.path.getsize(filename)
 
 
-
 def filetype():
     pass
 
 
-def flock(handle,operation):
+def flock(handle, operation):
     return fcntl.flock(handle, operation)
 
 
-def fnmatch(filename,pattern):
+def fnmatch(filename, pattern):
     return py_fnmatch.fnmatch(filename, pattern)
-
 
 
 def fopen():
@@ -1951,28 +1943,32 @@ def fputs():
     pass
 
 
-def fread():
-    pass
+def fread(handle, length):
+    f = open(handle, "r+")
+    return f.read(length)
 
 
 def fscanf():
     pass
 
 
-def fseek():
-    pass
+def fseek(handle, offset, whence=0):
+    # SEEK_SET=0
+    # SEEK_CUR=1
+    # SEEK_END=2
+    return handle.seek(offset, whence)
 
 
-def fstat():
-    pass
+def fstat(handle):
+    os.fstat(handle)
 
 
-def ftell():
-    pass
+def ftell(handle):
+    return handle.tell()
 
 
-def ftruncate():
-    pass
+def ftruncate(handle, size):
+    return handle.truncate(size)
 
 
 def fwrite():
