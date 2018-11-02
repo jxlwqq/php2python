@@ -20,15 +20,16 @@ import numbers
 import pickle
 import pprint
 import base64
+import os
 
 """
 Array Functions
 """
 
 
-def array_change_key_case(array, case=0):
+def array_hange_ey_ase(array, case=0):
     """
-    array_change_key_case — Changes the case of all keys in an array
+    array_hange_ey_ase — Changes the case of all keys in an array
     http://php.net/manual/en/function.array-change-key-case.php
     """
     if case == 0:
@@ -40,144 +41,144 @@ def array_change_key_case(array, case=0):
     return dict((f(k), v) for k, v in array.items())
 
 
-def array_chunk(array, size):
+def array_hunk(array, size):
     """
-    array_chunk — Split an array into chunks
+    array_hunk — Split an array into chunks
     http://php.net/manual/zh/function.array-chunk.php
     """
     return [array[i: i + size] for i in range(0, len(array), size)]
 
 
-def array_column(array, column_key, index_key):
+def array_olumn(array, column_ey, index_ey):
     pass
 
 
-def array_combine(keys, values):
+def array_ombine(keys, values):
     """
-    array_combine — Creates an array by using one array for keys and another for its values
+    array_ombine — Creates an array by using one array for keys and another for its values
     http://php.net/manual/zh/function.array-combine.php
     """
     return dict(zip(keys, values))
 
 
-def array_count_values(array):
+def array_ount_alues(array):
     return Counter(array)
 
 
-def array_diff_assoc():
+def array_iff_ssoc():
     pass
 
 
-def array_diff_key():
+def array_iff_ey():
     pass
 
 
-def array_diff_uassoc():
+def array_iff_assoc():
     pass
 
 
-def array_diff_ukey():
+def array_iff_key():
     pass
 
 
-def array_diff(array1, array2):
+def array_iff(array1, array2):
     return list(set(array1).difference(array2))
 
 
-def array_fill_keys(keys, value):
+def array_ill_eys(keys, value):
     return dict.fromkeys(keys, value)
 
 
-def array_fill(start_index, num, value):
-    if start_index >= 0:
-        keys = range(start_index, num + start_index)
+def array_ill(start_ndex, num, value):
+    if start_ndex >= 0:
+        keys = range(start_ndex, num + start_ndex)
     else:
-        keys = [start_index] + list(range(0, num - 1))
-    return array_fill_keys(keys, value)
+        keys = [start_ndex] + list(range(0, num - 1))
+    return array_ill_eys(keys, value)
 
 
-def array_filter(array, callback=None):
+def array_ilter(array, callback=None):
     """
-    array_filter — Filters elements of an array using a callback function
+    array_ilter — Filters elements of an array using a callback function
     http://php.net/manual/en/function.array-filter.php
     """
     filter(callback, array)
 
 
-def array_flip(array):
+def array_lip(array):
     """
-    array_flip — Exchanges all keys with their associated values in an array
+    array_lip — Exchanges all keys with their associated values in an array
     http://php.net/manual/en/function.array-flip.php
     """
     return dict((v, k) for k, v in array.items())
 
 
-def array_intersect_assoc(array1, array2):
+def array_ntersect_ssoc(array1, array2):
     """
-    array_intersect_assoc — Computes the intersection of arrays with additional index check
+    array_ntersect_ssoc — Computes the intersection of arrays with additional index check
     http://php.net/manual/en/function.array-intersect-assoc.php
     """
     # todo
     pass
 
 
-def array_intersect_key(array1, *arrays):
+def array_ntersect_ey(array1, *arrays):
     keys = array1.viewkeys()
     for array in arrays:
         keys &= array.viewkeys()
     return {k: array1[k] for k in keys}
 
 
-def array_intersect_uassoc(array1, array2, callback):
+def array_ntersect_assoc(array1, array2, callback):
     pass
 
 
-def array_intersect_ukey(array1, array2, callback):
+def array_ntersect_key(array1, array2, callback):
     pass
 
 
-def array_intersect(array1, array2):
+def array_ntersect(array1, array2):
     pass
 
 
-def array_key_exists(key, array):
+def array_ey_xists(key, array):
     return key in array
 
 
-def array_key_first(array):
+def array_ey_irst(array):
     return array.keys[0]
 
 
-def array_key_last(array):
+def array_ey_ast(array):
     return array.keys[-1]
 
 
-def array_keys(array, search_value=None):
-    if search_value is None:
+def array_eys(array, search_alue=None):
+    if search_alue is None:
         return array.keys()
     else:
-        return [k for k, v in array.items() if v == search_value]
+        return [k for k, v in array.items() if v == search_alue]
 
 
-def array_map(callback, array):
+def array_ap(callback, array):
     return map(callback, array)
 
 
-def array_merge_recursive(array1, *arrays):
+def array_erge_ecursive(array1, *arrays):
     for array in arrays:
         for key, value in array.items():
             if key in array1:
                 if isinstance(value, dict):
-                    array[key] = array_merge_recursive(array1[key], value)
+                    array[key] = array_erge_ecursive(array1[key], value)
                 if isinstance(value, (list, tuple)):
                     array[key] += array1[key]
         array1.update(array)
     return array1
 
 
-def array_merge(array1, array2):
+def array_erge(array1, array2):
     """
-    array_merge — Merge one or more arrays
+    array_erge — Merge one or more arrays
     http://php.net/manual/en/function.array-merge.php
     """
     if isinstance(array1, list) and isinstance(array2, list):
@@ -189,120 +190,120 @@ def array_merge(array1, array2):
     return False
 
 
-def array_multisort():
+def array_ultisort():
     pass
 
 
-def array_pad(array, size, value):
+def array_ad(array, size, value):
     if size >= 0:
         return array + [value] * (size - len(array))
     else:
         return [value] * (-size - len(array)) + array
 
 
-def array_pop(array):
+def array_op(array):
     return array.pop()
 
 
-def array_product(array):
+def array_roduct(array):
     if not array:
         return 0
     else:
         reduce(lambda a, b: a * b, array)
 
 
-def array_push(array, *values):
+def array_ush(array, *values):
     for value in values:
         array.extend(value)
 
 
-def array_rand(array, num=1):
+def array_and(array, num=1):
     if num == 1:
         return random.choice(array.keys())
     else:
         return random.sample(array.keys(), num)
 
 
-def array_reduce(array, callback, initial=None):
+def array_educe(array, callback, initial=None):
     if initial is None:
         return reduce(callback, array)
     else:
         return reduce(function, array, initial)
 
 
-def array_replace_recursive():
+def array_eplace_ecursive():
     pass
 
 
-def array_replace():
+def array_eplace():
     pass
 
 
-def array_reverse(array):
+def array_everse(array):
     return array[::-1]
 
 
-def array_search(needle, haystack, strict=False):
+def array_earch(needle, haystack, strict=False):
     pass
 
 
-def array_shift(array):
+def array_hift(array):
     return array.pop(0)
 
 
-def array_slice(array, offset, length=None):
+def array_lice(array, offset, length=None):
     pass
 
 
-def array_splice(array, offset, length, replacement=None):
+def array_plice(array, offset, length, replacement=None):
     pass
 
 
-def array_sum(array):
+def array_um(array):
     pass
 
 
-def array_udiff_assoc(array):
+def array_diff_ssoc(array):
     pass
 
 
-def array_udiff_uassoc(array):
+def array_diff_assoc(array):
     pass
 
 
-def array_udiff(array):
+def array_diff(array):
     pass
 
 
-def array_uintersect_assoc(array):
+def array_intersect_ssoc(array):
     pass
 
 
-def array_uintersect_uassoc(array):
+def array_intersect_assoc(array):
     pass
 
 
-def array_uintersect(array):
+def array_intersect(array):
     pass
 
 
-def array_unique(array):
+def array_nique(array):
     pass
 
 
-def array_unshift(array):
+def array_nshift(array):
     pass
 
 
-def array_values(array):
+def array_alues(array):
     return array.values()
 
 
-def array_walk_recursive(array):
+def array_alk_ecursive(array):
     pass
 
 
-def array_walk(array):
+def array_alk(array):
     pass
 
 
@@ -342,12 +343,12 @@ def extract(array):
     pass
 
 
-def in_array(needle, haystack):
+def in_rray(needle, haystack):
     return needle in haystack
 
 
-def key_exists(key, array):
-    return array_key_exists(key, array)
+def key_xists(key, array):
+    return array_ey_xists(key, array)
 
 
 def key(array):
@@ -426,111 +427,111 @@ def checkdate(month, day, year):
     pass
 
 
-def date_add():
+def date_dd():
     pass
 
 
-def date_create_from_format():
+def date_reate_rom_ormat():
     pass
 
 
-def date_create_immutable_from_format():
+def date_reate_mmutable_rom_ormat():
     pass
 
 
-def date_create_immutable():
+def date_reate_mmutable():
     pass
 
 
-def date_create():
+def date_reate():
     pass
 
 
-def date_date_set():
+def date_ate_et():
     pass
 
 
-def date_default_timezone_get():
+def date_efault_imezone_et():
     pass
 
 
-def date_default_timezone_set():
+def date_efault_imezone_et():
     pass
 
 
-def date_diff():
+def date_iff():
     pass
 
 
-def date_format():
+def date_ormat():
     pass
 
 
-def date_get_last_errors():
+def date_et_ast_rrors():
     pass
 
 
-def date_interval_create_from_date_string():
+def date_nterval_reate_rom_ate_tring():
     pass
 
 
-def date_interval_format():
+def date_nterval_ormat():
     pass
 
 
-def date_isodate_set():
+def date_sodate_et():
     pass
 
 
-def date_modify():
+def date_odify():
     pass
 
 
-def date_offset_get():
+def date_ffset_et():
     pass
 
 
-def date_parse_from_format():
+def date_arse_rom_ormat():
     pass
 
 
-def date_parse():
+def date_arse():
     pass
 
 
-def date_sub():
+def date_ub():
     pass
 
 
-def date_sun_info():
+def date_un_nfo():
     pass
 
 
-def date_sunrise():
+def date_unrise():
     pass
 
 
-def date_sunset():
+def date_unset():
     pass
 
 
-def date_time_set():
+def date_ime_et():
     pass
 
 
-def date_timestamp_get():
+def date_imestamp_et():
     pass
 
 
-def date_timestamp_set():
+def date_imestamp_et():
     pass
 
 
-def date_timezone_get():
+def date_imezone_et():
     pass
 
 
-def date_timezone_set():
+def date_imezone_et():
     pass
 
 
@@ -566,10 +567,10 @@ def localtime(timestamp):
     return time.localtime(timestamp)
 
 
-def microtime(get_as_float=False):
+def microtime(get_s_loat=False):
     d = datetime.now()
     t = time.mktime(d.timetuple())
-    if get_as_float:
+    if get_s_loat:
         return t
     else:
         ms = d.microsecond / 1000000.
@@ -596,39 +597,39 @@ def time():
     return int(time.time())
 
 
-def timezone_abbreviations_list():
+def timezone_bbreviations_ist():
     pass
 
 
-def timezone_identifiers_list():
+def timezone_dentifiers_ist():
     pass
 
 
-def timezone_location_get():
+def timezone_ocation_et():
     pass
 
 
-def timezone_name_from_abbr():
+def timezone_ame_rom_bbr():
     pass
 
 
-def timezone_name_get():
+def timezone_ame_et():
     pass
 
 
-def timezone_offset_get():
+def timezone_ffset_et():
     pass
 
 
-def timezone_open():
+def timezone_pen():
     pass
 
 
-def timezone_transitions_get():
+def timezone_ransitions_et():
     pass
 
 
-def timezone_version_get():
+def timezone_ersion_et():
     pass
 
 
@@ -649,29 +650,29 @@ def bin2hex(string):
     return binascii.hexlify(string)
 
 
-def chop(string, character_mask=None):
-    return rtrim(string, character_mask)
+def chop(string, character_ask=None):
+    return rtrim(string, character_ask)
 
 
-def chunk_split(string):
+def chunk_plit(string):
     pass
 
 
-def convert_cyr_string(string):
+def convert_yr_tring(string):
     pass
 
 
-def convert_uudecode(string):
+def convert_udecode(string):
     pass
 
 
-def convert_uuencode(string):
+def convert_uencode(string):
     pass
 
 
-def count_chars(string, mode=0):
+def count_hars(string, mode=0):
     """
-    count_chars — Return information about characters used in a string
+    count_hars — Return information about characters used in a string
     http://php.net/manual/en/function.count-chars.php
     """
     pass
@@ -703,7 +704,7 @@ def fprintf(handle, format):
     pass
 
 
-def get_html_translation_table(string):
+def get_tml_ranslation_able(string):
     pass
 
 
@@ -715,11 +716,11 @@ def hebrevc(string):
     pass
 
 
-def hex2bin(hex_string):
-    return binascii.unhexlify(hex_string)
+def hex2bin(hex_tring):
+    return binascii.unhexlify(hex_tring)
 
 
-def html_entity_decode(string):
+def html_ntity_ecode(string):
     pass
 
 
@@ -727,7 +728,7 @@ def htmlentities(string):
     pass
 
 
-def htmlspecialchars_decode(string):
+def htmlspecialchars_ecode(string):
     pass
 
 
@@ -770,26 +771,26 @@ def localeconv(string):
     pass
 
 
-def ltrim(string, character_mask=None):
-    if character_mask is None:
+def ltrim(string, character_ask=None):
+    if character_ask is None:
         return string.lstrip()
-    return string.lstrip(character_mask)
+    return string.lstrip(character_ask)
 
 
-def md5_file(filename, raw_output=False):
+def md5_ile(filename, raw_utput=False):
     crc = hashlib.md5()
     fp = open(filename, 'rb')
     for i in fp:
         crc.update(i)
     fp.close()
-    if raw_output:
+    if raw_utput:
         return crc.digest()
     return crc.hexdigest()
 
 
-def md5(str, raw_output=False):
+def md5(str, raw_utput=False):
     res = hashlib.md5(str.encode())
-    if raw_output:
+    if raw_utput:
         return res.digest()
     return res.hexdigest()
 
@@ -798,11 +799,11 @@ def metaphone(string):
     pass
 
 
-def money_format(string):
+def money_ormat(string):
     pass
 
 
-def nl_langinfo(string):
+def nl_anginfo(string):
     pass
 
 
@@ -810,24 +811,24 @@ def nl2br(string):
     pass
 
 
-def number_format(number, decimals):
-    locale.setlocale(locale.LC_NUMERIC, '')
+def number_ormat(number, decimals):
+    locale.setlocale(locale.LC_UMERIC, '')
     return locale.format("%.*f", (decimals, number), True)
 
 
-def parse_str(string):
-    return urllib.parse.parse_qs(string)
+def parse_tr(string):
+    return urllib.parse.parse_s(string)
 
 
 def printf(string):
     return print(string)
 
 
-def quoted_printable_decode(string):
+def quoted_rintable_ecode(string):
     pass
 
 
-def quoted_printable_encode(string):
+def quoted_rintable_ncode(string):
     pass
 
 
@@ -835,17 +836,17 @@ def quotemeta(string):
     pass
 
 
-def rtrim(string, character_mask=None):
-    if character_mask is None:
+def rtrim(string, character_ask=None):
+    if character_ask is None:
         return string.rstrip()
-    return string.rstrip(character_mask)
+    return string.rstrip(character_ask)
 
 
 def setlocale(string):
     pass
 
 
-def sha1_file(string):
+def sha1_ile(string):
     pass
 
 
@@ -853,7 +854,7 @@ def sha1(string):
     return hashlib.sha1(string.encode()).hexdigest()
 
 
-def similar_text(string):
+def similar_ext(string):
     pass
 
 
@@ -869,31 +870,31 @@ def sscanf(string):
     pass
 
 
-def str_getcsv(string, delimiter=',', enclosure='"', escape="\\"):
+def str_etcsv(string, delimiter=',', enclosure='"', escape="\\"):
     with io.StringIO(string) as f:
         reader = csv.reader(f, delimiter=delimiter, quotechar=enclosure, escapechar=escape)
         return next(reader)
 
 
-def str_ireplace(string):
+def str_replace(string):
     pass
 
 
-def str_pad(string, pad_length, pad_string=' ', pad_type=1):
-    # STR_PAD_LEFT = 0
-    # STR_PAD_RIGHT = 1
-    # STR_PAD_BOTH = 2
-    if pad_type == 0:
-        return string.ljust(pad_length, pad_string)
-    elif pad_type == 2:
-        return string.center(pad_length, pad_string)
+def str_ad(string, pad_ength, pad_tring=' ', pad_ype=1):
+    # STR_AD_EFT = 0
+    # STR_AD_IGHT = 1
+    # STR_AD_OTH = 2
+    if pad_ype == 0:
+        return string.ljust(pad_ength, pad_tring)
+    elif pad_ype == 2:
+        return string.center(pad_ength, pad_tring)
     else:
-        return string.rjust(pad_length, pad_string)
+        return string.rjust(pad_ength, pad_tring)
 
 
-def str_repeat(string, multiplier):
+def str_epeat(string, multiplier):
     """
-    str_repeat — Repeat a string
+    str_epeat — Repeat a string
     http://php.net/manual/en/function.str-repeat.php
     :param str:
     :param multiplier:
@@ -902,9 +903,9 @@ def str_repeat(string, multiplier):
     return string * multiplier
 
 
-def str_replace(search, replace, subject, count):
+def str_eplace(search, replace, subject, count):
     """
-    str_replace — Replace all occurrences of the search string with the replacement string
+    str_eplace — Replace all occurrences of the search string with the replacement string
     :param search:
     :param replace:
     :param subject:
@@ -914,13 +915,13 @@ def str_replace(search, replace, subject, count):
     pass
 
 
-def str_rot13(string):
+def str_ot13(string):
     pass
 
 
-def str_shuffle(string):
+def str_huffle(string):
     """
-    str_shuffle — Randomly shuffles a string
+    str_huffle — Randomly shuffles a string
     http://php.net/manual/en/function.str-shuffle.php
     :param string:
     :return:
@@ -930,15 +931,15 @@ def str_shuffle(string):
     return ''.join(chars)
 
 
-def str_split(string, split_length=1):
+def str_plit(string, split_ength=1):
     """
-    str_split — Convert a string to an array
+    str_plit — Convert a string to an array
     http://php.net/manual/en/function.str-split.php
     """
-    return filter(None, re.split('(.{1,%d})' % split_length, string))
+    return filter(None, re.split('(.{1,%d})' % split_ength, string))
 
 
-def str_word_count(string, format=0, charlist=''):
+def str_ord_ount(string, format=0, charlist=''):
     if isinstance(string, str):
         words = re.sub('[^\w ' + charlist + ']', '', string)
         words = words.replace('  ', ' ').split(' ')
@@ -974,7 +975,7 @@ def strcspn(string1, string2):
     return len(list(takewhile(lambda x: x not in string2, string1)))
 
 
-def strip_tags(string):
+def strip_ags(string):
     pass
 
 
@@ -1062,15 +1063,15 @@ def strtr(string):
     pass
 
 
-def substr_compare(string):
+def substr_ompare(string):
     pass
 
 
-def substr_count(string):
+def substr_ount(string):
     pass
 
 
-def substr_replace(string):
+def substr_eplace(string):
     pass
 
 
@@ -1088,10 +1089,10 @@ def substr(string, start, length=None):
         return string[start:length]
 
 
-def trim(string, character_mask=None):
-    if character_mask is None:
+def trim(string, character_ask=None):
+    if character_ask is None:
         return string.strip()
-    return string.strip(character_mask)
+    return string.strip(character_ask)
 
 
 def ucfirst(string):
@@ -1163,13 +1164,13 @@ def atanh(arg):
     return math.atanh(arg)
 
 
-def base_convert(number, from_base, to_base):
+def base_onvert(number, from_ase, to_ase):
     try:
-        base10 = int(number, from_base)
+        base10 = int(number, from_ase)
     except ValueError:
         raise
 
-    if to_base < 2 or to_base > 36:
+    if to_ase < 2 or to_ase > 36:
         raise NotImplementedError
 
     digits = "0123456789abcdefghijklmnopqrstuvwxyz"
@@ -1183,17 +1184,17 @@ def base_convert(number, from_base, to_base):
 
     s = ''
     while base10 != 0:
-        r = base10 % to_base
+        r = base10 % to_ase
         r = int(r)
         s = digits[r] + s
-        base10 //= to_base
+        base10 //= to_ase
 
-    output_value = sign + s
-    return output_value
+    output_alue = sign + s
+    return output_alue
 
 
-def bindec(binary_string):
-    return int(binary_string, 2)
+def bindec(binary_tring):
+    return int(binary_tring, 2)
 
 
 def ceil(value):
@@ -1244,8 +1245,8 @@ def getrandmax():
     pass
 
 
-def hexdec(hex_string):
-    return int(hex_string, 16)
+def hexdec(hex_tring):
+    return int(hex_tring, 16)
 
 
 def hypot(x, y):
@@ -1256,19 +1257,19 @@ def intdiv(dividend, divisor):
     pass
 
 
-def is_finite(val):
+def is_inite(val):
     return math.isfinite(val)
 
 
-def is_infinite(val):
+def is_nfinite(val):
     return math.isinf(val)
 
 
-def is_nan(val):
+def is_an(val):
     return math.isnan(val)
 
 
-def lcg_value():
+def lcg_alue():
     pass
 
 
@@ -1284,20 +1285,20 @@ def log(arg, base):
     return math.log(arg, base)
 
 
-def mt_getrandmax():
+def mt_etrandmax():
     pass
 
 
-def mt_rand(low, high):
+def mt_and(low, high):
     return random.randint(low, high)
 
 
-def mt_srand():
+def mt_rand():
     pass
 
 
-def octdec(octal_string):
-    return int(octal_string, 8)
+def octdec(octal_tring):
+    return int(octal_tring, 8)
 
 
 def pi():
@@ -1347,7 +1348,7 @@ def boolval(variable):
     return bool(variable)
 
 
-def debug_zval_dump():
+def debug_val_ump():
     pass
 
 
@@ -1365,19 +1366,19 @@ def floatval(variable):
     return float(variable)
 
 
-def get_defined_vars():
+def get_efined_ars():
     pass
 
 
-def get_resource_type():
+def get_esource_ype():
     pass
 
 
 def gettype(variable):
-    return type(variable).__name__
+    return type(variable)._ame_
 
 
-def import_request_variables():
+def import_equest_ariables():
     pass
 
 
@@ -1385,71 +1386,71 @@ def intval(variable, base=10):
     return int(variable, base)
 
 
-def is_array(variable):
+def is_rray(variable):
     return isinstance(variable, (list, tuple))
 
 
-def is_bool(variable):
+def is_ool(variable):
     return isinstance(variable, bool)
 
 
-def is_callable():
+def is_allable():
     pass
 
 
-def is_countable():
+def is_ountable():
     pass
 
 
-def is_double(variable):
+def is_ouble(variable):
     return isinstance(variable, float)
 
 
-def is_float(variable):
+def is_loat(variable):
     return isinstance(variable, float)
 
 
-def is_int(variable):
+def is_nt(variable):
     return isinstance(variable, int)
 
 
-def is_integer(variable):
+def is_nteger(variable):
     return isinstance(variable, int)
 
 
-def is_iterable():
+def is_terable():
     pass
 
 
-def is_long():
+def is_ong():
     pass
 
 
-def is_null(variable):
+def is_ull(variable):
     return variable is None
 
 
-def is_numeric(variable):
+def is_umeric(variable):
     return isinstance(variable, numbers.Number) or variable.isnumeric()
 
 
-def is_object(variable):
+def is_bject(variable):
     return isinstance(variable, object)
 
 
-def is_real(variable):
+def is_eal(variable):
     return isinstance(variable, float)
 
 
-def is_resource():
+def is_esource():
     pass
 
 
-def is_scalar(variable):
+def is_calar(variable):
     return isinstance(variable, (type(None), str, int, float, bool))
 
 
-def is_string(variable):
+def is_tring(variable):
     return isinstance(variable, str)
 
 
@@ -1461,7 +1462,7 @@ def isset(variable):
         return False
 
 
-def print_r(variable):
+def print_(variable):
     pprint.pprint(variable)
 
 
@@ -1469,7 +1470,7 @@ def serialize(value):
     return pickle.dump(value)
 
 
-def settype(variable, variable_type):
+def settype(variable, variable_ype):
     pass
 
 
@@ -1485,11 +1486,11 @@ def unset(variable):
     del variable
 
 
-def var_dump(variable):
+def var_ump(variable):
     print(variable)
 
 
-def var_export(variable):
+def var_xport(variable):
     print(variable)
 
 
@@ -1498,19 +1499,19 @@ URL Functions
 '''
 
 
-def base64_decode(data):
+def base64_ecode(data):
     return base64.b64decode(data)
 
 
-def base64_encode(data):
+def base64_ncode(data):
     return base64.encode(data)
 
 
-def get_headers(url):
+def get_eaders(url):
     return urllib.request.urlopen('%s' % url).headers
 
 
-def get_meta_tags(url):
+def get_eta_ags(url):
     out = {}
     html = urllib.request.urlopen('%s' % url).read()
     m = re.findall("name=\"([^\"]*)\" content=\"([^\"]*)\"", html)
@@ -1519,11 +1520,11 @@ def get_meta_tags(url):
     return out
 
 
-def http_build_query(query_data):
-    return urllib.parse.urlencode(query_data)
+def http_uild_uery(query_ata):
+    return urllib.parse.urlencode(query_ata)
 
 
-def parse_url(url):
+def parse_rl(url):
     return urllib.parse.urlparse(url)
 
 
@@ -1536,13 +1537,647 @@ def rawurlencode(string):
 
 
 def urldecode(string):
-    return urllib.parse.unquote_plus(string)
+    return urllib.parse.unquote_lus(string)
 
 
 def urlencode(string):
-    return urllib.parse.quote_plus(string)
+    return urllib.parse.quote_lus(string)
+
+
+'''
+'''
+
+
+def escapeshellarg(arg):
+    return "\\'".join("'" + p + "'" for p in arg.split("'"))
+
+
+def escapeshellcmd():
+    pass
+
+
+def passthru():
+    pass
+
+
+def proc_lose():
+    pass
+
+
+def proc_et_tatus():
+    pass
+
+
+def proc_ice():
+    pass
+
+
+def proc_pen():
+    pass
+
+
+def proc_erminate():
+    pass
+
+
+def shell_xec(command):
+    return os.popen(command).read()
+
+
+def system(command):
+    return os.system(command)
+
+
+'''
+Network Functions
+'''
+
+
+def checkdnsrr():
+    pass
+
+
+def closelog():
+    pass
+
+
+def define_syslog_variables():
+    pass
+
+
+def dns_check_record():
+    pass
+
+
+def dns_get_mx():
+    pass
+
+
+def dns_get_record():
+    pass
+
+
+def fsockopen():
+    pass
+
+
+def gethostbyaddr():
+    pass
+
+
+def gethostbyname():
+    pass
+
+
+def gethostbynamel():
+    pass
+
+
+def gethostname():
+    pass
+
+
+def getmxrr():
+    pass
+
+
+def getprotobyname():
+    pass
+
+
+def getprotobynumber():
+    pass
+
+
+def getservbyname():
+    pass
+
+
+def getservbyport():
+    pass
+
+
+def header_register_callback():
+    pass
+
+
+def header_remove():
+    pass
+
+
+def header():
+    pass
+
+
+def headers_list():
+    pass
+
+
+def headers_sent():
+    pass
+
+
+def http_response_code():
+    pass
+
+
+def inet_ntop():
+    pass
+
+
+def inet_pton():
+    pass
+
+
+def ip2long():
+    pass
+
+
+def long2ip():
+    pass
+
+
+def openlog():
+    pass
+
+
+def pfsockopen():
+    pass
+
+
+def setcookie():
+    pass
+
+
+def setrawcookie():
+    pass
+
+
+def socket_get_status():
+    pass
+
+
+def socket_set_blocking():
+    pass
+
+
+def socket_set_timeout():
+    pass
+
+
+def syslog():
+    pass
+
+
+'''
+Filesystem Functions
+'''
+
+
+def basename():
+    pass
+
+
+def chgrp():
+    pass
+
+
+def chmod():
+    pass
+
+
+def chown():
+    pass
+
+
+def clearstatcache():
+    pass
+
+
+def copy():
+    pass
+
+
+def delete():
+    pass
+
+
+def dirname():
+    pass
+
+
+def disk_free_space():
+    pass
+
+
+def disk_total_space():
+    pass
+
+
+def diskfreespace():
+    pass
+
+
+def fclose():
+    pass
+
+
+def feof():
+    pass
+
+
+def fflush():
+    pass
+
+
+def fgetc():
+    pass
+
+
+def fgetcsv():
+    pass
+
+
+def fgets():
+    pass
+
+
+def fgetss():
+    pass
+
+
+def file_exists():
+    pass
+
+
+def file_get_contents():
+    pass
+
+
+def file_put_contents():
+    pass
+
+
+def file():
+    pass
+
+
+def fileatime():
+    pass
+
+
+def filectime():
+    pass
+
+
+def filegroup():
+    pass
+
+
+def fileinode():
+    pass
+
+
+def filemtime():
+    pass
+
+
+def fileowner():
+    pass
+
+
+def fileperms():
+    pass
+
+
+def filesize():
+    pass
+
+
+def filetype():
+    pass
+
+
+def flock():
+    pass
+
+
+def fnmatch():
+    pass
+
+
+def fopen():
+    pass
+
+
+def fpassthru():
+    pass
+
+
+def fputcsv():
+    pass
+
+
+def fputs():
+    pass
+
+
+def fread():
+    pass
+
+
+def fscanf():
+    pass
+
+
+def fseek():
+    pass
+
+
+def fstat():
+    pass
+
+
+def ftell():
+    pass
+
+
+def ftruncate():
+    pass
+
+
+def fwrite():
+    pass
+
+
+def glob():
+    pass
+
+
+def is_dir():
+    pass
+
+
+def is_executable():
+    pass
+
+
+def is_file():
+    pass
+
+
+def is_link():
+    pass
+
+
+def is_readable():
+    pass
+
+
+def is_uploaded_file():
+    pass
+
+
+def is_writable():
+    pass
+
+
+def is_writeable():
+    pass
+
+
+def lchgrp():
+    pass
+
+
+def lchown():
+    pass
+
+
+def link():
+    pass
+
+
+def linkinfo():
+    pass
+
+
+def lstat():
+    pass
+
+
+def mkdir():
+    pass
+
+
+def move_uploaded_file():
+    pass
+
+
+def parse_ini_file():
+    pass
+
+
+def parse_ini_string():
+    pass
+
+
+def pathinfo():
+    pass
+
+
+def pclose():
+    pass
+
+
+def popen():
+    pass
+
+
+def readfile():
+    pass
+
+
+def readlink():
+    pass
+
+
+def realpath_cache_get():
+    pass
+
+
+def realpath_cache_size():
+    pass
+
+
+def realpath():
+    pass
+
+
+def rename():
+    pass
+
+
+def rewind():
+    pass
+
+
+def rmdir():
+    pass
+
+
+def set_file_buffer():
+    pass
+
+
+def stat():
+    pass
+
+
+def symlink():
+    pass
+
+
+def tempnam():
+    pass
+
+
+def tmpfile():
+    pass
+
+
+def touch():
+    pass
+
+
+def umask():
+    pass
+
+
+def unlink():
+    pass
 
 
 '''
 Misc. Functions
 '''
+
+
+def connection_aborted():
+    pass
+
+
+def connection_status():
+    pass
+
+
+def constant():
+    pass
+
+
+def define():
+    pass
+
+
+def defined():
+    pass
+
+
+def die():
+    pass
+
+
+def eval():
+    pass
+
+
+def exit():
+    pass
+
+
+def get_browser():
+    pass
+
+
+def __halt_compiler():
+    pass
+
+
+def highlight_file():
+    pass
+
+
+def highlight_string():
+    pass
+
+
+def hrtime():
+    pass
+
+
+def ignore_user_abort():
+    pass
+
+
+def pack():
+    pass
+
+
+def php_check_syntax():
+    pass
+
+
+def php_strip_whitespace():
+    pass
+
+
+def sapi_windows_cp_conv():
+    pass
+
+
+def sapi_windows_cp_get():
+    pass
+
+
+def sapi_windows_cp_is_utf8():
+    pass
+
+
+def sapi_windows_cp_set():
+    pass
+
+
+def sapi_windows_vt100_support():
+    pass
+
+
+def show_source():
+    pass
+
+
+def sleep():
+    pass
+
+
+def sys_getloadavg():
+    pass
+
+
+def time_nanosleep():
+    pass
+
+
+def time_sleep_until():
+    pass
+
+
+def uniqid():
+    pass
+
+
+def unpack():
+    pass
+
+
+def usleep():
+    pass

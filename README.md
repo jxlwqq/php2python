@@ -364,17 +364,17 @@ Python alternatives for PHP internal (built-in) functions.
 
 ## Program execution Functions
 
-* [ ] [escapeshellarg](http://php.net/manual/en/function.escapeshellarg.php) — Escape a string to be used as a shell argument
+* [x] [escapeshellarg](http://php.net/manual/en/function.escapeshellarg.php) — Escape a string to be used as a shell argument
 * [ ] [escapeshellcmd](http://php.net/manual/en/function.escapeshellcmd.php) — Escape shell metacharacters
-* [ ] [exec](http://php.net/manual/en/function.exec.php) — Execute an external program
+* [ ] <strike>[exec](http://php.net/manual/en/function.exec.php) — Execute an external program</strike>
 * [ ] [passthru](http://php.net/manual/en/function.passthru.php) — Execute an external program and display raw output
 * [ ] [proc_close](http://php.net/manual/en/function.proc-close.php) — Close a process opened by proc_open and return the exit code of that process
 * [ ] [proc_get_status](http://php.net/manual/en/function.proc-get-status.php) — Get information about a process opened by proc_open
 * [ ] [proc_nice](http://php.net/manual/en/function.proc-nice.php) — Change the priority of the current process
 * [ ] [proc_open](http://php.net/manual/en/function.proc-open.php) — Execute a command and open file pointers for input/output
 * [ ] [proc_terminate](http://php.net/manual/en/function.proc-terminate.php) — Kills a process opened by proc_open
-* [ ] [shell_exec](http://php.net/manual/en/function.shell-exec.php) — Execute command via shell and return the complete output as a string
-* [ ] [system](http://php.net/manual/en/function.system.php) — Execute an external program and display the output
+* [x] [shell_exec](http://php.net/manual/en/function.shell-exec.php) — Execute command via shell and return the complete output as a string
+* [x] [system](http://php.net/manual/en/function.system.php) — Execute an external program and display the output
 
 ## Network Functions
 
