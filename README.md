@@ -2,8 +2,7 @@
 
 Python alternatives for PHP internal (built-in) functions.
 
-* [php2go](https://github.com/syyongx/php2go)
-* [php2python](https://github.com/jxlwqq/php2python)
+* [php2go](https://github.com/syyongx/php2go) - Use Golang to implement PHP's common built-in functions
 
 ## Table of Contents
 * [Array Functions](#array-functions)
