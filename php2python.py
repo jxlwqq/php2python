@@ -2066,7 +2066,7 @@ def readfile(filename):
 
 
 def readlink(path):
-    os.readlink(path)
+    return os.readlink(path)
 
 
 def realpath_cache_get():
@@ -2114,7 +2114,7 @@ def tmpfile():
 
 
 def touch(filename, atime=None, mtime=None):
-    os.utime(filename, (atime, mtime))
+    return os.utime(filename, (atime, mtime))
 
 
 def umask(mask):
