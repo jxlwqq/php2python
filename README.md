@@ -351,16 +351,16 @@ Python alternatives for PHP internal (built-in) functions.
 
 ## URL Functions
 
-* [ ] [base64_decode](http://php.net/manual/en/function.base64-decode.php) — Decodes data encoded with MIME base64
-* [ ] [base64_encode](http://php.net/manual/en/function.base64-encode.php) — Encodes data with MIME base64
-* [ ] [get_headers](http://php.net/manual/en/function.get-headers.php) — Fetches all the headers sent by the server in response to an HTTP request
-* [ ] [get_meta_tags](http://php.net/manual/en/function.get-meta-tags.php) — Extracts all meta tag content attributes from a file and returns an array
-* [ ] [http_build_query](http://php.net/manual/en/function.http-build-query.php) — Generate URL-encoded query string
-* [ ] [parse_url](http://php.net/manual/en/function.parse-url.php) — Parse a URL and return its components
-* [ ] [rawurldecode](http://php.net/manual/en/function.rawurldecode.php) — Decode URL-encoded strings
-* [ ] [rawurlencode](http://php.net/manual/en/function.rawurlencode.php) — URL-encode according to RFC 3986
-* [ ] [urldecode](http://php.net/manual/en/function.urldecode.php) — Decodes URL-encoded string
-* [ ] [urlencode](http://php.net/manual/en/function.urlencode.php) — URL-encodes string
+* [x] [base64_decode](http://php.net/manual/en/function.base64-decode.php) — Decodes data encoded with MIME base64
+* [x] [base64_encode](http://php.net/manual/en/function.base64-encode.php) — Encodes data with MIME base64
+* [x] [get_headers](http://php.net/manual/en/function.get-headers.php) — Fetches all the headers sent by the server in response to an HTTP request
+* [x] [get_meta_tags](http://php.net/manual/en/function.get-meta-tags.php) — Extracts all meta tag content attributes from a file and returns an array
+* [x] [http_build_query](http://php.net/manual/en/function.http-build-query.php) — Generate URL-encoded query string
+* [x] [parse_url](http://php.net/manual/en/function.parse-url.php) — Parse a URL and return its components
+* [x] [rawurldecode](http://php.net/manual/en/function.rawurldecode.php) — Decode URL-encoded strings
+* [x] [rawurlencode](http://php.net/manual/en/function.rawurlencode.php) — URL-encode according to RFC 3986
+* [x] [urldecode](http://php.net/manual/en/function.urldecode.php) — Decodes URL-encoded string
+* [x] [urlencode](http://php.net/manual/en/function.urlencode.php) — URL-encodes string
 
 ## Program execution Functions
 
