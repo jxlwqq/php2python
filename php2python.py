@@ -17,6 +17,7 @@ import urllib.parse
 from itertools import takewhile
 import numbers
 import pickle
+import pprint
 
 """
 Array Functions
@@ -1458,8 +1459,8 @@ def isset(variable):
         return False
 
 
-def print_r():
-    pass
+def print_r(variable):
+    pprint.pprint(variable)
 
 
 def serialize(value):
