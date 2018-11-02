@@ -73,13 +73,13 @@ Python alternatives for PHP internal (built-in) functions.
 * [ ] [key](http://php.net/manual/en/function.key.php) — Fetch a key from an array
 * [ ] [krsort](http://php.net/manual/en/function.krsort.php) — Sort an array by key in reverse order
 * [ ] [ksort](http://php.net/manual/en/function.ksort.php) — Sort an array by key
-* [ ] [list](http://php.net/manual/en/function.list.php) — Assign variables as if they were an array
+* [ ] <strike>[list](http://php.net/manual/en/function.list.php) — Assign variables as if they were an array</strike>, `Built-in function in Python`
 * [ ] [natcasesort](http://php.net/manual/en/function.natcasesort.php) — Sort an array using a case insensitive "natural order" algorithm
 * [ ] [natsort](http://php.net/manual/en/function.natsort.php) — Sort an array using a "natural order" algorithm
-* [ ] [next](http://php.net/manual/en/function.next.php) — Advance the internal pointer of an array
+* [ ] <strike>[next](http://php.net/manual/en/function.next.php) — Advance the internal pointer of an array<strike>, `Built-in function in Python`
 * [ ] [pos](http://php.net/manual/en/function.pos.php) — Alias of current
 * [ ] [prev](http://php.net/manual/en/function.prev.php) — Rewind the internal array pointer
-* [ ] [range](http://php.net/manual/en/function.range.php) — Create an array containing a range of elements
+* [ ] <strike>[range](http://php.net/manual/en/function.range.php) — Create an array containing a range of elements</strike>, `Built-in function in Python`
 * [ ] [reset](http://php.net/manual/en/function.reset.php) — Set the internal pointer of an array to its first element
 * [ ] [rsort](http://php.net/manual/en/function.rsort.php) — Sort an array in reverse order
 * [ ] [shuffle](http://php.net/manual/en/function.shuffle.php) — Shuffle an array
@@ -96,7 +96,7 @@ Python alternatives for PHP internal (built-in) functions.
 * [ ] [addslashes](http://php.net/manual/en/function.addslashes.php) — Quote string with slashes
 * [ ] [bin2hex](http://php.net/manual/en/function.bin2hex.php) — Convert binary data into hexadecimal representation
 * [ ] [chop](http://php.net/manual/en/function.chop.php) — Alias of rtrim
-* [ ] [chr](http://php.net/manual/en/function.chr.php) — Generate a single-byte string from a number
+* [ ] <strike>[chr](http://php.net/manual/en/function.chr.php) — Generate a single-byte string from a number</strike>, `Built-in function in Python`
 * [ ] [chunk_split](http://php.net/manual/en/function.chunk-split.php) — Split a string into smaller chunks
 * [ ] [convert_cyr_string](http://php.net/manual/en/function.convert-cyr-string.php) — Convert from one Cyrillic character set to another
 * [ ] [convert_uudecode](http://php.net/manual/en/function.convert-uudecode.php) — Decode a uuencoded string
@@ -128,9 +128,9 @@ Python alternatives for PHP internal (built-in) functions.
 * [ ] [nl_langinfo](http://php.net/manual/en/function.nl-langinfo.php) — Query language and locale information
 * [ ] [nl2br](http://php.net/manual/en/function.nl2br.php) — Inserts HTML line breaks before all newlines in a string
 * [ ] [number_format](http://php.net/manual/en/function.number-format.php) — Format a number with grouped thousands
-* [ ] [ord](http://php.net/manual/en/function.ord.php) — Convert the first byte of a string to a value between 0 and 255
+* [ ] <strike>[ord](http://php.net/manual/en/function.ord.php) — Convert the first byte of a string to a value between 0 and 255</strike>, `Built-in function in Python`
 * [ ] [parse_str](http://php.net/manual/en/function.parse-str.php) — Parses the string into variables
-* [ ] [print](http://php.net/manual/en/function.print.php) — Output a string
+* [ ] <strike>[print](http://php.net/manual/en/function.print.php) — Output a string</strike>, `Built-in function in Python`
 * [ ] [printf](http://php.net/manual/en/function.printf.php) — Output a formatted string
 * [ ] [quoted_printable_decode](http://php.net/manual/en/function.quoted-printable-decode.php) — Convert a quoted-printable string to an 8 bit string
 * [ ] [quoted_printable_encode](http://php.net/manual/en/function.quoted-printable-encode.php) — Convert a 8 bit string to a quoted-printable string
@@ -248,7 +248,7 @@ Python alternatives for PHP internal (built-in) functions.
 
 ## Mathematical Functions
 
-* [ ] <strike>[abs](http://php.net/manual/en/function.abs.php) — Absolute value</strike>
+* [ ] <strike>[abs](http://php.net/manual/en/function.abs.php) — Absolute value</strike>, `Built-in function in Python`
 * [ ] [acos](http://php.net/manual/en/function.acos.php) — Arc cosine
 * [ ] [acosh](http://php.net/manual/en/function.acosh.php) — Inverse hyperbolic cosine
 * [ ] [asin](http://php.net/manual/en/function.asin.php) — Arc sine
@@ -280,17 +280,17 @@ Python alternatives for PHP internal (built-in) functions.
 * [ ] [log10](http://php.net/manual/en/function.log10.php) — Base-10 logarithm
 * [ ] [log1p](http://php.net/manual/en/function.log1p.php) — Returns log(1 + number), computed in a way that is accurate even when the value of number is close to zero
 * [ ] [log](http://php.net/manual/en/function.log.php) — Natural logarithm
-* [ ] <strike>[max](http://php.net/manual/en/function.max.php) — Find highest value</strike>
-* [ ] <strike>[min](http://php.net/manual/en/function.min.php) — Find lowest value</strike>
+* [ ] <strike>[max](http://php.net/manual/en/function.max.php) — Find highest value</strike>, `Built-in function in Python`
+* [ ] <strike>[min](http://php.net/manual/en/function.min.php) — Find lowest value</strike>, `Built-in function in Python`
 * [ ] [mt_getrandmax](http://php.net/manual/en/function.mt-getrandmax.php) — Show largest possible random value
 * [ ] [mt_rand](http://php.net/manual/en/function.mt-rand.php) — Generate a random value via the Mersenne Twister Random Number Generator
 * [ ] [mt_srand](http://php.net/manual/en/function.mt-srand.php) — Seeds the Mersenne Twister Random Number Generator
 * [ ] [octdec](http://php.net/manual/en/function.octdec.php) — Octal to decimal
 * [ ] [pi](http://php.net/manual/en/function.pi.php) — Get value of pi
-* [ ] <strike>[pow](http://php.net/manual/en/function.pow.php) — Exponential expression</strike>
+* [ ] <strike>[pow](http://php.net/manual/en/function.pow.php) — Exponential expression</strike>, `Built-in function in Python`
 * [ ] [rad2deg](http://php.net/manual/en/function.rad2deg.php) — Converts the radian number to the equivalent number in degrees
 * [ ] [rand](http://php.net/manual/en/function.rand.php) — Generate a random integer
-* [ ] [round](http://php.net/manual/en/function.round.php) — Rounds a float
+* [ ] <strike>[round](http://php.net/manual/en/function.round.php) — Rounds a float</strike>, `Built-in function in Python`
 * [ ] [sin](http://php.net/manual/en/function.sin.php) — Sine
 * [ ] [sinh](http://php.net/manual/en/function.sinh.php) — Hyperbolic sine
 * [ ] [sqrt](http://php.net/manual/en/function.sqrt.php) — Square root

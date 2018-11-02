@@ -4,13 +4,17 @@
 from collections import Counter
 import random
 from functools import reduce
-import binascii
 import hashlib
 import locale
 import csv
 import io
 import re
 import math
+import time
+import datetime
+import binascii
+import urllib.parse
+from itertools import takewhile
 
 """
 Array Functions
@@ -286,7 +290,7 @@ def array_unshift(array):
 
 
 def array_values(array):
-    pass
+    return array.values()
 
 
 def array_walk_recursive(array):
@@ -333,12 +337,12 @@ def extract(array):
     pass
 
 
-def in_array(array):
-    pass
+def in_array(needle, haystack):
+    return needle in haystack
 
 
-def key_exists(array):
-    pass
+def key_exists(key, array):
+    return array_key_exists(key, array)
 
 
 def key(array):
@@ -353,10 +357,6 @@ def ksort(array):
     pass
 
 
-def php_list(array):
-    pass
-
-
 def natcasesort(array):
     pass
 
@@ -365,23 +365,11 @@ def natsort(array):
     pass
 
 
-def next(array):
-    pass
-
-
 def pos(array):
     pass
 
 
 def prev(array):
-    pass
-
-
-def php_range(low, high, step=None):
-    if low >= high:
-        return range(low, high + 1, step)
-    else:
-        return range(low, high - 1, -step)
     pass
 
 
@@ -569,16 +557,22 @@ def idate():
     pass
 
 
-def localtime():
-    pass
+def localtime(timestamp):
+    return time.localtime(timestamp)
 
 
-def microtime():
-    pass
+def microtime(get_as_float=False):
+    d = datetime.now()
+    t = time.mktime(d.timetuple())
+    if get_as_float:
+        return t
+    else:
+        ms = d.microsecond / 1000000.
+        return '%f %d' % (ms, t)
 
 
-def mktime():
-    pass
+def mktime(hour, minute, second, month, day, year):
+    return time.mktime((year, month, day, hour, minute, second))
 
 
 def strftime():
@@ -594,7 +588,7 @@ def strtotime():
 
 
 def time():
-    pass
+    return int(time.time())
 
 
 def timezone_abbreviations_list():
@@ -647,15 +641,11 @@ def addslashes(string):
 
 
 def bin2hex(string):
-    pass
+    return binascii.hexlify(string)
 
 
-def chop(string):
-    pass
-
-
-def chr(string):
-    pass
+def chop(string, character_mask=None):
+    return rtrim(string, character_mask)
 
 
 def chunk_split(string):
@@ -694,11 +684,17 @@ def echo(string):
     print(string)
 
 
-def explode(string):
-    pass
+def explode(delimiter, string, limit):
+    if limit == 0:
+        limit = 1
+
+    if limit > 0:
+        return string.split(delimiter, limit)
+    else:
+        return string.split(delimiter)[:limit]
 
 
-def fprintf(string):
+def fprintf(handle, format):
     pass
 
 
@@ -714,8 +710,8 @@ def hebrevc(string):
     pass
 
 
-def hex2bin(string):
-    pass
+def hex2bin(hex_string):
+    return binascii.unhexlify(hex_string)
 
 
 def html_entity_decode(string):
@@ -734,20 +730,35 @@ def htmlspecialchars(string):
     pass
 
 
-def implode(string):
-    pass
+def implode(glue='', pieces=[]):
+    return glue.join(pieces)
 
 
-def join(string):
-    pass
+def join(glue='', pieces=[]):
+    return implode(glue, pieces)
 
 
 def lcfirst(string):
-    pass
+    return string[0].lower() + string[1:]
 
 
-def levenshtein(string):
-    pass
+def levenshtein(string1, string2):
+    n, m = len(string1), len(string2)
+    if n > m:
+        string1, string2 = string2, string1
+        n, m = m, n
+
+    current = range(n + 1)
+    for i in range(1, m + 1):
+        previous, current = current, [i] + [0] * n
+        for j in range(1, n + 1):
+            add, delete = previous[j] + 1, current[j - 1] + 1
+            change = previous[j - 1]
+            if string1[j - 1] != string2[i - 1]:
+                change = change + 1
+            current[j] = min(add, delete, change)
+
+    return current[n]
 
 
 def localeconv(string):
@@ -799,16 +810,8 @@ def number_format(number, decimals):
     return locale.format("%.*f", (decimals, number), True)
 
 
-def ord(string):
-    pass
-
-
 def parse_str(string):
-    pass
-
-
-def php_print(string):
-    return print(string)
+    return urllib.parse.parse_qs(string)
 
 
 def printf(string):
@@ -842,7 +845,7 @@ def sha1_file(string):
 
 
 def sha1(string):
-    pass
+    return hashlib.sha1(string.encode()).hexdigest()
 
 
 def similar_text(string):
@@ -871,8 +874,16 @@ def str_ireplace(string):
     pass
 
 
-def str_pad(string):
-    pass
+def str_pad(string, pad_length, pad_string=' ', pad_type=1):
+    # STR_PAD_LEFT = 0
+    # STR_PAD_RIGHT = 1
+    # STR_PAD_BOTH = 2
+    if pad_type == 0:
+        return string.ljust(pad_length, pad_string)
+    elif pad_type == 2:
+        return string.center(pad_length, pad_string)
+    else:
+        return string.rjust(pad_length, pad_string)
 
 
 def str_repeat(string, multiplier):
@@ -954,8 +965,8 @@ def strcoll(string):
     pass
 
 
-def strcspn(string):
-    pass
+def strcspn(string1, string2):
+    return len(list(takewhile(lambda x: x not in string2, string1)))
 
 
 def strip_tags(string):
@@ -1294,10 +1305,6 @@ def rad2deg(number):
 
 def rand(minint, maxint):
     random.randint(minint, maxint)
-
-
-def php_round(val, precision=0):
-    round(val, precision)
 
 
 def sin(arg):
