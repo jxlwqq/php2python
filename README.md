@@ -312,42 +312,42 @@ Python alternatives for PHP internal (built-in) functions.
 
 ## Variable handling Functions
 
-* [ ] [boolval](http://php.net/manual/en/function.boolval.php) — Get the boolean value of a variable
+* [x] [boolval](http://php.net/manual/en/function.boolval.php) — Get the boolean value of a variable
 * [ ] [debug_zval_dump](http://php.net/manual/en/function.debug-zval-dump.php) — Dumps a string representation of an internal zend value to output
-* [ ] [doubleval](http://php.net/manual/en/function.doubleval.php) — Alias of floatval
-* [ ] [empty](http://php.net/manual/en/function.empty.php) — Determine whether a variable is empty
-* [ ] [floatval](http://php.net/manual/en/function.floatval.php) — Get float value of a variable
+* [x] [doubleval](http://php.net/manual/en/function.doubleval.php) — Alias of floatval
+* [x] [empty](http://php.net/manual/en/function.empty.php) — Determine whether a variable is empty
+* [x] [floatval](http://php.net/manual/en/function.floatval.php) — Get float value of a variable
 * [ ] [get_defined_vars](http://php.net/manual/en/function.get-defined-vars.php) — Returns an array of all defined variables
 * [ ] [get_resource_type](http://php.net/manual/en/function.get-resource-type.php) — Returns the resource type
-* [ ] [gettype](http://php.net/manual/en/function.gettype.php) — Get the type of a variable
+* [x] [gettype](http://php.net/manual/en/function.gettype.php) — Get the type of a variable
 * [ ] [import_request_variables](http://php.net/manual/en/function.import-request-variables.php) — Import GET/POST/Cookie variables into the global scope
-* [ ] [intval](http://php.net/manual/en/function.intval.php) — Get the integer value of a variable
-* [ ] [is_array](http://php.net/manual/en/function.is-array.php) — Finds whether a variable is an array
-* [ ] [is_bool](http://php.net/manual/en/function.is-bool.php) — Finds out whether a variable is a boolean
+* [x] [intval](http://php.net/manual/en/function.intval.php) — Get the integer value of a variable
+* [x] [is_array](http://php.net/manual/en/function.is-array.php) — Finds whether a variable is an array
+* [x] [is_bool](http://php.net/manual/en/function.is-bool.php) — Finds out whether a variable is a boolean
 * [ ] [is_callable](http://php.net/manual/en/function.is-callable.php) — Verify that the contents of a variable can be called as a function
 * [ ] [is_countable](http://php.net/manual/en/function.is-countable.php) — Verify that the contents of a variable is a countable value
-* [ ] [is_double](http://php.net/manual/en/function.is-double.php) — Alias of is_float
-* [ ] [is_float](http://php.net/manual/en/function.is-float.php) — Finds whether the type of a variable is float
-* [ ] [is_int](http://php.net/manual/en/function.is-int.php) — Find whether the type of a variable is integer
-* [ ] [is_integer](http://php.net/manual/en/function.is-integer.php) — Alias of is_int
+* [x] [is_double](http://php.net/manual/en/function.is-double.php) — Alias of is_float
+* [x] [is_float](http://php.net/manual/en/function.is-float.php) — Finds whether the type of a variable is float
+* [x] [is_int](http://php.net/manual/en/function.is-int.php) — Find whether the type of a variable is integer
+* [x] [is_integer](http://php.net/manual/en/function.is-integer.php) — Alias of is_int
 * [ ] [is_iterable](http://php.net/manual/en/function.is-iterable.php) — Verify that the contents of a variable is an iterable value
 * [ ] [is_long](http://php.net/manual/en/function.is-long.php) — Alias of is_int
-* [ ] [is_null](http://php.net/manual/en/function.is-null.php) — Finds whether a variable is NULL
-* [ ] [is_numeric](http://php.net/manual/en/function.is-numeric.php) — Finds whether a variable is a number or a numeric string
-* [ ] [is_object](http://php.net/manual/en/function.is-object.php) — Finds whether a variable is an object
-* [ ] [is_real](http://php.net/manual/en/function.is-real.php) — Alias of is_float
+* [x] [is_null](http://php.net/manual/en/function.is-null.php) — Finds whether a variable is NULL
+* [x] [is_numeric](http://php.net/manual/en/function.is-numeric.php) — Finds whether a variable is a number or a numeric string
+* [x] [is_object](http://php.net/manual/en/function.is-object.php) — Finds whether a variable is an object
+* [x] [is_real](http://php.net/manual/en/function.is-real.php) — Alias of is_float
 * [ ] [is_resource](http://php.net/manual/en/function.is-resource.php) — Finds whether a variable is a resource
-* [ ] [is_scalar](http://php.net/manual/en/function.is-scalar.php) — Finds whether a variable is a scalar
-* [ ] [is_string](http://php.net/manual/en/function.is-string.php) — Find whether the type of a variable is string
-* [ ] [isset](http://php.net/manual/en/function.isset.php) — Determine if a variable is set and is not NULL
-* [ ] [print_r](http://php.net/manual/en/function.print-r.php) — Prints human-readable information about a variable
-* [ ] [serialize](http://php.net/manual/en/function.serialize.php) — Generates a storable representation of a value
+* [x] [is_scalar](http://php.net/manual/en/function.is-scalar.php) — Finds whether a variable is a scalar
+* [x] [is_string](http://php.net/manual/en/function.is-string.php) — Find whether the type of a variable is string
+* [x] [isset](http://php.net/manual/en/function.isset.php) — Determine if a variable is set and is not NULL
+* [x] [print_r](http://php.net/manual/en/function.print-r.php) — Prints human-readable information about a variable
+* [x] [serialize](http://php.net/manual/en/function.serialize.php) — Generates a storable representation of a value
 * [ ] [settype](http://php.net/manual/en/function.settype.php) — Set the type of a variable
-* [ ] [strval](http://php.net/manual/en/function.strval.php) — Get string value of a variable
+* [x] [strval](http://php.net/manual/en/function.strval.php) — Get string value of a variable
 * [ ] [unserialize](http://php.net/manual/en/function.unserialize.php) — Creates a PHP value from a stored representation
-* [ ] [unset](http://php.net/manual/en/function.unset.php) — Unset a given variable
-* [ ] [var_dump](http://php.net/manual/en/function.var-dump.php) — Dumps information about a variable
-* [ ] [var_export](http://php.net/manual/en/function.var-export.php) — Outputs or returns a parsable string representation of a variable
+* [x] [unset](http://php.net/manual/en/function.unset.php) — Unset a given variable
+* [x] [var_dump](http://php.net/manual/en/function.var-dump.php) — Dumps information about a variable
+* [x] [var_export](http://php.net/manual/en/function.var-export.php) — Outputs or returns a parsable string representation of a variable
 
 ## URL Functions
 
