@@ -32,6 +32,7 @@ import string
 import syslog as py_syslog
 import fcntl
 import fnmatch as py_fnmatch
+import shutil
 
 """
 Array Functions
@@ -60,8 +61,14 @@ def array_chunk(array, size):
     return [array[i: i + size] for i in range(0, len(array), size)]
 
 
-def array_column(array, column_key, index_key):
-    pass
+def array_column(array, column_key, index_key=None):
+    if index_key is None:
+        return [item.get(column_key) for item in array]
+    else:
+        res = {}
+        for item in array:
+            res[item.get(index_key)] = item.get(column_key)
+        return res
 
 
 def array_combine(keys, values):
@@ -1813,16 +1820,16 @@ def clearstatcache():
     pass
 
 
-def copy():
-    pass
+def copy(source, dest):
+    return shutil.copy(source, dest)
 
 
-def delete():
-    pass
+def delete(filename):
+    return unlink(filename)
 
 
-def dirname():
-    pass
+def dirname(path):
+    return os.path.dirname(path.rstrip(os.pathsep)) or '.'
 
 
 def disk_free_space():
@@ -1845,8 +1852,8 @@ def feof():
     pass
 
 
-def fflush():
-    pass
+def fflush(handle):
+    return handle.flush()
 
 
 def fgetc():
@@ -1865,8 +1872,8 @@ def fgetss():
     pass
 
 
-def file_exists():
-    pass
+def file_exists(path):
+    return os.path.exists(path)
 
 
 def file_get_contents():
@@ -1976,7 +1983,7 @@ def fwrite():
 
 
 def glob(pattern):
-    py_glob.glob(pattern)
+    return py_glob.glob(pattern)
 
 
 def is_dir(path):
@@ -2120,7 +2127,7 @@ def umask(mask):
 
 
 def unlink(filename):
-    os.unlink(filename)
+    return os.unlink(filename)
 
 
 '''
