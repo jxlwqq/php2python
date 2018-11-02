@@ -10,7 +10,7 @@ import csv
 import io
 import re
 import math
-import time
+import time as py_time
 import datetime
 import binascii
 import urllib.parse
@@ -563,8 +563,10 @@ def date_timezone_set():
     pass
 
 
-def date():
-    pass
+def date(format, timestamp=None):
+    if timestamp is None:
+        timestamp = py_time.time()
+    return py_time.strftime(format, timestamp)
 
 
 def getdate():
@@ -592,12 +594,12 @@ def idate():
 
 
 def localtime(timestamp):
-    return time.localtime(timestamp)
+    return py_time.localtime(timestamp)
 
 
 def microtime(get_as_float=False):
     d = datetime.now()
-    t = time.mktime(d.timetuple())
+    t = py_time.mktime(d.timetuple())
     if get_as_float:
         return t
     else:
@@ -606,7 +608,7 @@ def microtime(get_as_float=False):
 
 
 def mktime(hour, minute, second, month, day, year):
-    return time.mktime((year, month, day, hour, minute, second))
+    return py_time.mktime((year, month, day, hour, minute, second))
 
 
 def strftime():
@@ -622,7 +624,7 @@ def strtotime():
 
 
 def time():
-    return int(time.time())
+    return int(py_time.time())
 
 
 def timezone_abbreviations_list():
@@ -2215,7 +2217,7 @@ def show_source():
 
 
 def sleep(seconds):
-    time.sleep(seconds)
+    py_time.sleep(seconds)
 
 
 def sys_getloadavg():
@@ -2227,11 +2229,11 @@ def time_nanosleep(seconds, nanoseconds):
 
 
 def time_sleep_until(timestamp):
-    time.sleep(timestamp - time.time())
+    py_time.sleep(timestamp - py_time.time())
 
 
 def uniqid(prefix=''):
-    return prefix + hex(int(time()))[2:10] + hex(int(time() * 1000000) % 0x100000)[2:7]
+    return prefix + hex(int(py_time.time()))[2:10] + hex(int(py_time.time() * 1000000) % 0x100000)[2:7]
 
 
 def unpack(format_codes, data):
@@ -2239,4 +2241,4 @@ def unpack(format_codes, data):
 
 
 def usleep(micro_seconds):
-    time.sleep(micro_seconds / 1000000.0)
+    py_time.sleep(micro_seconds / 1000000.0)
