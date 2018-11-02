@@ -337,6 +337,153 @@ Python alternatives for PHP internal (built-in) functions.
 * [ ] [var_dump](http://php.net/manual/en/function.var-dump.php) — Dumps information about a variable
 * [ ] [var_export](http://php.net/manual/en/function.var-export.php) — Outputs or returns a parsable string representation of a variable
 
+## URL Functions
+
+* [ ] [base64_decode](http://php.net/manual/en/function.base64-decode.php) — Decodes data encoded with MIME base64
+* [ ] [base64_encode](http://php.net/manual/en/function.base64-encode.php) — Encodes data with MIME base64
+* [ ] [get_headers](http://php.net/manual/en/function.get-headers.php) — Fetches all the headers sent by the server in response to an HTTP request
+* [ ] [get_meta_tags](http://php.net/manual/en/function.get-meta-tags.php) — Extracts all meta tag content attributes from a file and returns an array
+* [ ] [http_build_query](http://php.net/manual/en/function.http-build-query.php) — Generate URL-encoded query string
+* [ ] [parse_url](http://php.net/manual/en/function.parse-url.php) — Parse a URL and return its components
+* [ ] [rawurldecode](http://php.net/manual/en/function.rawurldecode.php) — Decode URL-encoded strings
+* [ ] [rawurlencode](http://php.net/manual/en/function.rawurlencode.php) — URL-encode according to RFC 3986
+* [ ] [urldecode](http://php.net/manual/en/function.urldecode.php) — Decodes URL-encoded string
+* [ ] [urlencode](http://php.net/manual/en/function.urlencode.php) — URL-encodes string
+
+## Program execution Functions
+
+* [ ] [escapeshellarg](http://php.net/manual/en/function.escapeshellarg.php) — Escape a string to be used as a shell argument
+* [ ] [escapeshellcmd](http://php.net/manual/en/function.escapeshellcmd.php) — Escape shell metacharacters
+* [ ] [exec](http://php.net/manual/en/function.exec.php) — Execute an external program
+* [ ] [passthru](http://php.net/manual/en/function.passthru.php) — Execute an external program and display raw output
+* [ ] [proc_close](http://php.net/manual/en/function.proc-close.php) — Close a process opened by proc_open and return the exit code of that process
+* [ ] [proc_get_status](http://php.net/manual/en/function.proc-get-status.php) — Get information about a process opened by proc_open
+* [ ] [proc_nice](http://php.net/manual/en/function.proc-nice.php) — Change the priority of the current process
+* [ ] [proc_open](http://php.net/manual/en/function.proc-open.php) — Execute a command and open file pointers for input/output
+* [ ] [proc_terminate](http://php.net/manual/en/function.proc-terminate.php) — Kills a process opened by proc_open
+* [ ] [shell_exec](http://php.net/manual/en/function.shell-exec.php) — Execute command via shell and return the complete output as a string
+* [ ] [system](http://php.net/manual/en/function.system.php) — Execute an external program and display the output
+
+## Network Functions
+
+* [ ] [checkdnsrr](http://php.net/manual/en/function.checkdnsrr.php) — Check DNS records corresponding to a given Internet host name or IP address
+* [ ] [closelog](http://php.net/manual/en/function.closelog.php) — Close connection to system logger
+* [ ] [define_syslog_variables](http://php.net/manual/en/function.define-syslog-variables.php) — Initializes all syslog related variables
+* [ ] [dns_check_record](http://php.net/manual/en/function.dns-check-record.php) — Alias of checkdnsrr
+* [ ] [dns_get_mx](http://php.net/manual/en/function.dns-get-mx.php) — Alias of getmxrr
+* [ ] [dns_get_record](http://php.net/manual/en/function.dns-get-record.php) — Fetch DNS Resource Records associated with a hostname
+* [ ] [fsockopen](http://php.net/manual/en/function.fsockopen.php) — Open Internet or Unix domain socket connection
+* [ ] [gethostbyaddr](http://php.net/manual/en/function.gethostbyaddr.php) — Get the Internet host name corresponding to a given IP address
+* [ ] [gethostbyname](http://php.net/manual/en/function.gethostbyname.php) — Get the IPv4 address corresponding to a given Internet host name
+* [ ] [gethostbynamel](http://php.net/manual/en/function.gethostbynamel.php) — Get a list of IPv4 addresses corresponding to a given Internet host name
+* [ ] [gethostname](http://php.net/manual/en/function.gethostname.php) — Gets the host name
+* [ ] [getmxrr](http://php.net/manual/en/function.getmxrr.php) — Get MX records corresponding to a given Internet host name
+* [ ] [getprotobyname](http://php.net/manual/en/function.getprotobyname.php) — Get protocol number associated with protocol name
+* [ ] [getprotobynumber](http://php.net/manual/en/function.getprotobynumber.php) — Get protocol name associated with protocol number
+* [ ] [getservbyname](http://php.net/manual/en/function.getservbyname.php) — Get port number associated with an Internet service and protocol
+* [ ] [getservbyport](http://php.net/manual/en/function.getservbyport.php) — Get Internet service which corresponds to port and protocol
+* [ ] [header_register_callback](http://php.net/manual/en/function.header-register-callback.php) — Call a header function
+* [ ] [header_remove](http://php.net/manual/en/function.header-remove.php) — Remove previously set headers
+* [ ] [header](http://php.net/manual/en/function.header.php) — Send a raw HTTP header
+* [ ] [headers_list](http://php.net/manual/en/function.headers-list.php) — Returns a list of response headers sent (or ready to send)
+* [ ] [headers_sent](http://php.net/manual/en/function.headers-sent.php) — Checks if or where headers have been sent
+* [ ] [http_response_code](http://php.net/manual/en/function.http-response-code.php) — Get or Set the HTTP response code
+* [ ] [inet_ntop](http://php.net/manual/en/function.inet-ntop.php) — Converts a packed internet address to a human readable representation
+* [ ] [inet_pton](http://php.net/manual/en/function.inet-pton.php) — Converts a human readable IP address to its packed in_addr representation
+* [ ] [ip2long](http://php.net/manual/en/function.ip2long.php) — Converts a string containing an (IPv4) Internet Protocol dotted address into a long integer
+* [ ] [long2ip](http://php.net/manual/en/function.long2ip.php) — Converts an long integer address into a string in (IPv4) Internet standard dotted format
+* [ ] [openlog](http://php.net/manual/en/function.openlog.php) — Open connection to system logger
+* [ ] [pfsockopen](http://php.net/manual/en/function.pfsockopen.php) — Open persistent Internet or Unix domain socket connection
+* [ ] [setcookie](http://php.net/manual/en/function.setcookie.php) — Send a cookie
+* [ ] [setrawcookie](http://php.net/manual/en/function.setrawcookie.php) — Send a cookie without urlencoding the cookie value
+* [ ] [socket_get_status](http://php.net/manual/en/function.socket-get-status.php) — Alias of stream_get_meta_data
+* [ ] [socket_set_blocking](http://php.net/manual/en/function.socket-set-blocking.php) — Alias of stream_set_blocking
+* [ ] [socket_set_timeout](http://php.net/manual/en/function.socket-set-timeout.php) — Alias of stream_set_timeout
+* [ ] [syslog](http://php.net/manual/en/function.syslog.php) — Generate a system log message
+
+## Filesystem Functions
+
+* [ ] [basename](http://php.net/manual/en/function.basename.php) — Returns trailing name component of path
+* [ ] [chgrp](http://php.net/manual/en/function.chgrp.php) — Changes file group
+* [ ] [chmod](http://php.net/manual/en/function.chmod.php) — Changes file mode
+* [ ] [chown](http://php.net/manual/en/function.chown.php) — Changes file owner
+* [ ] [clearstatcache](http://php.net/manual/en/function.clearstatcache.php) — Clears file status cache
+* [ ] [copy](http://php.net/manual/en/function.copy.php) — Copies file
+* [ ] [delete](http://php.net/manual/en/function.delete.php) — See unlink or unset
+* [ ] [dirname](http://php.net/manual/en/function.dirname.php) — Returns a parent directory's path
+* [ ] [disk_free_space](http://php.net/manual/en/function.disk-free-space.php) — Returns available space on filesystem or disk partition
+* [ ] [disk_total_space](http://php.net/manual/en/function.disk-total-space.php) — Returns the total size of a filesystem or disk partition
+* [ ] [diskfreespace](http://php.net/manual/en/function.diskfreespace.php) — Alias of disk_free_space
+* [ ] [fclose](http://php.net/manual/en/function.fclose.php) — Closes an open file pointer
+* [ ] [feof](http://php.net/manual/en/function.feof.php) — Tests for end-of-file on a file pointer
+* [ ] [fflush](http://php.net/manual/en/function.fflush.php) — Flushes the output to a file
+* [ ] [fgetc](http://php.net/manual/en/function.fgetc.php) — Gets character from file pointer
+* [ ] [fgetcsv](http://php.net/manual/en/function.fgetcsv.php) — Gets line from file pointer and parse for CSV fields
+* [ ] [fgets](http://php.net/manual/en/function.fgets.php) — Gets line from file pointer
+* [ ] [fgetss](http://php.net/manual/en/function.fgetss.php) — Gets line from file pointer and strip HTML tags
+* [ ] [file_exists](http://php.net/manual/en/function.file-exists.php) — Checks whether a file or directory exists
+* [ ] [file_get_contents](http://php.net/manual/en/function.file-get-contents.php) — Reads entire file into a string
+* [ ] [file_put_contents](http://php.net/manual/en/function.file-put-contents.php) — Write data to a file
+* [ ] [file](http://php.net/manual/en/function.file.php) — Reads entire file into an array
+* [ ] [fileatime](http://php.net/manual/en/function.fileatime.php) — Gets last access time of file
+* [ ] [filectime](http://php.net/manual/en/function.filectime.php) — Gets inode change time of file
+* [ ] [filegroup](http://php.net/manual/en/function.filegroup.php) — Gets file group
+* [ ] [fileinode](http://php.net/manual/en/function.fileinode.php) — Gets file inode
+* [ ] [filemtime](http://php.net/manual/en/function.filemtime.php) — Gets file modification time
+* [ ] [fileowner](http://php.net/manual/en/function.fileowner.php) — Gets file owner
+* [ ] [fileperms](http://php.net/manual/en/function.fileperms.php) — Gets file permissions
+* [ ] [filesize](http://php.net/manual/en/function.filesize.php) — Gets file size
+* [ ] [filetype](http://php.net/manual/en/function.filetype.php) — Gets file type
+* [ ] [flock](http://php.net/manual/en/function.flock.php) — Portable advisory file locking
+* [ ] [fnmatch](http://php.net/manual/en/function.fnmatch.php) — Match filename against a pattern
+* [ ] [fopen](http://php.net/manual/en/function.fopen.php) — Opens file or URL
+* [ ] [fpassthru](http://php.net/manual/en/function.fpassthru.php) — Output all remaining data on a file pointer
+* [ ] [fputcsv](http://php.net/manual/en/function.fputcsv.php) — Format line as CSV and write to file pointer
+* [ ] [fputs](http://php.net/manual/en/function.fputs.php) — Alias of fwrite
+* [ ] [fread](http://php.net/manual/en/function.fread.php) — Binary-safe file read
+* [ ] [fscanf](http://php.net/manual/en/function.fscanf.php) — Parses input from a file according to a format
+* [ ] [fseek](http://php.net/manual/en/function.fseek.php) — Seeks on a file pointer
+* [ ] [fstat](http://php.net/manual/en/function.fstat.php) — Gets information about a file using an open file pointer
+* [ ] [ftell](http://php.net/manual/en/function.ftell.php) — Returns the current position of the file read/write pointer
+* [ ] [ftruncate](http://php.net/manual/en/function.ftruncate.php) — Truncates a file to a given length
+* [ ] [fwrite](http://php.net/manual/en/function.fwrite.php) — Binary-safe file write
+* [ ] [glob](http://php.net/manual/en/function.glob.php) — Find pathnames matching a pattern
+* [ ] [is_dir](http://php.net/manual/en/function.is-dir.php) — Tells whether the filename is a directory
+* [ ] [is_executable](http://php.net/manual/en/function.is-executable.php) — Tells whether the filename is executable
+* [ ] [is_file](http://php.net/manual/en/function.is-file.php) — Tells whether the filename is a regular file
+* [ ] [is_link](http://php.net/manual/en/function.is-link.php) — Tells whether the filename is a symbolic link
+* [ ] [is_readable](http://php.net/manual/en/function.is-readable.php) — Tells whether a file exists and is readable
+* [ ] [is_uploaded_file](http://php.net/manual/en/function.is-uploaded-file.php) — Tells whether the file was uploaded via HTTP POST
+* [ ] [is_writable](http://php.net/manual/en/function.is-writable.php) — Tells whether the filename is writable
+* [ ] [is_writeable](http://php.net/manual/en/function.is-writeable.php) — Alias of is_writable
+* [ ] [lchgrp](http://php.net/manual/en/function.lchgrp.php) — Changes group ownership of symlink
+* [ ] [lchown](http://php.net/manual/en/function.lchown.php) — Changes user ownership of symlink
+* [ ] [link](http://php.net/manual/en/function.link.php) — Create a hard link
+* [ ] [linkinfo](http://php.net/manual/en/function.linkinfo.php) — Gets information about a link
+* [ ] [lstat](http://php.net/manual/en/function.lstat.php) — Gives information about a file or symbolic link
+* [ ] [mkdir](http://php.net/manual/en/function.mkdir.php) — Makes directory
+* [ ] [move_uploaded_file](http://php.net/manual/en/function.move-uploaded-file.php) — Moves an uploaded file to a new location
+* [ ] [parse_ini_file](http://php.net/manual/en/function.parse-ini-file.php) — Parse a configuration file
+* [ ] [parse_ini_string](http://php.net/manual/en/function.parse-ini-string.php) — Parse a configuration string
+* [ ] [pathinfo](http://php.net/manual/en/function.pathinfo.php) — Returns information about a file path
+* [ ] [pclose](http://php.net/manual/en/function.pclose.php) — Closes process file pointer
+* [ ] [popen](http://php.net/manual/en/function.popen.php) — Opens process file pointer
+* [ ] [readfile](http://php.net/manual/en/function.readfile.php) — Outputs a file
+* [ ] [readlink](http://php.net/manual/en/function.readlink.php) — Returns the target of a symbolic link
+* [ ] [realpath_cache_get](http://php.net/manual/en/function.realpath-cache-get.php) — Get realpath cache entries
+* [ ] [realpath_cache_size](http://php.net/manual/en/function.realpath-cache-size.php) — Get realpath cache size
+* [ ] [realpath](http://php.net/manual/en/function.realpath.php) — Returns canonicalized absolute pathname
+* [ ] [rename](http://php.net/manual/en/function.rename.php) — Renames a file or directory
+* [ ] [rewind](http://php.net/manual/en/function.rewind.php) — Rewind the position of a file pointer
+* [ ] [rmdir](http://php.net/manual/en/function.rmdir.php) — Removes directory
+* [ ] [set_file_buffer](http://php.net/manual/en/function.set-file-buffer.php) — Alias of stream_set_write_buffer
+* [ ] [stat](http://php.net/manual/en/function.stat.php) — Gives information about a file
+* [ ] [symlink](http://php.net/manual/en/function.symlink.php) — Creates a symbolic link
+* [ ] [tempnam](http://php.net/manual/en/function.tempnam.php) — Create file with unique file name
+* [ ] [tmpfile](http://php.net/manual/en/function.tmpfile.php) — Creates a temporary file
+* [ ] [touch](http://php.net/manual/en/function.touch.php) — Sets access and modification time of file
+* [ ] [umask](http://php.net/manual/en/function.umask.php) — Changes the current umask
+* [ ] [unlink](http://php.net/manual/en/function.unlink.php) — Deletes a file
 
 ## Misc. Functions
 
