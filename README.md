@@ -248,7 +248,7 @@ Python alternatives for PHP internal (built-in) functions.
 
 ## Mathematical Functions
 
-* [ ] [abs](http://php.net/manual/en/function.abs.php) — Absolute value
+* [ ] <strike>[abs](http://php.net/manual/en/function.abs.php) — Absolute value</strike>
 * [ ] [acos](http://php.net/manual/en/function.acos.php) — Arc cosine
 * [ ] [acosh](http://php.net/manual/en/function.acosh.php) — Inverse hyperbolic cosine
 * [ ] [asin](http://php.net/manual/en/function.asin.php) — Arc sine
@@ -280,14 +280,14 @@ Python alternatives for PHP internal (built-in) functions.
 * [ ] [log10](http://php.net/manual/en/function.log10.php) — Base-10 logarithm
 * [ ] [log1p](http://php.net/manual/en/function.log1p.php) — Returns log(1 + number), computed in a way that is accurate even when the value of number is close to zero
 * [ ] [log](http://php.net/manual/en/function.log.php) — Natural logarithm
-* [ ] [max](http://php.net/manual/en/function.max.php) — Find highest value
-* [ ] [min](http://php.net/manual/en/function.min.php) — Find lowest value
+* [ ] <strike>[max](http://php.net/manual/en/function.max.php) — Find highest value</strike>
+* [ ] <strike>[min](http://php.net/manual/en/function.min.php) — Find lowest value</strike>
 * [ ] [mt_getrandmax](http://php.net/manual/en/function.mt-getrandmax.php) — Show largest possible random value
 * [ ] [mt_rand](http://php.net/manual/en/function.mt-rand.php) — Generate a random value via the Mersenne Twister Random Number Generator
 * [ ] [mt_srand](http://php.net/manual/en/function.mt-srand.php) — Seeds the Mersenne Twister Random Number Generator
 * [ ] [octdec](http://php.net/manual/en/function.octdec.php) — Octal to decimal
 * [ ] [pi](http://php.net/manual/en/function.pi.php) — Get value of pi
-* [ ] [pow](http://php.net/manual/en/function.pow.php) — Exponential expression
+* [ ] <strike>[pow](http://php.net/manual/en/function.pow.php) — Exponential expression</strike>
 * [ ] [rad2deg](http://php.net/manual/en/function.rad2deg.php) — Converts the radian number to the equivalent number in degrees
 * [ ] [rand](http://php.net/manual/en/function.rand.php) — Generate a random integer
 * [ ] [round](http://php.net/manual/en/function.round.php) — Rounds a float

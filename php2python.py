@@ -1,6 +1,16 @@
 #! /usr/bin/env python
 # -*- coding: utf8 -*-
 
+from collections import Counter
+import random
+from functools import reduce
+import binascii
+import hashlib
+import locale
+import csv
+import io
+import re
+import math
 
 """
 Array Functions
@@ -42,23 +52,22 @@ def array_combine(keys, values):
 
 
 def array_count_values(array):
-    from collections import Counter
     return Counter(array)
 
 
-def array_diff_assoc(self):
+def array_diff_assoc():
     pass
 
 
-def array_diff_key(self):
+def array_diff_key():
     pass
 
 
-def array_diff_uassoc(self):
+def array_diff_uassoc():
     pass
 
 
-def array_diff_ukey(self):
+def array_diff_ukey():
     pass
 
 
@@ -147,7 +156,7 @@ def array_map(callback, array):
 
 def array_merge_recursive(array1, *arrays):
     for array in arrays:
-        for key, value in array.items(self):
+        for key, value in array.items():
             if key in array1:
                 if isinstance(value, dict):
                     array[key] = array_merge_recursive(array1[key], value)
@@ -171,7 +180,7 @@ def array_merge(array1, array2):
     return False
 
 
-def array_multisort(self):
+def array_multisort():
     pass
 
 
@@ -190,7 +199,6 @@ def array_product(array):
     if not array:
         return 0
     else:
-        from functools import reduce
         reduce(lambda a, b: a * b, array)
 
 
@@ -200,7 +208,6 @@ def array_push(array, *values):
 
 
 def array_rand(array, num=1):
-    import random
     if num == 1:
         return random.choice(array.keys())
     else:
@@ -208,18 +215,17 @@ def array_rand(array, num=1):
 
 
 def array_reduce(array, callback, initial=None):
-    from functools import reduce
     if initial is None:
         return reduce(callback, array)
     else:
         return reduce(function, array, initial)
 
 
-def array_replace_recursive(self):
+def array_replace_recursive():
     pass
 
 
-def array_replace(self):
+def array_replace():
     pass
 
 
@@ -388,7 +394,6 @@ def rsort(array):
 
 
 def shuffle(array):
-    import random
     return random.shuffle(array)
 
 
@@ -413,268 +418,218 @@ def usort(array):
 
 
 """
-Function handling Functions
-"""
-
-
-def call_user_func_array(self):
-    pass
-
-
-def call_user_func(self):
-    pass
-
-
-def create_function(self):
-    pass
-
-
-def forward_static_call_array(self):
-    pass
-
-
-def forward_static_call(self):
-    pass
-
-
-def func_get_arg(self):
-    pass
-
-
-def func_get_args(self):
-    pass
-
-
-def func_num_args(self):
-    pass
-
-
-def function_exists(self):
-    pass
-
-
-def get_defined_functions(self):
-    pass
-
-
-def register_shutdown_function(self):
-    pass
-
-
-def register_tick_function(self):
-    pass
-
-
-def unregister_tick_function(self):
-    pass
-
-
-"""
 Date/Time Functions
 """
 
 
-def checkdate(self):
+def checkdate(month, day, year):
+    import datetime
+    try:
+        month, day, year = map(int, (month, day, year))
+        datetime.date(year, month, day)
+        return True
+    except ValueError:
+        return False
     pass
 
 
-def date_add(self):
+def date_add():
     pass
 
 
-def date_create_from_format(self):
+def date_create_from_format():
     pass
 
 
-def date_create_immutable_from_format(self):
+def date_create_immutable_from_format():
     pass
 
 
-def date_create_immutable(self):
+def date_create_immutable():
     pass
 
 
-def date_create(self):
+def date_create():
     pass
 
 
-def date_date_set(self):
+def date_date_set():
     pass
 
 
-def date_default_timezone_get(self):
+def date_default_timezone_get():
     pass
 
 
-def date_default_timezone_set(self):
+def date_default_timezone_set():
     pass
 
 
-def date_diff(self):
+def date_diff():
     pass
 
 
-def date_format(self):
+def date_format():
     pass
 
 
-def date_get_last_errors(self):
+def date_get_last_errors():
     pass
 
 
-def date_interval_create_from_date_string(self):
+def date_interval_create_from_date_string():
     pass
 
 
-def date_interval_format(self):
+def date_interval_format():
     pass
 
 
-def date_isodate_set(self):
+def date_isodate_set():
     pass
 
 
-def date_modify(self):
+def date_modify():
     pass
 
 
-def date_offset_get(self):
+def date_offset_get():
     pass
 
 
-def date_parse_from_format(self):
+def date_parse_from_format():
     pass
 
 
-def date_parse(self):
+def date_parse():
     pass
 
 
-def date_sub(self):
+def date_sub():
     pass
 
 
-def date_sun_info(self):
+def date_sun_info():
     pass
 
 
-def date_sunrise(self):
+def date_sunrise():
     pass
 
 
-def date_sunset(self):
+def date_sunset():
     pass
 
 
-def date_time_set(self):
+def date_time_set():
     pass
 
 
-def date_timestamp_get(self):
+def date_timestamp_get():
     pass
 
 
-def date_timestamp_set(self):
+def date_timestamp_set():
     pass
 
 
-def date_timezone_get(self):
+def date_timezone_get():
     pass
 
 
-def date_timezone_set(self):
+def date_timezone_set():
     pass
 
 
-def date(self):
+def date():
     pass
 
 
-def getdate(self):
+def getdate():
     pass
 
 
-def gettimeofday(self):
+def gettimeofday():
     pass
 
 
-def gmdate(self):
+def gmdate():
     pass
 
 
-def gmmktime(self):
+def gmmktime():
     pass
 
 
-def gmstrftime(self):
+def gmstrftime():
     pass
 
 
-def idate(self):
+def idate():
     pass
 
 
-def localtime(self):
+def localtime():
     pass
 
 
-def microtime(self):
+def microtime():
     pass
 
 
-def mktime(self):
+def mktime():
     pass
 
 
-def strftime(self):
+def strftime():
     pass
 
 
-def strptime(self):
+def strptime():
     pass
 
 
-def strtotime(self):
+def strtotime():
     pass
 
 
-def time(self):
+def time():
     pass
 
 
-def timezone_abbreviations_list(self):
+def timezone_abbreviations_list():
     pass
 
 
-def timezone_identifiers_list(self):
+def timezone_identifiers_list():
     pass
 
 
-def timezone_location_get(self):
+def timezone_location_get():
     pass
 
 
-def timezone_name_from_abbr(self):
+def timezone_name_from_abbr():
     pass
 
 
-def timezone_name_get(self):
+def timezone_name_get():
     pass
 
 
-def timezone_offset_get(self):
+def timezone_offset_get():
     pass
 
 
-def timezone_open(self):
+def timezone_open():
     pass
 
 
-def timezone_transitions_get(self):
+def timezone_transitions_get():
     pass
 
 
-def timezone_version_get(self):
+def timezone_version_get():
     pass
 
 
@@ -728,7 +683,6 @@ def count_chars(string, mode=0):
 
 
 def crc32(string):
-    import binascii
     return binascii.crc32(string) & 0xffffffff
 
 
@@ -807,7 +761,6 @@ def ltrim(string, character_mask=None):
 
 
 def md5_file(filename, raw_output=False):
-    import hashlib
     crc = hashlib.md5()
     fp = open(filename, 'rb')
     for i in fp:
@@ -819,7 +772,6 @@ def md5_file(filename, raw_output=False):
 
 
 def md5(str, raw_output=False):
-    import hashlib
     res = hashlib.md5(str.encode())
     if raw_output:
         return res.digest()
@@ -843,7 +795,6 @@ def nl2br(string):
 
 
 def number_format(number, decimals):
-    import locale
     locale.setlocale(locale.LC_NUMERIC, '')
     return locale.format("%.*f", (decimals, number), True)
 
@@ -911,8 +862,6 @@ def sscanf(string):
 
 
 def str_getcsv(string, delimiter=',', enclosure='"', escape="\\"):
-    import csv
-    import io
     with io.StringIO(string) as f:
         reader = csv.reader(f, delimiter=delimiter, quotechar=enclosure, escapechar=escape)
         return next(reader)
@@ -960,7 +909,6 @@ def str_shuffle(string):
     :param string:
     :return:
     """
-    import random
     chars = list(string)
     random.shuffle(chars)
     return ''.join(chars)
@@ -971,12 +919,10 @@ def str_split(string, split_length=1):
     str_split — Convert a string to an array
     http://php.net/manual/en/function.str-split.php
     """
-    import re
     return filter(None, re.split('(.{1,%d})' % split_length, string))
 
 
 def str_word_count(string, format=0, charlist=''):
-    import re
     if isinstance(string, str):
         words = re.sub('[^\w ' + charlist + ']', '', string)
         words = words.replace('  ', ' ').split(' ')
@@ -1089,11 +1035,11 @@ def strtok(string):
 
 
 def strtolower(string):
-    pass
+    return string.lower()
 
 
 def strtoupper(string):
-    pass
+    return string.upper()
 
 
 def strtr(string):
@@ -1173,173 +1119,180 @@ Mathematical Functions
 """
 
 
-def abs(self):
+def acos(arg):
+    return math.acos(arg)
+
+
+def acosh(arg):
+    return math.acosh(arg)
+
+
+def asin(arg):
+    return math.asin(arg)
+
+
+def asinh(arg):
+    return math.asinh(arg)
+
+
+def atan2(y, x):
+    return math.atan2(y, x)
+
+
+def atan(arg):
+    return math.atan(arg)
+
+
+def atanh(arg):
+    return math.atanh(arg)
+
+
+def base_convert(number, from_base, to_base):
+    try:
+        base10 = int(number, from_base)
+    except ValueError:
+        raise
+
+    if to_base < 2 or to_base > 36:
+        raise NotImplementedError
+
+    digits = "0123456789abcdefghijklmnopqrstuvwxyz"
+    sign = ''
+
+    if base10 == 0:
+        return '0'
+    elif base10 < 0:
+        sign = '-'
+        base10 = -base10
+
+    s = ''
+    while base10 != 0:
+        r = base10 % to_base
+        r = int(r)
+        s = digits[r] + s
+        base10 //= to_base
+
+    output_value = sign + s
+    return output_value
+
+
+def bindec(binary_string):
+    return int(binary_string, 2)
+
+
+def ceil(value):
+    return math.ceil(value)
+
+
+def cos(arg):
+    return math.cos(arg)
+
+
+def cosh(arg):
+    return math.cosh(arg)
+
+
+def decbin(number):
+    return bin(number)
+
+
+def dechex(number):
+    return hex(number)
+
+
+def decoct(number):
+    return oct(number)
+
+
+def deg2rad(number):
+    return math.radians(number)
+
+
+def exp(arg):
+    return math.exp(arg)
+
+
+def expm1(arg):
+    return math.exp(arg) - 1
+
+
+def floor(value):
+    return math.floor(value)
+
+
+def fmod(x, y):
+    return math.fmod(x, y)
+
+
+def getrandmax():
     pass
 
 
-def acos(self):
+def hexdec(hex_string):
+    return int(hex_string, 16)
+
+
+def hypot(x, y):
+    return math.hypot(x, y)
+
+
+def intdiv(dividend, divisor):
     pass
 
 
-def acosh(self):
+def is_finite(val):
+    return math.isfinite(val)
+
+
+def is_infinite(val):
+    return math.isinf(val)
+
+
+def is_nan(val):
+    return math.isnan(val)
+
+
+def lcg_value():
     pass
 
 
-def asin(self):
+def log10(arg):
+    return math.log10(arg)
+
+
+def log1p(arg):
+    return math.log1p(arg)
+
+
+def log(arg, base):
+    return math.log(arg, base)
+
+
+def mt_getrandmax():
     pass
 
 
-def asinh(self):
+def mt_rand(low, high):
+    return random.randint(low, high)
+
+
+def mt_srand():
     pass
 
 
-def atan2(self):
-    pass
+def octdec(octal_string):
+    return int(octal_string, 8)
 
 
-def atan(self):
-    pass
-
-
-def atanh(self):
-    pass
-
-
-def base_convert(self):
-    pass
-
-
-def bindec(self):
-    pass
-
-
-def ceil(self):
-    pass
-
-
-def cos(self):
-    pass
-
-
-def cosh(self):
-    pass
-
-
-def decbin(self):
-    pass
-
-
-def dechex(self):
-    pass
-
-
-def decoct(self):
-    pass
-
-
-def deg2rad(self):
-    pass
-
-
-def exp(self):
-    pass
-
-
-def expm1(self):
-    pass
-
-
-def floor(self):
-    pass
-
-
-def fmod(self):
-    pass
-
-
-def getrandmax(self):
-    pass
-
-
-def hexdec(self):
-    pass
-
-
-def hypot(self):
-    pass
-
-
-def intdiv(self):
-    pass
-
-
-def is_finite(self):
-    pass
-
-
-def is_infinite(self):
-    pass
-
-
-def is_nan(self):
-    pass
-
-
-def lcg_value(self):
-    pass
-
-
-def log10(self):
-    pass
-
-
-def log1p(self):
-    pass
-
-
-def log(self):
-    pass
-
-
-def max(self):
-    pass
-
-
-def min(self):
-    pass
-
-
-def mt_getrandmax(self):
-    pass
-
-
-def mt_rand(self):
-    pass
-
-
-def mt_srand(self):
-    pass
-
-
-def octdec(self):
-    pass
-
-
-def pi(self):
-    pass
-
-
-def pow(self):
-    pass
+def pi():
+    return math.pi
 
 
 def rad2deg(number):
-    import math
     return math.degrees(number)
 
 
 def rand(minint, maxint):
-    import random
     random.randint(minint, maxint)
 
 
@@ -1348,32 +1301,26 @@ def php_round(val, precision=0):
 
 
 def sin(arg):
-    import math
     math.sin(arg)
 
 
 def sinh(arg):
-    import math
     math.sinh(arg)
 
 
 def sqrt(arg):
-    import math
     math.sqrt(arg)
 
 
 def srand(seed=None):
-    import random
     if seed is None:
         return random.seed()
     return random.seed(seed)
 
 
 def tan(arg):
-    import math
     return math.tan(arg)
 
 
 def tanh(arg):
-    import math
     math.tanh(arg)
