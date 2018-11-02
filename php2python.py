@@ -23,6 +23,7 @@ import base64
 import os
 import struct
 import sys
+import glob
 
 """
 Array Functions
@@ -1912,64 +1913,68 @@ def fwrite():
     pass
 
 
-def glob():
-    pass
+def glob(pattern):
+    glob.glob(pattern)
 
 
-def is_dir():
-    pass
+def is_dir(path):
+    return os.path.isdir(path)
 
 
-def is_executable():
-    pass
+def is_executable(filename):
+    return os.access(filename, os.X_OK)
 
 
-def is_file():
-    pass
+
+def is_file(filename):
+    return os.path.isfile(filename)
 
 
-def is_link():
-    pass
+
+def is_link(filename):
+    return os.path.islink(filename)
 
 
-def is_readable():
-    pass
+
+def is_readable(filename):
+    return os.access(filename, os.R_OK)
+
 
 
 def is_uploaded_file():
     pass
 
 
-def is_writable():
-    pass
+def is_writable(filename):
+    return os.access(filename, os.W_OK)
 
 
-def is_writeable():
-    pass
+def is_writeable(filename):
+    return os.access(filename, os.W_OK)
 
 
-def lchgrp():
-    pass
+def lchgrp(filename, group):
+    os.lchown(filename, None, group)
 
 
-def lchown():
-    pass
+def lchown(filename, user):
+    return os.lchown(filename, user, None)
 
 
-def link():
-    pass
+def link(target, link):
+    return os.link(target, link)
 
 
-def linkinfo():
-    pass
+def linkinfo(path):
+    return os.stat(path).st_dev
 
 
-def lstat():
-    pass
+def lstat(filename):
+    return os.lstat(filename)
 
 
-def mkdir():
-    pass
+def mkdir(pathname, mode):
+    return os.mkdir(pathname, mode)
 
 
 def move_uploaded_file():
@@ -1996,12 +2001,12 @@ def popen():
     pass
 
 
-def readfile():
-    pass
+def readfile(filename):
+    return open(filename, 'r').read()
 
 
-def readlink():
-    pass
+def readlink(path):
+    os.readlink(path)
 
 
 def realpath_cache_get():
@@ -2012,32 +2017,32 @@ def realpath_cache_size():
     pass
 
 
-def realpath():
-    pass
+def realpath(path):
+    return os.path.realpath(path)
 
 
-def rename():
-    pass
+def rename(oldname, newname):
+    return os.rename(oldname, newname)
 
 
 def rewind():
     pass
 
 
-def rmdir():
-    pass
+def rmdir(dirname):
+    return os.rmdir(dirname)
 
 
 def set_file_buffer():
     pass
 
 
-def stat():
-    pass
+def stat(filename):
+    return os.stat(filename)
 
 
-def symlink():
-    pass
+def symlink(target, link):
+    return os.symlink(target, link)
 
 
 def tempnam():
@@ -2087,14 +2092,6 @@ def defined():
 
 def die():
     sys.exit()
-
-
-def eval():
-    pass
-
-
-def exit():
-    pass
 
 
 def get_browser():

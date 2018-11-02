@@ -505,8 +505,8 @@ Python alternatives for PHP internal (built-in) functions.
 * [ ] [define](http://php.net/manual/en/function.define.php) — Defines a named constant
 * [ ] [defined](http://php.net/manual/en/function.defined.php) — Checks whether a given named constant exists
 * [ ] [die](http://php.net/manual/en/function.die.php) — Equivalent to exit
-* [ ] [eval](http://php.net/manual/en/function.eval.php) — Evaluate a string as PHP code
-* [ ] [exit](http://php.net/manual/en/function.exit.php) — Output a message and terminate the current script
+* [ ] <strike>[eval](http://php.net/manual/en/function.eval.php) — Evaluate a string as PHP code</strike>
+* [ ] <strike>[exit](http://php.net/manual/en/function.exit.php) — Output a message and terminate the current script</strike>
 * [ ] [get_browser](http://php.net/manual/en/function.get-browser.php) — Tells what the user's browser is capable of
 * [ ] [__halt_compiler](http://php.net/manual/en/function.halt-compiler.php) — Halts the compiler execution
 * [ ] [highlight_file](http://php.net/manual/en/function.highlight-file.php) — Syntax highlighting of a file
