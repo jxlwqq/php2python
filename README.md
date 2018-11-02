@@ -8,14 +8,14 @@ Python alternatives for PHP internal (built-in) functions.
 ## Table of Contents
 * [Array Functions](#array-functions)
 * [String Functions](#string-functions)
-* [Date/Time Functions](#date/time-functions) 
+* [Date/Time Functions](#date\/time-functions) 
 * [Mathematical Functions](#mathematical-functions) 
 * [Variable handling Functions](#variable-handling-functions)
 * [URL Functions](#url-functions) 
 * [Program execution Functions](#program-execution-functions) 
 * [Network Functions](#network-functions) 
 * [Filesystem Functions](#filesystem-functions) 
-* [Misc. Functions](#misc.-functions)
+* [Misc. Functions](#misc\.-functions)
 
 ## Array Functions
 
