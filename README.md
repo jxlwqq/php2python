@@ -5,6 +5,18 @@ Python alternatives for PHP internal (built-in) functions.
 * [php2go](https://github.com/syyongx/php2go)
 * [php2python](https://github.com/jxlwqq/php2python)
 
+## Table of Contents
+* [Array Functions](#array-functions)
+* [String Functions](#string-functions)
+* [Date/Time Functions](#date/time-functions) 
+* [Mathematical Functions](#mathematical-functions) 
+* [Variable handling Functions](#variable-handling-functions)
+* [URL Functions](#url-functions) 
+* [Program execution Functions](#program-execution-functions) 
+* [Network Functions](#network-functions) 
+* [Filesystem Functions](#filesystem-functions) 
+* [Misc. Functions](#misc.-functions)
+
 ## Array Functions
 
 * [ ] [array_change_key_case](http://php.net/manual/en/function.array-change-key-case.php) — Changes the case of all keys in an array
