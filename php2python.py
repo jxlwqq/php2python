@@ -23,7 +23,16 @@ import base64
 import os
 import struct
 import sys
-import glob
+import glob as py_glob
+import inspect
+import textwrap
+import crypt
+import quopri
+import string
+import syslog as py_syslog
+import fcntl
+import fnmatch as py_fnmatch
+
 
 """
 Array Functions
@@ -255,15 +264,24 @@ def array_shift(array):
 
 
 def array_slice(array, offset, length=None):
-    pass
+    if is_array(array) and not isinstance(array, dict):
+        if isinstance(array, set):
+            array = list(array)
+            return set(array[offset:length])
+        return array[offset:length]
+    return False
 
 
 def array_splice(array, offset, length, replacement=None):
-    pass
+    if replacement is None:
+        del array[offset: offset + length]
+    else:
+        array[offset: offset + length] = replacement
+    return array
 
 
 def array_sum(array):
-    pass
+    return sum(array)
 
 
 def array_udiff_assoc(array):
@@ -322,8 +340,15 @@ def asort(array):
     pass
 
 
-def compact(array):
-    pass
+def compact(*names):
+    caller = inspect.stack()[1][0]
+    vars = {}
+    for n in names:
+        if n in caller.f_locals:
+            vars[n] = caller.f_locals[n]
+        elif n in caller.f_globals:
+            vars[n] = caller.f_globals[n]
+    return vars
 
 
 def count(array):
@@ -339,7 +364,7 @@ def each(array):
 
 
 def end(array):
-    pass
+    return array[-1]
 
 
 def extract(array):
@@ -657,8 +682,8 @@ def chop(string, character_mask=None):
     return rtrim(string, character_mask)
 
 
-def chunk_split(string):
-    pass
+def chunk_split(body, chunklen, end="\r\n"):
+    return end.join(textwrap.wrap(body, chunklen))
 
 
 def convert_cyr_string(string):
@@ -673,11 +698,7 @@ def convert_uuencode(string):
     pass
 
 
-def count_chars(string, mode=0):
-    """
-    count_chars — Return information about characters used in a string
-    http://php.net/manual/en/function.count-chars.php
-    """
+def count_chars(s, mode=0):
     pass
 
 
@@ -685,8 +706,8 @@ def crc32(string):
     return binascii.crc32(string) & 0xffffffff
 
 
-def crypt(string):
-    pass
+def crypt(string, salt):
+    return crypt.crypt(string, salt)
 
 
 def echo(string):
@@ -744,7 +765,7 @@ def implode(glue='', pieces=[]):
 
 
 def join(glue='', pieces=[]):
-    return implode(glue, pieces)
+    return glue.join(pieces)
 
 
 def lcfirst(string):
@@ -810,8 +831,11 @@ def nl_langinfo(string):
     pass
 
 
-def nl2br(string):
-    pass
+def nl2br(string, is_xhtml=True):
+    if is_xhtml:
+        return string.replace('\n', '<br />\n')
+    else:
+        return string.replace('\n', '<br>\n')
 
 
 def number_format(number, decimals):
@@ -828,11 +852,11 @@ def printf(string):
 
 
 def quoted_printable_decode(string):
-    pass
+    return quopri.decodestring(string)
 
 
 def quoted_printable_encode(string):
-    pass
+    return quopri.encodestring(string)
 
 
 def quotemeta(string):
@@ -966,8 +990,8 @@ def strchr(string):
     pass
 
 
-def strcmp(string):
-    pass
+def strcmp(string1, string2):
+    return (string1 > string2) - (string1 < string2)
 
 
 def strcoll(string):
@@ -986,16 +1010,20 @@ def stripcslashes(string):
     pass
 
 
-def stripos(string):
-    pass
+def stripos(haystack, needle, offset=0):
+    return haystack.upper().find(needle.upper(), offset)
 
 
 def stripslashes(string):
     pass
 
 
-def stristr(string):
-    pass
+def stristr(haystack, needle):
+    pos = haystack.upper().find(needle.upper())
+    if pos < 0:
+        return None
+    else:
+        return haystack[pos:]
 
 
 def strlen(string):
@@ -1018,36 +1046,53 @@ def strncmp(string):
     pass
 
 
-def strpbrk(string):
-    pass
+def strpbrk(haystack, char_list):
+    try:
+        pos = next(i for i, x in enumerate(haystack) if x in char_list)
+        return haystack[pos:]
+    except:
+        return None
 
 
-def strpos(string):
-    pass
+def strpos(haystack, needle, offset=0):
+    pos = haystack.find(needle, offset)
+    if pos == -1:
+        return False
+    else:
+        return pos
 
 
-def strrchr(string):
-    pass
+def strrchr(haystack, needle):
+    return haystack.rfind(needle)
 
 
 def strrev(string):
-    pass
+    return string[::-1]
 
 
-def strripos(string):
-    pass
+def strripos(haystack, needle, offset=0):
+    return haystack.upper().rfind(needle.upper(), offset)
 
 
-def strrpos(string):
-    pass
+def strrpos(haystack, needle, offset=0):
+    pos = haystack.rfind(needle, offset)
+    if pos == -1:
+        return False
+    else:
+        return pos
 
 
-def strspn(string):
-    pass
+def strspn(subject, mask, start=0, length=None):
+    if not length: length = len(subject)
+    return len(re.search('^[' + mask + ']*', subject[start:start + length]).group(0))
 
 
-def strstr(string):
-    pass
+def strstr(haystack, needle):
+    pos = haystack.find(needle)
+    if pos < 0:
+        return None
+    else:
+        return haystack[pos:]
 
 
 def strtok(string):
@@ -1062,8 +1107,10 @@ def strtoupper(string):
     return string.upper()
 
 
-def strtr(string):
-    pass
+def strtr(string, from_str, to_str=None):
+    if is_array(from_str):
+        return string.translate(str.maketrans(from_str))
+    return string.translate(str.maketrans(from_str, to_str))
 
 
 def substr_compare(string):
@@ -1074,8 +1121,13 @@ def substr_count(string):
     pass
 
 
-def substr_replace(string):
-    pass
+def substr_replace(subject, replace, start, length=None):
+    if length is None:
+        return subject[:start] + replace
+    elif length < 0:
+        return subject[:start] + replace + subject[length:]
+    else:
+        return subject[:start] + replace + subject[start + length:]
 
 
 def substr(string, start, length=None):
@@ -1108,14 +1160,14 @@ def ucfirst(string):
     return string[0].upper() + string[1:]
 
 
-def ucwords(string):
+def ucwords(words):
     """
     ucwords — Uppercase the first character of each word in a string
     http://php.net/manual/en/function.ucwords.php
     :param string:
     :return:
     """
-    pass
+    return string.capwords(words)
 
 
 def vfprintf(string):
@@ -1728,8 +1780,8 @@ def socket_set_timeout():
     pass
 
 
-def syslog():
-    pass
+def syslog(priority, message):
+    return py_syslog.syslog(priority, message)
 
 
 '''
@@ -1737,20 +1789,23 @@ Filesystem Functions
 '''
 
 
-def basename():
-    pass
+def basename(path, suffix=None):
+    base_name = os.path.basename(path)
+    if suffix is not None and basename.endswith(suffix):
+        return base_name[:-len(suffix)]
+    return base_name
 
 
-def chgrp():
-    pass
+def chgrp(filename, group):
+    return os.chown(filename, None, group)
 
 
-def chmod():
-    pass
+def chmod(filename, mode):
+    return os.chmod(filename, mode)
 
 
-def chown():
-    pass
+def chown(filename, user):
+    return os.chown(filename, user, None)
 
 
 def clearstatcache():
@@ -1817,56 +1872,65 @@ def file_get_contents():
     pass
 
 
-def file_put_contents():
-    pass
+def file_put_contents(filename, mode, data):
+    file = open(filename, mode)
+    file.write(data)
+    file.close()
 
 
 def file():
     pass
 
 
-def fileatime():
-    pass
+def fileatime(filename):
+    return os.path.getatime(filename)
 
 
-def filectime():
-    pass
+
+def filectime(filename):
+    return os.path.getctime(filename)
 
 
-def filegroup():
-    pass
+def filegroup(filename):
+    return os.stat(filename).st_gid
 
 
-def fileinode():
-    pass
+def fileinode(filename):
+    return os.stat(filename).st_ino
 
 
-def filemtime():
-    pass
+
+def filemtime(filename):
+    return os.path.getmtime(filename)
 
 
-def fileowner():
-    pass
+
+def fileowner(filename):
+    return os.stat(filename).st_uid
 
 
-def fileperms():
-    pass
+
+def fileperms(filename):
+    return os.stat(filename).st_mode
 
 
-def filesize():
-    pass
+
+def filesize(filename):
+    return os.path.getsize(filename)
+
 
 
 def filetype():
     pass
 
 
-def flock():
-    pass
+def flock(handle,operation):
+    return fcntl.flock(handle, operation)
 
 
-def fnmatch():
-    pass
+def fnmatch(filename,pattern):
+    return py_fnmatch.fnmatch(filename, pattern)
+
 
 
 def fopen():
@@ -1914,7 +1978,7 @@ def fwrite():
 
 
 def glob(pattern):
-    glob.glob(pattern)
+    py_glob.glob(pattern)
 
 
 def is_dir(path):
@@ -1925,20 +1989,16 @@ def is_executable(filename):
     return os.access(filename, os.X_OK)
 
 
-
 def is_file(filename):
     return os.path.isfile(filename)
-
 
 
 def is_link(filename):
     return os.path.islink(filename)
 
 
-
 def is_readable(filename):
     return os.access(filename, os.R_OK)
-
 
 
 def is_uploaded_file():
