@@ -1331,3 +1331,13 @@ def tan(arg):
 
 def tanh(arg):
     return math.tanh(arg)
+
+
+'''
+Variable handling Functions
+'''
+
+
+'''
+Misc. Functions
+'''

@@ -297,3 +297,76 @@ Python alternatives for PHP internal (built-in) functions.
 * [x] [srand](http://php.net/manual/en/function.srand.php) — Seed the random number generator
 * [x] [tan](http://php.net/manual/en/function.tan.php) — Tangent
 * [x] [tanh](http://php.net/manual/en/function.tanh.php) — Hyperbolic tangent
+
+## Variable handling Functions
+
+* [ ] [boolval](http://php.net/manual/en/function.boolval.php) — Get the boolean value of a variable
+* [ ] [debug_zval_dump](http://php.net/manual/en/function.debug-zval-dump.php) — Dumps a string representation of an internal zend value to output
+* [ ] [doubleval](http://php.net/manual/en/function.doubleval.php) — Alias of floatval
+* [ ] [empty](http://php.net/manual/en/function.empty.php) — Determine whether a variable is empty
+* [ ] [floatval](http://php.net/manual/en/function.floatval.php) — Get float value of a variable
+* [ ] [get_defined_vars](http://php.net/manual/en/function.get-defined-vars.php) — Returns an array of all defined variables
+* [ ] [get_resource_type](http://php.net/manual/en/function.get-resource-type.php) — Returns the resource type
+* [ ] [gettype](http://php.net/manual/en/function.gettype.php) — Get the type of a variable
+* [ ] [import_request_variables](http://php.net/manual/en/function.import-request-variables.php) — Import GET/POST/Cookie variables into the global scope
+* [ ] [intval](http://php.net/manual/en/function.intval.php) — Get the integer value of a variable
+* [ ] [is_array](http://php.net/manual/en/function.is-array.php) — Finds whether a variable is an array
+* [ ] [is_bool](http://php.net/manual/en/function.is-bool.php) — Finds out whether a variable is a boolean
+* [ ] [is_callable](http://php.net/manual/en/function.is-callable.php) — Verify that the contents of a variable can be called as a function
+* [ ] [is_countable](http://php.net/manual/en/function.is-countable.php) — Verify that the contents of a variable is a countable value
+* [ ] [is_double](http://php.net/manual/en/function.is-double.php) — Alias of is_float
+* [ ] [is_float](http://php.net/manual/en/function.is-float.php) — Finds whether the type of a variable is float
+* [ ] [is_int](http://php.net/manual/en/function.is-int.php) — Find whether the type of a variable is integer
+* [ ] [is_integer](http://php.net/manual/en/function.is-integer.php) — Alias of is_int
+* [ ] [is_iterable](http://php.net/manual/en/function.is-iterable.php) — Verify that the contents of a variable is an iterable value
+* [ ] [is_long](http://php.net/manual/en/function.is-long.php) — Alias of is_int
+* [ ] [is_null](http://php.net/manual/en/function.is-null.php) — Finds whether a variable is NULL
+* [ ] [is_numeric](http://php.net/manual/en/function.is-numeric.php) — Finds whether a variable is a number or a numeric string
+* [ ] [is_object](http://php.net/manual/en/function.is-object.php) — Finds whether a variable is an object
+* [ ] [is_real](http://php.net/manual/en/function.is-real.php) — Alias of is_float
+* [ ] [is_resource](http://php.net/manual/en/function.is-resource.php) — Finds whether a variable is a resource
+* [ ] [is_scalar](http://php.net/manual/en/function.is-scalar.php) — Finds whether a variable is a scalar
+* [ ] [is_string](http://php.net/manual/en/function.is-string.php) — Find whether the type of a variable is string
+* [ ] [isset](http://php.net/manual/en/function.isset.php) — Determine if a variable is set and is not NULL
+* [ ] [print_r](http://php.net/manual/en/function.print-r.php) — Prints human-readable information about a variable
+* [ ] [serialize](http://php.net/manual/en/function.serialize.php) — Generates a storable representation of a value
+* [ ] [settype](http://php.net/manual/en/function.settype.php) — Set the type of a variable
+* [ ] [strval](http://php.net/manual/en/function.strval.php) — Get string value of a variable
+* [ ] [unserialize](http://php.net/manual/en/function.unserialize.php) — Creates a PHP value from a stored representation
+* [ ] [unset](http://php.net/manual/en/function.unset.php) — Unset a given variable
+* [ ] [var_dump](http://php.net/manual/en/function.var-dump.php) — Dumps information about a variable
+* [ ] [var_export](http://php.net/manual/en/function.var-export.php) — Outputs or returns a parsable string representation of a variable
+
+
+## Misc. Functions
+
+* [ ] [connection_aborted](http://php.net/manual/en/function.connection-aborted.php) — Check whether client disconnected
+* [ ] [connection_status](http://php.net/manual/en/function.connection-status.php) — Returns connection status bitfield
+* [ ] [constant](http://php.net/manual/en/function.constant.php) — Returns the value of a constant
+* [ ] [define](http://php.net/manual/en/function.define.php) — Defines a named constant
+* [ ] [defined](http://php.net/manual/en/function.defined.php) — Checks whether a given named constant exists
+* [ ] [die](http://php.net/manual/en/function.die.php) — Equivalent to exit
+* [ ] [eval](http://php.net/manual/en/function.eval.php) — Evaluate a string as PHP code
+* [ ] [exit](http://php.net/manual/en/function.exit.php) — Output a message and terminate the current script
+* [ ] [get_browser](http://php.net/manual/en/function.get-browser.php) — Tells what the user's browser is capable of
+* [ ] [__halt_compiler](http://php.net/manual/en/function.halt-compiler.php) — Halts the compiler execution
+* [ ] [highlight_file](http://php.net/manual/en/function.highlight-file.php) — Syntax highlighting of a file
+* [ ] [highlight_string](http://php.net/manual/en/function.highlight-string.php) — Syntax highlighting of a string
+* [ ] [hrtime](http://php.net/manual/en/function.hrtime.php) — Get the system's high resolution time
+* [ ] [ignore_user_abort](http://php.net/manual/en/function.ignore-user-abort.php) — Set whether a client disconnect should abort script execution
+* [ ] [pack](http://php.net/manual/en/function.pack.php) — Pack data into binary string
+* [ ] [php_check_syntax](http://php.net/manual/en/function.php-check-syntax.php) — Check the PHP syntax of (and execute) the specified file
+* [ ] [php_strip_whitespace](http://php.net/manual/en/function.php-strip-whitespace.php) — Return source with stripped comments and whitespace
+* [ ] [sapi_windows_cp_conv](http://php.net/manual/en/function.sapi-windows-cp-conv.php) — Convert string from one codepage to another
+* [ ] [sapi_windows_cp_get](http://php.net/manual/en/function.sapi-windows-cp-get.php) — Get process codepage
+* [ ] [sapi_windows_cp_is_utf8](http://php.net/manual/en/function.sapi-windows-cp-is-utf8.php) — Indicates whether the codepage is UTF-8 compatible
+* [ ] [sapi_windows_cp_set](http://php.net/manual/en/function.sapi-windows-cp-set.php) — Set process codepage
+* [ ] [sapi_windows_vt100_support](http://php.net/manual/en/function.sapi-windows-vt100-support.php) — Get or set VT100 support for the specified stream associated to an output buffer of a Windows console.
+* [ ] [show_source](http://php.net/manual/en/function.show-source.php) — Alias of highlight_file
+* [ ] [sleep](http://php.net/manual/en/function.sleep.php) — Delay execution
+* [ ] [sys_getloadavg](http://php.net/manual/en/function.sys-getloadavg.php) — Gets system load average
+* [ ] [time_nanosleep](http://php.net/manual/en/function.time-nanosleep.php) — Delay for a number of seconds and nanoseconds
+* [ ] [time_sleep_until](http://php.net/manual/en/function.time-sleep-until.php) — Make the script sleep until the specified time
+* [ ] [uniqid](http://php.net/manual/en/function.uniqid.php) — Generate a unique ID
+* [ ] [unpack](http://php.net/manual/en/function.unpack.php) — Unpack data from binary string
+* [ ] [usleep](http://php.net/manual/en/function.usleep.php) — Delay execution in microseconds
