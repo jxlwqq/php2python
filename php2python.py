@@ -21,6 +21,8 @@ import pickle
 import pprint
 import base64
 import os
+import struct
+import sys
 
 """
 Array Functions
@@ -2046,16 +2048,16 @@ def tmpfile():
     pass
 
 
-def touch():
-    pass
+def touch(filename, atime=None, mtime=None):
+    os.utime(filename, (atime, mtime))
 
 
 def umask():
     pass
 
 
-def unlink():
-    pass
+def unlink(filename):
+    os.unlink(filename)
 
 
 '''
@@ -2084,7 +2086,7 @@ def defined():
 
 
 def die():
-    pass
+    sys.exit()
 
 
 def eval():
@@ -2119,8 +2121,8 @@ def ignore_user_abort():
     pass
 
 
-def pack():
-    pass
+def pack(format_codes, args):
+    return struct.pack(format_codes, args)
 
 
 def php_check_syntax():
@@ -2155,29 +2157,29 @@ def show_source():
     pass
 
 
-def sleep():
-    pass
+def sleep(seconds):
+    time.sleep(seconds)
 
 
 def sys_getloadavg():
+    return os.getloadavg()
+
+
+def time_nanosleep(seconds, nanoseconds):
     pass
 
 
-def time_nanosleep():
-    pass
+def time_sleep_until(timestamp):
+    time.sleep(timestamp - time.time())
 
 
-def time_sleep_until():
-    pass
+def uniqid(prefix=''):
+    return prefix + hex(int(time()))[2:10] + hex(int(time() * 1000000) % 0x100000)[2:7]
 
 
-def uniqid():
-    pass
+def unpack(format_codes, data):
+    return struct.unpack(format_codes, data)
 
 
-def unpack():
-    pass
-
-
-def usleep():
-    pass
+def usleep(micro_seconds):
+    time.sleep(micro_seconds / 1000000.0)
