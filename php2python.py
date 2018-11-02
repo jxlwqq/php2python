@@ -1304,19 +1304,19 @@ def rad2deg(number):
 
 
 def rand(minint, maxint):
-    random.randint(minint, maxint)
+    return random.randint(minint, maxint)
 
 
 def sin(arg):
-    math.sin(arg)
+    return math.sin(arg)
 
 
 def sinh(arg):
-    math.sinh(arg)
+    return math.sinh(arg)
 
 
 def sqrt(arg):
-    math.sqrt(arg)
+    return math.sqrt(arg)
 
 
 def srand(seed=None):
@@ -1330,4 +1330,4 @@ def tan(arg):
 
 
 def tanh(arg):
-    math.tanh(arg)
+    return math.tanh(arg)

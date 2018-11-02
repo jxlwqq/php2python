@@ -249,51 +249,51 @@ Python alternatives for PHP internal (built-in) functions.
 ## Mathematical Functions
 
 * [ ] <strike>[abs](http://php.net/manual/en/function.abs.php) — Absolute value</strike>, `Built-in function in Python`
-* [ ] [acos](http://php.net/manual/en/function.acos.php) — Arc cosine
-* [ ] [acosh](http://php.net/manual/en/function.acosh.php) — Inverse hyperbolic cosine
-* [ ] [asin](http://php.net/manual/en/function.asin.php) — Arc sine
-* [ ] [asinh](http://php.net/manual/en/function.asinh.php) — Inverse hyperbolic sine
-* [ ] [atan2](http://php.net/manual/en/function.atan2.php) — Arc tangent of two variables
-* [ ] [atan](http://php.net/manual/en/function.atan.php) — Arc tangent
-* [ ] [atanh](http://php.net/manual/en/function.atanh.php) — Inverse hyperbolic tangent
-* [ ] [base_convert](http://php.net/manual/en/function.base-convert.php) — Convert a number between arbitrary bases
-* [ ] [bindec](http://php.net/manual/en/function.bindec.php) — Binary to decimal
-* [ ] [ceil](http://php.net/manual/en/function.ceil.php) — Round fractions up
-* [ ] [cos](http://php.net/manual/en/function.cos.php) — Cosine
-* [ ] [cosh](http://php.net/manual/en/function.cosh.php) — Hyperbolic cosine
-* [ ] [decbin](http://php.net/manual/en/function.decbin.php) — Decimal to binary
-* [ ] [dechex](http://php.net/manual/en/function.dechex.php) — Decimal to hexadecimal
-* [ ] [decoct](http://php.net/manual/en/function.decoct.php) — Decimal to octal
-* [ ] [deg2rad](http://php.net/manual/en/function.deg2rad.php) — Converts the number in degrees to the radian equivalent
-* [ ] [exp](http://php.net/manual/en/function.exp.php) — Calculates the exponent of e
-* [ ] [expm1](http://php.net/manual/en/function.expm1.php) — Returns exp(number) - 1, computed in a way that is accurate even when the value of number is close to zero
-* [ ] [floor](http://php.net/manual/en/function.floor.php) — Round fractions down
-* [ ] [fmod](http://php.net/manual/en/function.fmod.php) — Returns the floating point remainder (modulo) of the division of the arguments
+* [x] [acos](http://php.net/manual/en/function.acos.php) — Arc cosine
+* [x] [acosh](http://php.net/manual/en/function.acosh.php) — Inverse hyperbolic cosine
+* [x] [asin](http://php.net/manual/en/function.asin.php) — Arc sine
+* [x] [asinh](http://php.net/manual/en/function.asinh.php) — Inverse hyperbolic sine
+* [x] [atan2](http://php.net/manual/en/function.atan2.php) — Arc tangent of two variables
+* [x] [atan](http://php.net/manual/en/function.atan.php) — Arc tangent
+* [x] [atanh](http://php.net/manual/en/function.atanh.php) — Inverse hyperbolic tangent
+* [x] [base_convert](http://php.net/manual/en/function.base-convert.php) — Convert a number between arbitrary bases
+* [x] [bindec](http://php.net/manual/en/function.bindec.php) — Binary to decimal
+* [x] [ceil](http://php.net/manual/en/function.ceil.php) — Round fractions up
+* [x] [cos](http://php.net/manual/en/function.cos.php) — Cosine
+* [x] [cosh](http://php.net/manual/en/function.cosh.php) — Hyperbolic cosine
+* [x] [decbin](http://php.net/manual/en/function.decbin.php) — Decimal to binary
+* [x] [dechex](http://php.net/manual/en/function.dechex.php) — Decimal to hexadecimal
+* [x] [decoct](http://php.net/manual/en/function.decoct.php) — Decimal to octal
+* [x] [deg2rad](http://php.net/manual/en/function.deg2rad.php) — Converts the number in degrees to the radian equivalent
+* [x] [exp](http://php.net/manual/en/function.exp.php) — Calculates the exponent of e
+* [x] [expm1](http://php.net/manual/en/function.expm1.php) — Returns exp(number) - 1, computed in a way that is accurate even when the value of number is close to zero
+* [x] [floor](http://php.net/manual/en/function.floor.php) — Round fractions down
+* [x] [fmod](http://php.net/manual/en/function.fmod.php) — Returns the floating point remainder (modulo) of the division of the arguments
 * [ ] [getrandmax](http://php.net/manual/en/function.getrandmax.php) — Show largest possible random value
-* [ ] [hexdec](http://php.net/manual/en/function.hexdec.php) — Hexadecimal to decimal
-* [ ] [hypot](http://php.net/manual/en/function.hypot.php) — Calculate the length of the hypotenuse of a right-angle triangle
+* [x] [hexdec](http://php.net/manual/en/function.hexdec.php) — Hexadecimal to decimal
+* [x] [hypot](http://php.net/manual/en/function.hypot.php) — Calculate the length of the hypotenuse of a right-angle triangle
 * [ ] [intdiv](http://php.net/manual/en/function.intdiv.php) — Integer division
-* [ ] [is_finite](http://php.net/manual/en/function.is-finite.php) — Finds whether a value is a legal finite number
-* [ ] [is_infinite](http://php.net/manual/en/function.is-infinite.php) — Finds whether a value is infinite
-* [ ] [is_nan](http://php.net/manual/en/function.is-nan.php) — Finds whether a value is not a number
+* [x] [is_finite](http://php.net/manual/en/function.is-finite.php) — Finds whether a value is a legal finite number
+* [x] [is_infinite](http://php.net/manual/en/function.is-infinite.php) — Finds whether a value is infinite
+* [x] [is_nan](http://php.net/manual/en/function.is-nan.php) — Finds whether a value is not a number
 * [ ] [lcg_value](http://php.net/manual/en/function.lcg-value.php) — Combined linear congruential generator
-* [ ] [log10](http://php.net/manual/en/function.log10.php) — Base-10 logarithm
-* [ ] [log1p](http://php.net/manual/en/function.log1p.php) — Returns log(1 + number), computed in a way that is accurate even when the value of number is close to zero
-* [ ] [log](http://php.net/manual/en/function.log.php) — Natural logarithm
+* [x] [log10](http://php.net/manual/en/function.log10.php) — Base-10 logarithm
+* [x] [log1p](http://php.net/manual/en/function.log1p.php) — Returns log(1 + number), computed in a way that is accurate even when the value of number is close to zero
+* [x] [log](http://php.net/manual/en/function.log.php) — Natural logarithm
 * [ ] <strike>[max](http://php.net/manual/en/function.max.php) — Find highest value</strike>, `Built-in function in Python`
 * [ ] <strike>[min](http://php.net/manual/en/function.min.php) — Find lowest value</strike>, `Built-in function in Python`
 * [ ] [mt_getrandmax](http://php.net/manual/en/function.mt-getrandmax.php) — Show largest possible random value
 * [ ] [mt_rand](http://php.net/manual/en/function.mt-rand.php) — Generate a random value via the Mersenne Twister Random Number Generator
 * [ ] [mt_srand](http://php.net/manual/en/function.mt-srand.php) — Seeds the Mersenne Twister Random Number Generator
-* [ ] [octdec](http://php.net/manual/en/function.octdec.php) — Octal to decimal
-* [ ] [pi](http://php.net/manual/en/function.pi.php) — Get value of pi
+* [x] [octdec](http://php.net/manual/en/function.octdec.php) — Octal to decimal
+* [x] [pi](http://php.net/manual/en/function.pi.php) — Get value of pi
 * [ ] <strike>[pow](http://php.net/manual/en/function.pow.php) — Exponential expression</strike>, `Built-in function in Python`
-* [ ] [rad2deg](http://php.net/manual/en/function.rad2deg.php) — Converts the radian number to the equivalent number in degrees
-* [ ] [rand](http://php.net/manual/en/function.rand.php) — Generate a random integer
+* [x] [rad2deg](http://php.net/manual/en/function.rad2deg.php) — Converts the radian number to the equivalent number in degrees
+* [x] [rand](http://php.net/manual/en/function.rand.php) — Generate a random integer
 * [ ] <strike>[round](http://php.net/manual/en/function.round.php) — Rounds a float</strike>, `Built-in function in Python`
-* [ ] [sin](http://php.net/manual/en/function.sin.php) — Sine
-* [ ] [sinh](http://php.net/manual/en/function.sinh.php) — Hyperbolic sine
-* [ ] [sqrt](http://php.net/manual/en/function.sqrt.php) — Square root
-* [ ] [srand](http://php.net/manual/en/function.srand.php) — Seed the random number generator
-* [ ] [tan](http://php.net/manual/en/function.tan.php) — Tangent
-* [ ] [tanh](http://php.net/manual/en/function.tanh.php) — Hyperbolic tangent
+* [x] [sin](http://php.net/manual/en/function.sin.php) — Sine
+* [x] [sinh](http://php.net/manual/en/function.sinh.php) — Hyperbolic sine
+* [x] [sqrt](http://php.net/manual/en/function.sqrt.php) — Square root
+* [x] [srand](http://php.net/manual/en/function.srand.php) — Seed the random number generator
+* [x] [tan](http://php.net/manual/en/function.tan.php) — Tangent
+* [x] [tanh](http://php.net/manual/en/function.tanh.php) — Hyperbolic tangent
