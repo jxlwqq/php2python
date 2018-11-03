@@ -1,6 +1,6 @@
 # PHP2Python
 
-Python alternatives for PHP internal (built-in) functions.
+Python alternatives for PHP internal (built-in) functions. Support Python 3 Only.
 
 * [php2go](https://github.com/syyongx/php2go) - Use Golang to implement PHP's common built-in functions
 
@@ -18,18 +18,18 @@ Python alternatives for PHP internal (built-in) functions.
 
 ## Array Functions
 
-* [ ] [array_change_key_case](http://php.net/manual/en/function.array-change-key-case.php) — Changes the case of all keys in an array
-* [ ] [array_chunk](http://php.net/manual/en/function.array-chunk.php) — Split an array into chunks
-* [ ] [array_column](http://php.net/manual/en/function.array-column.php) — Return the values from a single column in the input array
-* [ ] [array_combine](http://php.net/manual/en/function.array-combine.php) — Creates an array by using one array for keys and another for its values
-* [ ] [array_count_values](http://php.net/manual/en/function.array-count-values.php) — Counts all the values of an array
+* [x] [array_change_key_case](http://php.net/manual/en/function.array-change-key-case.php) — Changes the case of all keys in an array
+* [x] [array_chunk](http://php.net/manual/en/function.array-chunk.php) — Split an array into chunks
+* [x] [array_column](http://php.net/manual/en/function.array-column.php) — Return the values from a single column in the input array
+* [x] [array_combine](http://php.net/manual/en/function.array-combine.php) — Creates an array by using one array for keys and another for its values
+* [x] [array_count_values](http://php.net/manual/en/function.array-count-values.php) — Counts all the values of an array
 * [ ] [array_diff_assoc](http://php.net/manual/en/function.array-diff-assoc.php) — Computes the difference of arrays with additional index check
 * [ ] [array_diff_key](http://php.net/manual/en/function.array-diff-key.php) — Computes the difference of arrays using keys for comparison
 * [ ] [array_diff_uassoc](http://php.net/manual/en/function.array-diff-uassoc.php) — Computes the difference of arrays with additional index check which is performed by a user supplied callback function
 * [ ] [array_diff_ukey](http://php.net/manual/en/function.array-diff-ukey.php) — Computes the difference of arrays using a callback function on the keys for comparison
-* [ ] [array_diff](http://php.net/manual/en/function.array-diff.php) — Computes the difference of arrays
-* [ ] [array_fill_keys](http://php.net/manual/en/function.array-fill-keys.php) — Fill an array with values, specifying keys
-* [ ] [array_fill](http://php.net/manual/en/function.array-fill.php) — Fill an array with values
+* [x] [array_diff](http://php.net/manual/en/function.array-diff.php) — Computes the difference of arrays
+* [x] [array_fill_keys](http://php.net/manual/en/function.array-fill-keys.php) — Fill an array with values, specifying keys
+* [x] [array_fill](http://php.net/manual/en/function.array-fill.php) — Fill an array with values
 * [ ] [array_filter](http://php.net/manual/en/function.array-filter.php) — Filters elements of an array using a callback function
 * [ ] [array_flip](http://php.net/manual/en/function.array-flip.php) — Exchanges all keys with their associated values in an array
 * [ ] [array_intersect_assoc](http://php.net/manual/en/function.array-intersect-assoc.php) — Computes the intersection of arrays with additional index check
