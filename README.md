@@ -249,7 +249,7 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 * [ ] [time](http://php.net/manual/en/function.time.php) — Return current Unix timestamp
 * [ ] <strike>[timezone_abbreviations_list](http://php.net/manual/en/function.timezone-abbreviations-list.php) — Alias of DateTimeZone::listAbbreviations</strike>
 * [ ] <strike>[timezone_identifiers_list](http://php.net/manual/en/function.timezone-identifiers-list.php) — Alias of DateTimeZone::listIdentifiers</strike>
-* <strike>[ ] [timezone_location_get](http://php.net/manual/en/function.timezone-location-get.php) — Alias of DateTimeZone::getLocation</strike>
+* [ ] <strike>[timezone_location_get](http://php.net/manual/en/function.timezone-location-get.php) — Alias of DateTimeZone::getLocation</strike>
 * [ ] [timezone_name_from_abbr](http://php.net/manual/en/function.timezone-name-from-abbr.php) — Returns the timezone name from abbreviation
 * [ ] <strike>[timezone_name_get](http://php.net/manual/en/function.timezone-name-get.php) — Alias of DateTimeZone::getName</strike>
 * [ ] [timezone_offset_get](http://php.net/manual/en/function.timezone-offset-get.php) — Alias of DateTimeZone::getOffset
