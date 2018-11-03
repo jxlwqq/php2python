@@ -206,33 +206,33 @@ Python alternatives for PHP internal (built-in) functions.
 ## Date/Time Functions
 
 * [ ] [checkdate](http://php.net/manual/en/function.checkdate.php) — Validate a Gregorian date
-* [ ] [date_add](http://php.net/manual/en/function.date-add.php) — Alias of DateTime::add
-* [ ] [date_create_from_format](http://php.net/manual/en/function.date-create-from-format.php) — Alias of DateTime::createFromFormat
-* [ ] [date_create_immutable_from_format](http://php.net/manual/en/function.date-create-immutable-from-format.php) — Alias of DateTimeImmutable::createFromFormat
-* [ ] [date_create_immutable](http://php.net/manual/en/function.date-create-immutable.php) — Alias of DateTimeImmutable::__construct
-* [ ] [date_create](http://php.net/manual/en/function.date-create.php) — Alias of DateTime::__construct
-* [ ] [date_date_set](http://php.net/manual/en/function.date-date-set.php) — Alias of DateTime::setDate
+* [ ] <strike>[date_add](http://php.net/manual/en/function.date-add.php) — Alias of DateTime::add</strike>
+* [ ] <strike>[date_create_from_format](http://php.net/manual/en/function.date-create-from-format.php) — Alias of DateTime::createFromFormat</strike>
+* [ ] <strike>[date_create_immutable_from_format](http://php.net/manual/en/function.date-create-immutable-from-format.php) — Alias of DateTimeImmutable::createFromFormat</strike>
+* [ ] <strike>[date_create_immutable](http://php.net/manual/en/function.date-create-immutable.php) — Alias of DateTimeImmutable::__construct</strike>
+* [ ] <strike>[date_create](http://php.net/manual/en/function.date-create.php) — Alias of DateTime::__construct</strike>
+* [ ] <strike>[date_date_set](http://php.net/manual/en/function.date-date-set.php) — Alias of DateTime::setDate</strike>
 * [ ] [date_default_timezone_get](http://php.net/manual/en/function.date-default-timezone-get.php) — Gets the default timezone used by all date/time functions in a script
 * [ ] [date_default_timezone_set](http://php.net/manual/en/function.date-default-timezone-set.php) — Sets the default timezone used by all date/time functions in a script
-* [ ] [date_diff](http://php.net/manual/en/function.date-diff.php) — Alias of DateTime::diff
-* [ ] [date_format](http://php.net/manual/en/function.date-format.php) — Alias of DateTime::format
-* [ ] [date_get_last_errors](http://php.net/manual/en/function.date-get-last-errors.php) — Alias of DateTime::getLastErrors
-* [ ] [date_interval_create_from_date_string](http://php.net/manual/en/function.date-interval-create-from-date-string.php) — Alias of DateInterval::createFromDateString
-* [ ] [date_interval_format](http://php.net/manual/en/function.date-interval-format.php) — Alias of DateInterval::format
-* [ ] [date_isodate_set](http://php.net/manual/en/function.date-isodate-set.php) — Alias of DateTime::setISODate
-* [ ] [date_modify](http://php.net/manual/en/function.date-modify.php) — Alias of DateTime::modify
-* [ ] [date_offset_get](http://php.net/manual/en/function.date-offset-get.php) — Alias of DateTime::getOffset
+* [ ] <strike>[date_diff](http://php.net/manual/en/function.date-diff.php) — Alias of DateTime::diff</strike>
+* [ ] [date_format](http://php.net/manual/en/function.date-format.php) — Alias of DateTime::format</strike>
+* [ ] <strike>[date_get_last_errors](http://php.net/manual/en/function.date-get-last-errors.php) — Alias of DateTime::getLastErrors</strike>
+* [ ] <strike>[date_interval_create_from_date_string](http://php.net/manual/en/function.date-interval-create-from-date-string.php) — Alias of DateInterval::createFromDateString</strike>
+* [ ] <strike>[date_interval_format](http://php.net/manual/en/function.date-interval-format.php) — Alias of DateInterval::format</strike>
+* [ ] <strike>[date_isodate_set](http://php.net/manual/en/function.date-isodate-set.php) — Alias of DateTime::setISODate</strike>
+* [ ] <strike>[date_modify](http://php.net/manual/en/function.date-modify.php) — Alias of DateTime::modify</strike>
+* [ ] <strike>[date_offset_get](http://php.net/manual/en/function.date-offset-get.php) — Alias of DateTime::getOffset</strike>
 * [ ] [date_parse_from_format](http://php.net/manual/en/function.date-parse-from-format.php) — Get info about given date formatted according to the specified format
 * [ ] [date_parse](http://php.net/manual/en/function.date-parse.php) — Returns associative array with detailed info about given date
-* [ ] [date_sub](http://php.net/manual/en/function.date-sub.php) — Alias of DateTime::sub
+* [ ] <strike>[date_sub](http://php.net/manual/en/function.date-sub.php) — Alias of DateTime::sub</strike>
 * [ ] [date_sun_info](http://php.net/manual/en/function.date-sun-info.php) — Returns an array with information about sunset/sunrise and twilight begin/end
 * [ ] [date_sunrise](http://php.net/manual/en/function.date-sunrise.php) — Returns time of sunrise for a given day and location
-* [ ] [date_sunset](http://php.net/manual/en/function.date-sunset.php) — Returns time of sunset for a given day and location
-* [ ] [date_time_set](http://php.net/manual/en/function.date-time-set.php) — Alias of DateTime::setTime
-* [ ] [date_timestamp_get](http://php.net/manual/en/function.date-timestamp-get.php) — Alias of DateTime::getTimestamp
-* [ ] [date_timestamp_set](http://php.net/manual/en/function.date-timestamp-set.php) — Alias of DateTime::setTimestamp
-* [ ] [date_timezone_get](http://php.net/manual/en/function.date-timezone-get.php) — Alias of DateTime::getTimezone
-* [ ] [date_timezone_set](http://php.net/manual/en/function.date-timezone-set.php) — Alias of DateTime::setTimezone
+* [ ] <strike>[date_sunset](http://php.net/manual/en/function.date-sunset.php) — Returns time of sunset for a given day and location</strike>
+* [ ] <strike>[date_time_set](http://php.net/manual/en/function.date-time-set.php) — Alias of DateTime::setTime</strike>
+* [ ] <strike>[date_timestamp_get](http://php.net/manual/en/function.date-timestamp-get.php) — Alias of DateTime::getTimestamp</strike>
+* [ ] <strike>[date_timestamp_set](http://php.net/manual/en/function.date-timestamp-set.php) — Alias of DateTime::setTimestamp</strike>
+* [ ] <strike>[date_timezone_get](http://php.net/manual/en/function.date-timezone-get.php) — Alias of DateTime::getTimezone</strike>
+* [ ] <strike>[date_timezone_set](http://php.net/manual/en/function.date-timezone-set.php) — Alias of DateTime::setTimezone</strike>
 * [ ] [date](http://php.net/manual/en/function.date.php) — Format a local time/date
 * [ ] [getdate](http://php.net/manual/en/function.getdate.php) — Get date/time information
 * [ ] [gettimeofday](http://php.net/manual/en/function.gettimeofday.php) — Get current time
@@ -247,14 +247,14 @@ Python alternatives for PHP internal (built-in) functions.
 * [ ] [strptime](http://php.net/manual/en/function.strptime.php) — Parse a time/date generated with strftime
 * [ ] [strtotime](http://php.net/manual/en/function.strtotime.php) — Parse about any English textual datetime description into a Unix timestamp
 * [ ] [time](http://php.net/manual/en/function.time.php) — Return current Unix timestamp
-* [ ] [timezone_abbreviations_list](http://php.net/manual/en/function.timezone-abbreviations-list.php) — Alias of DateTimeZone::listAbbreviations
-* [ ] [timezone_identifiers_list](http://php.net/manual/en/function.timezone-identifiers-list.php) — Alias of DateTimeZone::listIdentifiers
-* [ ] [timezone_location_get](http://php.net/manual/en/function.timezone-location-get.php) — Alias of DateTimeZone::getLocation
+* [ ] <strike>[timezone_abbreviations_list](http://php.net/manual/en/function.timezone-abbreviations-list.php) — Alias of DateTimeZone::listAbbreviations</strike>
+* [ ] <strike>[timezone_identifiers_list](http://php.net/manual/en/function.timezone-identifiers-list.php) — Alias of DateTimeZone::listIdentifiers</strike>
+* <strike>[ ] [timezone_location_get](http://php.net/manual/en/function.timezone-location-get.php) — Alias of DateTimeZone::getLocation</strike>
 * [ ] [timezone_name_from_abbr](http://php.net/manual/en/function.timezone-name-from-abbr.php) — Returns the timezone name from abbreviation
-* [ ] [timezone_name_get](http://php.net/manual/en/function.timezone-name-get.php) — Alias of DateTimeZone::getName
+* [ ] <strike>[timezone_name_get](http://php.net/manual/en/function.timezone-name-get.php) — Alias of DateTimeZone::getName</strike>
 * [ ] [timezone_offset_get](http://php.net/manual/en/function.timezone-offset-get.php) — Alias of DateTimeZone::getOffset
-* [ ] [timezone_open](http://php.net/manual/en/function.timezone-open.php) — Alias of DateTimeZone::__construct
-* [ ] [timezone_transitions_get](http://php.net/manual/en/function.timezone-transitions-get.php) — Alias of DateTimeZone::getTransitions
+* [ ] <strike>[timezone_open](http://php.net/manual/en/function.timezone-open.php) — Alias of DateTimeZone::__construct</strike>
+* [ ] <strike>[timezone_transitions_get](http://php.net/manual/en/function.timezone-transitions-get.php) — Alias of DateTimeZone::getTransitions</strike>
 * [ ] [timezone_version_get](http://php.net/manual/en/function.timezone-version-get.php) — Gets the version of the timezonedb
 
 ## Mathematical Functions
