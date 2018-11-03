@@ -1457,12 +1457,16 @@ def is_bool(variable):
     return isinstance(variable, bool)
 
 
-def is_callable():
-    pass
+def is_callable(name):
+    return callable(name)
 
 
-def is_countable():
-    pass
+def is_countable(variable):
+    try:
+        Counter(variable)
+        return True
+    except:
+        return False
 
 
 def is_double(variable):
