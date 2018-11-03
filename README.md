@@ -215,7 +215,7 @@ Python alternatives for PHP internal (built-in) functions.
 * [ ] [date_default_timezone_get](http://php.net/manual/en/function.date-default-timezone-get.php) — Gets the default timezone used by all date/time functions in a script
 * [ ] [date_default_timezone_set](http://php.net/manual/en/function.date-default-timezone-set.php) — Sets the default timezone used by all date/time functions in a script
 * [ ] <strike>[date_diff](http://php.net/manual/en/function.date-diff.php) — Alias of DateTime::diff</strike>
-* [ ] [date_format](http://php.net/manual/en/function.date-format.php) — Alias of DateTime::format</strike>
+* [ ] <strike>[date_format](http://php.net/manual/en/function.date-format.php) — Alias of DateTime::format</strike>
 * [ ] <strike>[date_get_last_errors](http://php.net/manual/en/function.date-get-last-errors.php) — Alias of DateTime::getLastErrors</strike>
 * [ ] <strike>[date_interval_create_from_date_string](http://php.net/manual/en/function.date-interval-create-from-date-string.php) — Alias of DateInterval::createFromDateString</strike>
 * [ ] <strike>[date_interval_format](http://php.net/manual/en/function.date-interval-format.php) — Alias of DateInterval::format</strike>
