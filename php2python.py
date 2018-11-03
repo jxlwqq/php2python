@@ -26,7 +26,7 @@ import sys
 import glob as py_glob
 import inspect
 import textwrap
-import crypt
+import crypt as py_crypt
 import quopri
 import string
 import syslog as py_syslog
@@ -315,11 +315,13 @@ def array_uintersect(array):
 
 
 def array_unique(array):
-    pass
+    return list(set(array))
 
 
-def array_unshift(array):
-    pass
+def array_unshift(array, *args):
+    for i in reversed(args):
+        array.insert(0, i)
+    return array
 
 
 def array_values(array):
@@ -330,8 +332,9 @@ def array_walk_recursive(array):
     pass
 
 
-def array_walk(array):
-    pass
+def array_walk(array, callback):
+    for k, val in array.items():
+        callback(val, k)
 
 
 def array(array):
@@ -667,1133 +670,6 @@ def timezone_transitions_get():
 
 def timezone_version_get():
     pass
-
-
-"""
-Strings Functions
-"""
-
-
-def addcslashes(string):
-    pass
-
-
-def addslashes(string):
-    pass
-
-
-def bin2hex(string):
-    return binascii.hexlify(string)
-
-
-def chop(string, character_mask=None):
-    return rtrim(string, character_mask)
-
-
-def chunk_split(body, chunklen, end="\r\n"):
-    return end.join(textwrap.wrap(body, chunklen))
-
-
-def convert_cyr_string(string):
-    pass
-
-
-def convert_uudecode(string):
-    pass
-
-
-def convert_uuencode(string):
-    pass
-
-
-def count_chars(s, mode=0):
-    pass
-
-
-def crc32(string):
-    return binascii.crc32(string) & 0xffffffff
-
-
-def crypt(string, salt):
-    return crypt.crypt(string, salt)
-
-
-def echo(string):
-    print(string)
-
-
-def explode(delimiter, string, limit):
-    if limit == 0:
-        limit = 1
-
-    if limit > 0:
-        return string.split(delimiter, limit)
-    else:
-        return string.split(delimiter)[:limit]
-
-
-def fprintf(handle, format):
-    pass
-
-
-def get_html_translation_table(string):
-    pass
-
-
-def hebrev(string):
-    pass
-
-
-def hebrevc(string):
-    pass
-
-
-def hex2bin(hex_string):
-    return binascii.unhexlify(hex_string)
-
-
-def html_entity_decode(string):
-    pass
-
-
-def htmlentities(string):
-    pass
-
-
-def htmlspecialchars_decode(string):
-    pass
-
-
-def htmlspecialchars(string):
-    pass
-
-
-def implode(glue='', pieces=[]):
-    return glue.join(pieces)
-
-
-def join(glue='', pieces=[]):
-    return glue.join(pieces)
-
-
-def lcfirst(string):
-    return string[0].lower() + string[1:]
-
-
-def levenshtein(string1, string2):
-    n, m = len(string1), len(string2)
-    if n > m:
-        string1, string2 = string2, string1
-        n, m = m, n
-
-    current = range(n + 1)
-    for i in range(1, m + 1):
-        previous, current = current, [i] + [0] * n
-        for j in range(1, n + 1):
-            add, delete = previous[j] + 1, current[j - 1] + 1
-            change = previous[j - 1]
-            if string1[j - 1] != string2[i - 1]:
-                change = change + 1
-            current[j] = min(add, delete, change)
-
-    return current[n]
-
-
-def localeconv(string):
-    pass
-
-
-def ltrim(string, character_mask=None):
-    if character_mask is None:
-        return string.lstrip()
-    return string.lstrip(character_mask)
-
-
-def md5_file(filename, raw_output=False):
-    crc = hashlib.md5()
-    fp = open(filename, 'rb')
-    for i in fp:
-        crc.update(i)
-    fp.close()
-    if raw_output:
-        return crc.digest()
-    return crc.hexdigest()
-
-
-def md5(str, raw_output=False):
-    res = hashlib.md5(str.encode())
-    if raw_output:
-        return res.digest()
-    return res.hexdigest()
-
-
-def metaphone(string):
-    pass
-
-
-def money_format(string):
-    pass
-
-
-def nl_langinfo(string):
-    pass
-
-
-def nl2br(string, is_xhtml=True):
-    if is_xhtml:
-        return string.replace('\n', '<br />\n')
-    else:
-        return string.replace('\n', '<br>\n')
-
-
-def number_format(number, decimals):
-    locale.setlocale(locale.LC_NUMERIC, '')
-    return locale.format("%.*f", (decimals, number), True)
-
-
-def parse_str(string):
-    return urllib.parse.parse_qs(string)
-
-
-def printf(string):
-    return print(string)
-
-
-def quoted_printable_decode(string):
-    return quopri.decodestring(string)
-
-
-def quoted_printable_encode(string):
-    return quopri.encodestring(string)
-
-
-def quotemeta(string):
-    pass
-
-
-def rtrim(string, character_mask=None):
-    if character_mask is None:
-        return string.rstrip()
-    return string.rstrip(character_mask)
-
-
-def setlocale(string):
-    pass
-
-
-def sha1_file(string):
-    pass
-
-
-def sha1(string):
-    return hashlib.sha1(string.encode()).hexdigest()
-
-
-def similar_text(string):
-    pass
-
-
-def soundex(string):
-    pass
-
-
-def sprintf(string):
-    pass
-
-
-def sscanf(string):
-    pass
-
-
-def str_getcsv(string, delimiter=',', enclosure='"', escape="\\"):
-    with io.StringIO(string) as f:
-        reader = csv.reader(f, delimiter=delimiter, quotechar=enclosure, escapechar=escape)
-        return next(reader)
-
-
-def str_ireplace(string):
-    pass
-
-
-def str_pad(string, pad_length, pad_string=' ', pad_type=1):
-    # STR_PAD_LEFT = 0
-    # STR_PAD_RIGHT = 1
-    # STR_PAD_BOTH = 2
-    if pad_type == 0:
-        return string.ljust(pad_length, pad_string)
-    elif pad_type == 2:
-        return string.center(pad_length, pad_string)
-    else:
-        return string.rjust(pad_length, pad_string)
-
-
-def str_repeat(string, multiplier):
-    """
-    str_repeat — Repeat a string
-    http://php.net/manual/en/function.str-repeat.php
-    :param str:
-    :param multiplier:
-    :return:
-    """
-    return string * multiplier
-
-
-def str_replace(search, replace, subject, count):
-    """
-    str_replace — Replace all occurrences of the search string with the replacement string
-    :param search:
-    :param replace:
-    :param subject:
-    :param count:
-    :return:
-    """
-    pass
-
-
-def str_rot13(string):
-    pass
-
-
-def str_shuffle(string):
-    """
-    str_shuffle — Randomly shuffles a string
-    http://php.net/manual/en/function.str-shuffle.php
-    :param string:
-    :return:
-    """
-    chars = list(string)
-    random.shuffle(chars)
-    return ''.join(chars)
-
-
-def str_split(string, split_length=1):
-    """
-    str_split — Convert a string to an array
-    http://php.net/manual/en/function.str-split.php
-    """
-    return filter(None, re.split('(.{1,%d})' % split_length, string))
-
-
-def str_word_count(string, format=0, charlist=''):
-    if isinstance(string, str):
-        words = re.sub('[^\w ' + charlist + ']', '', string)
-        words = words.replace('  ', ' ').split(' ')
-        if format == 0:
-            return len(words)
-        elif format == 1:
-            return words
-        elif format == 2:
-            result = {}
-            for word in words:
-                result[string.find(word)] = word
-            return result
-    return False
-
-
-def strcasecmp(string):
-    pass
-
-
-def strchr(string):
-    pass
-
-
-def strcmp(string1, string2):
-    return (string1 > string2) - (string1 < string2)
-
-
-def strcoll(string):
-    pass
-
-
-def strcspn(string1, string2):
-    return len(list(takewhile(lambda x: x not in string2, string1)))
-
-
-def strip_tags(string):
-    pass
-
-
-def stripcslashes(string):
-    pass
-
-
-def stripos(haystack, needle, offset=0):
-    return haystack.upper().find(needle.upper(), offset)
-
-
-def stripslashes(string):
-    pass
-
-
-def stristr(haystack, needle):
-    pos = haystack.upper().find(needle.upper())
-    if pos < 0:
-        return None
-    else:
-        return haystack[pos:]
-
-
-def strlen(string):
-    return len(string)
-
-
-def strnatcasecmp(string):
-    pass
-
-
-def strnatcmp(string):
-    pass
-
-
-def strncasecmp(string):
-    pass
-
-
-def strncmp(string):
-    pass
-
-
-def strpbrk(haystack, char_list):
-    try:
-        pos = next(i for i, x in enumerate(haystack) if x in char_list)
-        return haystack[pos:]
-    except:
-        return None
-
-
-def strpos(haystack, needle, offset=0):
-    pos = haystack.find(needle, offset)
-    if pos == -1:
-        return False
-    else:
-        return pos
-
-
-def strrchr(haystack, needle):
-    return haystack.rfind(needle)
-
-
-def strrev(string):
-    return string[::-1]
-
-
-def strripos(haystack, needle, offset=0):
-    return haystack.upper().rfind(needle.upper(), offset)
-
-
-def strrpos(haystack, needle, offset=0):
-    pos = haystack.rfind(needle, offset)
-    if pos == -1:
-        return False
-    else:
-        return pos
-
-
-def strspn(subject, mask, start=0, length=None):
-    if not length: length = len(subject)
-    return len(re.search('^[' + mask + ']*', subject[start:start + length]).group(0))
-
-
-def strstr(haystack, needle):
-    pos = haystack.find(needle)
-    if pos < 0:
-        return None
-    else:
-        return haystack[pos:]
-
-
-def strtok(string):
-    pass
-
-
-def strtolower(string):
-    return string.lower()
-
-
-def strtoupper(string):
-    return string.upper()
-
-
-def strtr(string, from_str, to_str=None):
-    if is_array(from_str):
-        return string.translate(str.maketrans(from_str))
-    return string.translate(str.maketrans(from_str, to_str))
-
-
-def substr_compare(string):
-    pass
-
-
-def substr_count(string):
-    pass
-
-
-def substr_replace(subject, replace, start, length=None):
-    if length is None:
-        return subject[:start] + replace
-    elif length < 0:
-        return subject[:start] + replace + subject[length:]
-    else:
-        return subject[:start] + replace + subject[start + length:]
-
-
-def substr(string, start, length=None):
-    if len(string) >= start:
-        if start > 0:
-            return False
-        else:
-            return string[start:]
-    if not length:
-        return string[start:]
-    elif length > 0:
-        return string[start:start + length]
-    else:
-        return string[start:length]
-
-
-def trim(string, character_mask=None):
-    if character_mask is None:
-        return string.strip()
-    return string.strip(character_mask)
-
-
-def ucfirst(string):
-    """
-    ucfirst — Make a string's first character uppercase
-    http://php.net/manual/en/function.ucfirst.php
-    :param string:
-    :return:
-    """
-    return string[0].upper() + string[1:]
-
-
-def ucwords(words):
-    """
-    ucwords — Uppercase the first character of each word in a string
-    http://php.net/manual/en/function.ucwords.php
-    :param string:
-    :return:
-    """
-    return string.capwords(words)
-
-
-def vfprintf(string):
-    pass
-
-
-def vprintf(string):
-    pass
-
-
-def vsprintf(string):
-    pass
-
-
-def wordwrap(string):
-    pass
-
-
-"""
-Mathematical Functions
-"""
-
-
-def acos(arg):
-    return math.acos(arg)
-
-
-def acosh(arg):
-    return math.acosh(arg)
-
-
-def asin(arg):
-    return math.asin(arg)
-
-
-def asinh(arg):
-    return math.asinh(arg)
-
-
-def atan2(y, x):
-    return math.atan2(y, x)
-
-
-def atan(arg):
-    return math.atan(arg)
-
-
-def atanh(arg):
-    return math.atanh(arg)
-
-
-def base_convert(number, from_base, to_base):
-    try:
-        base10 = int(number, from_base)
-    except ValueError:
-        raise
-
-    if to_base < 2 or to_base > 36:
-        raise NotImplementedError
-
-    digits = "0123456789abcdefghijklmnopqrstuvwxyz"
-    sign = ''
-
-    if base10 == 0:
-        return '0'
-    elif base10 < 0:
-        sign = '-'
-        base10 = -base10
-
-    s = ''
-    while base10 != 0:
-        r = base10 % to_base
-        r = int(r)
-        s = digits[r] + s
-        base10 //= to_base
-
-    output_value = sign + s
-    return output_value
-
-
-def bindec(binary_string):
-    return int(binary_string, 2)
-
-
-def ceil(value):
-    return math.ceil(value)
-
-
-def cos(arg):
-    return math.cos(arg)
-
-
-def cosh(arg):
-    return math.cosh(arg)
-
-
-def decbin(number):
-    return bin(number)
-
-
-def dechex(number):
-    return hex(number)
-
-
-def decoct(number):
-    return oct(number)
-
-
-def deg2rad(number):
-    return math.radians(number)
-
-
-def exp(arg):
-    return math.exp(arg)
-
-
-def expm1(arg):
-    return math.exp(arg) - 1
-
-
-def floor(value):
-    return math.floor(value)
-
-
-def fmod(x, y):
-    return math.fmod(x, y)
-
-
-def getrandmax():
-    pass
-
-
-def hexdec(hex_string):
-    return int(hex_string, 16)
-
-
-def hypot(x, y):
-    return math.hypot(x, y)
-
-
-def intdiv(dividend, divisor):
-    pass
-
-
-def is_finite(val):
-    return math.isfinite(val)
-
-
-def is_infinite(val):
-    return math.isinf(val)
-
-
-def is_nan(val):
-    return math.isnan(val)
-
-
-def lcg_value():
-    pass
-
-
-def log10(arg):
-    return math.log10(arg)
-
-
-def log1p(arg):
-    return math.log1p(arg)
-
-
-def log(arg, base):
-    return math.log(arg, base)
-
-
-def mt_getrandmax():
-    pass
-
-
-def mt_rand(low, high):
-    return random.randint(low, high)
-
-
-def mt_srand():
-    pass
-
-
-def octdec(octal_string):
-    return int(octal_string, 8)
-
-
-def pi():
-    return math.pi
-
-
-def rad2deg(number):
-    return math.degrees(number)
-
-
-def rand(minint, maxint):
-    return random.randint(minint, maxint)
-
-
-def sin(arg):
-    return math.sin(arg)
-
-
-def sinh(arg):
-    return math.sinh(arg)
-
-
-def sqrt(arg):
-    return math.sqrt(arg)
-
-
-def srand(seed=None):
-    if seed is None:
-        return random.seed()
-    return random.seed(seed)
-
-
-def tan(arg):
-    return math.tan(arg)
-
-
-def tanh(arg):
-    return math.tanh(arg)
-
-
-'''
-Variable handling Functions
-'''
-
-
-def boolval(variable):
-    return bool(variable)
-
-
-def debug_zval_dump():
-    pass
-
-
-def doubleval(variable):
-    return float(variable)
-
-
-def empty(variable):
-    if not variable:
-        return True
-    return False
-
-
-def floatval(variable):
-    return float(variable)
-
-
-def get_defined_vars():
-    pass
-
-
-def get_resource_type():
-    pass
-
-
-def gettype(variable):
-    return type(variable).__name__
-
-
-def import_request_variables():
-    pass
-
-
-def intval(variable, base=10):
-    return int(variable, base)
-
-
-def is_array(variable):
-    return isinstance(variable, (list, tuple))
-
-
-def is_bool(variable):
-    return isinstance(variable, bool)
-
-
-def is_callable(name):
-    return callable(name)
-
-
-def is_countable(variable):
-    try:
-        Counter(variable)
-        return True
-    except:
-        return False
-
-
-def is_double(variable):
-    return isinstance(variable, float)
-
-
-def is_float(variable):
-    return isinstance(variable, float)
-
-
-def is_int(variable):
-    return isinstance(variable, int)
-
-
-def is_integer(variable):
-    return isinstance(variable, int)
-
-
-def is_iterable():
-    pass
-
-
-def is_long():
-    pass
-
-
-def is_null(variable):
-    return variable is None
-
-
-def is_numeric(variable):
-    return isinstance(variable, numbers.Number) or variable.isnumeric()
-
-
-def is_object(variable):
-    return isinstance(variable, object)
-
-
-def is_real(variable):
-    return isinstance(variable, float)
-
-
-def is_resource():
-    pass
-
-
-def is_scalar(variable):
-    return isinstance(variable, (type(None), str, int, float, bool))
-
-
-def is_string(variable):
-    return isinstance(variable, str)
-
-
-def isset(variable):
-    try:
-        variable
-        return True
-    except NameError:
-        return False
-
-
-def print_r(variable):
-    pprint.pprint(variable)
-
-
-def serialize(value):
-    return pickle.dump(value)
-
-
-def settype(variable, variable_type):
-    pass
-
-
-def strval(variable):
-    return str(variable)
-
-
-def unserialize():
-    pass
-
-
-def unset(variable):
-    del variable
-
-
-def var_dump(variable):
-    print(variable)
-
-
-def var_export(variable):
-    print(variable)
-
-
-'''
-URL Functions
-'''
-
-
-def base64_decode(data):
-    return base64.b64decode(data)
-
-
-def base64_encode(data):
-    return base64.encode(data)
-
-
-def get_headers(url):
-    return urllib.request.urlopen('%s' % url).headers
-
-
-def get_meta_tags(url):
-    out = {}
-    html = urllib.request.urlopen('%s' % url).read()
-    m = re.findall("name=\"([^\"]*)\" content=\"([^\"]*)\"", html)
-    for i in m:
-        out[i[0]] = i[1]
-    return out
-
-
-def http_build_query(query_data):
-    return urllib.parse.urlencode(query_data)
-
-
-def parse_url(url):
-    return urllib.parse.urlparse(url)
-
-
-def rawurldecode(string):
-    return urllib.parse.unquote(string)
-
-
-def rawurlencode(string):
-    return urllib.parse.quote(string)
-
-
-def urldecode(string):
-    return urllib.parse.unquote_plus(string)
-
-
-def urlencode(string):
-    return urllib.parse.quote_plus(string)
-
-
-'''
-'''
-
-
-def escapeshellarg(arg):
-    return "\\'".join("'" + p + "'" for p in arg.split("'"))
-
-
-def escapeshellcmd():
-    pass
-
-
-def passthru():
-    pass
-
-
-def proc_lose():
-    pass
-
-
-def proc_et_tatus():
-    pass
-
-
-def proc_ice():
-    pass
-
-
-def proc_pen():
-    pass
-
-
-def proc_erminate():
-    pass
-
-
-def shell_xec(command):
-    return os.popen(command).read()
-
-
-def system(command):
-    return os.system(command)
-
-
-'''
-Network Functions
-'''
-
-
-def checkdnsrr():
-    pass
-
-
-def closelog():
-    pass
-
-
-def define_syslog_variables():
-    pass
-
-
-def dns_check_record():
-    pass
-
-
-def dns_get_mx():
-    pass
-
-
-def dns_get_record():
-    pass
-
-
-def fsockopen():
-    pass
-
-
-def gethostbyaddr():
-    pass
-
-
-def gethostbyname():
-    pass
-
-
-def gethostbynamel():
-    pass
-
-
-def gethostname():
-    pass
-
-
-def getmxrr():
-    pass
-
-
-def getprotobyname():
-    pass
-
-
-def getprotobynumber():
-    pass
-
-
-def getservbyname():
-    pass
-
-
-def getservbyport():
-    pass
-
-
-def header_register_callback():
-    pass
-
-
-def header_remove():
-    pass
-
-
-def header():
-    pass
-
-
-def headers_list():
-    pass
-
-
-def headers_sent():
-    pass
-
-
-def http_response_code():
-    pass
-
-
-def inet_ntop():
-    pass
-
-
-def inet_pton():
-    pass
-
-
-def ip2long():
-    pass
-
-
-def long2ip():
-    pass
-
-
-def openlog():
-    pass
-
-
-def pfsockopen():
-    pass
-
-
-def setcookie():
-    pass
-
-
-def setrawcookie():
-    pass
-
-
-def socket_get_status():
-    pass
-
-
-def socket_set_blocking():
-    pass
-
-
-def socket_set_timeout():
-    pass
-
-
-def syslog(priority, message):
-    return py_syslog.syslog(priority, message)
 
 
 '''
@@ -2134,6 +1010,214 @@ def unlink(filename):
     return os.unlink(filename)
 
 
+"""
+Mathematical Functions
+"""
+
+
+def acos(arg):
+    return math.acos(arg)
+
+
+def acosh(arg):
+    return math.acosh(arg)
+
+
+def asin(arg):
+    return math.asin(arg)
+
+
+def asinh(arg):
+    return math.asinh(arg)
+
+
+def atan2(y, x):
+    return math.atan2(y, x)
+
+
+def atan(arg):
+    return math.atan(arg)
+
+
+def atanh(arg):
+    return math.atanh(arg)
+
+
+def base_convert(number, from_base, to_base):
+    try:
+        base10 = int(number, from_base)
+    except ValueError:
+        raise
+
+    if to_base < 2 or to_base > 36:
+        raise NotImplementedError
+
+    digits = "0123456789abcdefghijklmnopqrstuvwxyz"
+    sign = ''
+
+    if base10 == 0:
+        return '0'
+    elif base10 < 0:
+        sign = '-'
+        base10 = -base10
+
+    s = ''
+    while base10 != 0:
+        r = base10 % to_base
+        r = int(r)
+        s = digits[r] + s
+        base10 //= to_base
+
+    output_value = sign + s
+    return output_value
+
+
+def bindec(binary_string):
+    return int(binary_string, 2)
+
+
+def ceil(value):
+    return math.ceil(value)
+
+
+def cos(arg):
+    return math.cos(arg)
+
+
+def cosh(arg):
+    return math.cosh(arg)
+
+
+def decbin(number):
+    return bin(number)
+
+
+def dechex(number):
+    return hex(number)
+
+
+def decoct(number):
+    return oct(number)
+
+
+def deg2rad(number):
+    return math.radians(number)
+
+
+def exp(arg):
+    return math.exp(arg)
+
+
+def expm1(arg):
+    return math.exp(arg) - 1
+
+
+def floor(value):
+    return math.floor(value)
+
+
+def fmod(x, y):
+    return math.fmod(x, y)
+
+
+def getrandmax():
+    pass
+
+
+def hexdec(hex_string):
+    return int(hex_string, 16)
+
+
+def hypot(x, y):
+    return math.hypot(x, y)
+
+
+def intdiv(dividend, divisor):
+    pass
+
+
+def is_finite(val):
+    return math.isfinite(val)
+
+
+def is_infinite(val):
+    return math.isinf(val)
+
+
+def is_nan(val):
+    return math.isnan(val)
+
+
+def lcg_value():
+    pass
+
+
+def log10(arg):
+    return math.log10(arg)
+
+
+def log1p(arg):
+    return math.log1p(arg)
+
+
+def log(arg, base):
+    return math.log(arg, base)
+
+
+def mt_getrandmax():
+    pass
+
+
+def mt_rand(low, high):
+    return random.randint(low, high)
+
+
+def mt_srand():
+    pass
+
+
+def octdec(octal_string):
+    return int(octal_string, 8)
+
+
+def pi():
+    return math.pi
+
+
+def rad2deg(number):
+    return math.degrees(number)
+
+
+def rand(minint, maxint):
+    return random.randint(minint, maxint)
+
+
+def sin(arg):
+    return math.sin(arg)
+
+
+def sinh(arg):
+    return math.sinh(arg)
+
+
+def sqrt(arg):
+    return math.sqrt(arg)
+
+
+def srand(seed=None):
+    if seed is None:
+        return random.seed()
+    return random.seed(seed)
+
+
+def tan(arg):
+    return math.tan(arg)
+
+
+def tanh(arg):
+    return math.tanh(arg)
+
+
 '''
 Misc. Functions
 '''
@@ -2249,3 +1333,930 @@ def unpack(format_codes, data):
 
 def usleep(micro_seconds):
     py_time.sleep(micro_seconds / 1000000.0)
+
+
+'''
+Network Functions
+'''
+
+
+def checkdnsrr():
+    pass
+
+
+def closelog():
+    pass
+
+
+def define_syslog_variables():
+    pass
+
+
+def dns_check_record():
+    pass
+
+
+def dns_get_mx():
+    pass
+
+
+def dns_get_record():
+    pass
+
+
+def fsockopen():
+    pass
+
+
+def gethostbyaddr():
+    pass
+
+
+def gethostbyname():
+    pass
+
+
+def gethostbynamel():
+    pass
+
+
+def gethostname():
+    pass
+
+
+def getmxrr():
+    pass
+
+
+def getprotobyname():
+    pass
+
+
+def getprotobynumber():
+    pass
+
+
+def getservbyname():
+    pass
+
+
+def getservbyport():
+    pass
+
+
+def header_register_callback():
+    pass
+
+
+def header_remove():
+    pass
+
+
+def header():
+    pass
+
+
+def headers_list():
+    pass
+
+
+def headers_sent():
+    pass
+
+
+def http_response_code():
+    pass
+
+
+def inet_ntop():
+    pass
+
+
+def inet_pton():
+    pass
+
+
+def ip2long():
+    pass
+
+
+def long2ip():
+    pass
+
+
+def openlog():
+    pass
+
+
+def pfsockopen():
+    pass
+
+
+def setcookie():
+    pass
+
+
+def setrawcookie():
+    pass
+
+
+def socket_get_status():
+    pass
+
+
+def socket_set_blocking():
+    pass
+
+
+def socket_set_timeout():
+    pass
+
+
+def syslog(priority, message):
+    return py_syslog.syslog(priority, message)
+
+
+'''
+Program execution Functions
+'''
+
+
+def escapeshellarg(arg):
+    return "\\'".join("'" + p + "'" for p in arg.split("'"))
+
+
+def escapeshellcmd():
+    pass
+
+
+def passthru():
+    pass
+
+
+def proc_lose():
+    pass
+
+
+def proc_et_tatus():
+    pass
+
+
+def proc_ice():
+    pass
+
+
+def proc_pen():
+    pass
+
+
+def proc_erminate():
+    pass
+
+
+def shell_xec(command):
+    return os.popen(command).read()
+
+
+def system(command):
+    return os.system(command)
+
+
+"""
+Strings Functions
+"""
+
+
+def addcslashes(string):
+    pass
+
+
+def addslashes(string):
+    pass
+
+
+def bin2hex(string):
+    return binascii.hexlify(string)
+
+
+def chop(string, character_mask=None):
+    return rtrim(string, character_mask)
+
+
+def chunk_split(body, chunklen, end="\r\n"):
+    return end.join(textwrap.wrap(body, chunklen))
+
+
+def convert_cyr_string(string):
+    pass
+
+
+def convert_uudecode(string):
+    pass
+
+
+def convert_uuencode(string):
+    pass
+
+
+def count_chars(s, mode=0):
+    pass
+
+
+def crc32(string):
+    return binascii.crc32(string) & 0xffffffff
+
+
+def crypt(string, salt):
+    return py_crypt.crypt(string, salt)
+
+
+def echo(string):
+    print(string)
+
+
+def explode(delimiter, string, limit):
+    if limit == 0:
+        limit = 1
+
+    if limit > 0:
+        return string.split(delimiter, limit)
+    else:
+        return string.split(delimiter)[:limit]
+
+
+def fprintf(handle, format):
+    pass
+
+
+def get_html_translation_table(string):
+    pass
+
+
+def hebrev(string):
+    pass
+
+
+def hebrevc(string):
+    pass
+
+
+def hex2bin(hex_string):
+    return binascii.unhexlify(hex_string)
+
+
+def html_entity_decode(string):
+    pass
+
+
+def htmlentities(string):
+    pass
+
+
+def htmlspecialchars_decode(string):
+    pass
+
+
+def htmlspecialchars(string):
+    pass
+
+
+def implode(glue='', pieces=[]):
+    return glue.join(pieces)
+
+
+def join(glue='', pieces=[]):
+    return glue.join(pieces)
+
+
+def lcfirst(string):
+    return string[0].lower() + string[1:]
+
+
+def levenshtein(string1, string2):
+    n, m = len(string1), len(string2)
+    if n > m:
+        string1, string2 = string2, string1
+        n, m = m, n
+
+    current = range(n + 1)
+    for i in range(1, m + 1):
+        previous, current = current, [i] + [0] * n
+        for j in range(1, n + 1):
+            add, delete = previous[j] + 1, current[j - 1] + 1
+            change = previous[j - 1]
+            if string1[j - 1] != string2[i - 1]:
+                change = change + 1
+            current[j] = min(add, delete, change)
+
+    return current[n]
+
+
+def localeconv(string):
+    pass
+
+
+def ltrim(string, character_mask=None):
+    if character_mask is None:
+        return string.lstrip()
+    return string.lstrip(character_mask)
+
+
+def md5_file(filename, raw_output=False):
+    crc = hashlib.md5()
+    fp = open(filename, 'rb')
+    for i in fp:
+        crc.update(i)
+    fp.close()
+    if raw_output:
+        return crc.digest()
+    return crc.hexdigest()
+
+
+def md5(str, raw_output=False):
+    res = hashlib.md5(str.encode())
+    if raw_output:
+        return res.digest()
+    return res.hexdigest()
+
+
+def metaphone(string):
+    pass
+
+
+def money_format(string):
+    pass
+
+
+def nl_langinfo(string):
+    pass
+
+
+def nl2br(string, is_xhtml=True):
+    if is_xhtml:
+        return string.replace('\n', '<br />\n')
+    else:
+        return string.replace('\n', '<br>\n')
+
+
+def number_format(number, decimals):
+    locale.setlocale(locale.LC_NUMERIC, '')
+    return locale.format("%.*f", (decimals, number), True)
+
+
+def parse_str(string):
+    return urllib.parse.parse_qs(string)
+
+
+def printf(string):
+    return print(string)
+
+
+def quoted_printable_decode(string):
+    return quopri.decodestring(string)
+
+
+def quoted_printable_encode(string):
+    return quopri.encodestring(string)
+
+
+def quotemeta(string):
+    pass
+
+
+def rtrim(string, character_mask=None):
+    if character_mask is None:
+        return string.rstrip()
+    return string.rstrip(character_mask)
+
+
+def setlocale(string):
+    pass
+
+
+def sha1_file(filename, raw_output=False):
+    crc = hashlib.sha1()
+    fp = open(filename, 'rb')
+    for i in fp:
+        crc.update(i)
+    fp.close()
+    if raw_output:
+        return crc.digest()
+    return crc.hexdigest()
+
+
+def sha1(string):
+    return hashlib.sha1(string.encode()).hexdigest()
+
+
+def similar_text(string):
+    pass
+
+
+def soundex(string):
+    pass
+
+
+def sprintf(string):
+    pass
+
+
+def sscanf(string):
+    pass
+
+
+def str_getcsv(string, delimiter=',', enclosure='"', escape="\\"):
+    with io.StringIO(string) as f:
+        reader = csv.reader(f, delimiter=delimiter, quotechar=enclosure, escapechar=escape)
+        return next(reader)
+
+
+def str_ireplace(string):
+    pass
+
+
+def str_pad(string, pad_length, pad_string=' ', pad_type=1):
+    # STR_PAD_LEFT = 0
+    # STR_PAD_RIGHT = 1
+    # STR_PAD_BOTH = 2
+    if pad_type == 0:
+        return string.ljust(pad_length, pad_string)
+    elif pad_type == 2:
+        return string.center(pad_length, pad_string)
+    else:
+        return string.rjust(pad_length, pad_string)
+
+
+def str_repeat(string, multiplier):
+    """
+    str_repeat — Repeat a string
+    http://php.net/manual/en/function.str-repeat.php
+    :param string:
+    :param multiplier:
+    :return:
+    """
+    return string * multiplier
+
+
+def str_replace(search, replace, subject, count):
+    """
+    str_replace — Replace all occurrences of the search string with the replacement string
+    :param search:
+    :param replace:
+    :param subject:
+    :param count:
+    :return:
+    """
+    pass
+
+
+def str_rot13(string):
+    pass
+
+
+def str_shuffle(string):
+    """
+    str_shuffle — Randomly shuffles a string
+    http://php.net/manual/en/function.str-shuffle.php
+    :param string:
+    :return:
+    """
+    chars = list(string)
+    random.shuffle(chars)
+    return ''.join(chars)
+
+
+def str_split(string, split_length=1):
+    """
+    str_split — Convert a string to an array
+    http://php.net/manual/en/function.str-split.php
+    """
+    return filter(None, re.split('(.{1,%d})' % split_length, string))
+
+
+def str_word_count(string, format=0, charlist=''):
+    if isinstance(string, str):
+        words = re.sub('[^\w ' + charlist + ']', '', string)
+        words = words.replace('  ', ' ').split(' ')
+        if format == 0:
+            return len(words)
+        elif format == 1:
+            return words
+        elif format == 2:
+            result = {}
+            for word in words:
+                result[string.find(word)] = word
+            return result
+    return False
+
+
+def strcasecmp(string):
+    pass
+
+
+def strchr(string):
+    pass
+
+
+def strcmp(string1, string2):
+    return (string1 > string2) - (string1 < string2)
+
+
+def strcoll(string):
+    pass
+
+
+def strcspn(string1, string2):
+    return len(list(takewhile(lambda x: x not in string2, string1)))
+
+
+def strip_tags(string):
+    pass
+
+
+def stripcslashes(string):
+    pass
+
+
+def stripos(haystack, needle, offset=0):
+    return haystack.upper().find(needle.upper(), offset)
+
+
+def stripslashes(string):
+    pass
+
+
+def stristr(haystack, needle):
+    pos = haystack.upper().find(needle.upper())
+    if pos < 0:
+        return None
+    else:
+        return haystack[pos:]
+
+
+def strlen(string):
+    return len(string)
+
+
+def strnatcasecmp(string):
+    pass
+
+
+def strnatcmp(string):
+    pass
+
+
+def strncasecmp(string):
+    pass
+
+
+def strncmp(string):
+    pass
+
+
+def strpbrk(haystack, char_list):
+    try:
+        pos = next(i for i, x in enumerate(haystack) if x in char_list)
+        return haystack[pos:]
+    except:
+        return None
+
+
+def strpos(haystack, needle, offset=0):
+    pos = haystack.find(needle, offset)
+    if pos == -1:
+        return False
+    else:
+        return pos
+
+
+def strrchr(haystack, needle):
+    return haystack.rfind(needle)
+
+
+def strrev(string):
+    return string[::-1]
+
+
+def strripos(haystack, needle, offset=0):
+    return haystack.upper().rfind(needle.upper(), offset)
+
+
+def strrpos(haystack, needle, offset=0):
+    pos = haystack.rfind(needle, offset)
+    if pos == -1:
+        return False
+    else:
+        return pos
+
+
+def strspn(subject, mask, start=0, length=None):
+    if not length: length = len(subject)
+    return len(re.search('^[' + mask + ']*', subject[start:start + length]).group(0))
+
+
+def strstr(haystack, needle):
+    pos = haystack.find(needle)
+    if pos < 0:
+        return None
+    else:
+        return haystack[pos:]
+
+
+def strtok(string):
+    pass
+
+
+def strtolower(string):
+    return string.lower()
+
+
+def strtoupper(string):
+    return string.upper()
+
+
+def strtr(string, from_str, to_str=None):
+    if is_array(from_str):
+        return string.translate(str.maketrans(from_str))
+    return string.translate(str.maketrans(from_str, to_str))
+
+
+def substr_compare(string):
+    pass
+
+
+def substr_count(string):
+    pass
+
+
+def substr_replace(subject, replace, start, length=None):
+    if length is None:
+        return subject[:start] + replace
+    elif length < 0:
+        return subject[:start] + replace + subject[length:]
+    else:
+        return subject[:start] + replace + subject[start + length:]
+
+
+def substr(string, start, length=None):
+    if len(string) >= start:
+        if start > 0:
+            return False
+        else:
+            return string[start:]
+    if not length:
+        return string[start:]
+    elif length > 0:
+        return string[start:start + length]
+    else:
+        return string[start:length]
+
+
+def trim(string, character_mask=None):
+    if character_mask is None:
+        return string.strip()
+    return string.strip(character_mask)
+
+
+def ucfirst(string):
+    """
+    ucfirst — Make a string's first character uppercase
+    http://php.net/manual/en/function.ucfirst.php
+    :param string:
+    :return:
+    """
+    return string[0].upper() + string[1:]
+
+
+def ucwords(words):
+    """
+    ucwords — Uppercase the first character of each word in a string
+    http://php.net/manual/en/function.ucwords.php
+    :param string:
+    :return:
+    """
+    return string.capwords(words)
+
+
+def vfprintf(string):
+    pass
+
+
+def vprintf(string):
+    pass
+
+
+def vsprintf(string):
+    pass
+
+
+def wordwrap(string):
+    pass
+
+
+'''
+URL Functions
+'''
+
+
+def base64_decode(data):
+    return base64.b64decode(data)
+
+
+def base64_encode(data):
+    return base64.encode(data)
+
+
+def get_headers(url):
+    return urllib.request.urlopen('%s' % url).headers
+
+
+def get_meta_tags(url):
+    out = {}
+    html = urllib.request.urlopen('%s' % url).read()
+    m = re.findall("name=\"([^\"]*)\" content=\"([^\"]*)\"", html)
+    for i in m:
+        out[i[0]] = i[1]
+    return out
+
+
+def http_build_query(query_data):
+    return urllib.parse.urlencode(query_data)
+
+
+def parse_url(url):
+    return urllib.parse.urlparse(url)
+
+
+def rawurldecode(string):
+    return urllib.parse.unquote(string)
+
+
+def rawurlencode(string):
+    return urllib.parse.quote(string)
+
+
+def urldecode(string):
+    return urllib.parse.unquote_plus(string)
+
+
+def urlencode(string):
+    return urllib.parse.quote_plus(string)
+
+
+'''
+Variable handling Functions
+'''
+
+
+def boolval(variable):
+    return bool(variable)
+
+
+def debug_zval_dump():
+    pass
+
+
+def doubleval(variable):
+    return float(variable)
+
+
+def empty(variable):
+    if not variable:
+        return True
+    return False
+
+
+def floatval(variable):
+    return float(variable)
+
+
+def get_defined_vars():
+    pass
+
+
+def get_resource_type():
+    pass
+
+
+def gettype(variable):
+    return type(variable).__name__
+
+
+def import_request_variables():
+    pass
+
+
+def intval(variable, base=10):
+    return int(variable, base)
+
+
+def is_array(variable):
+    return isinstance(variable, (list, tuple))
+
+
+def is_bool(variable):
+    return isinstance(variable, bool)
+
+
+def is_callable(name):
+    return callable(name)
+
+
+def is_countable(variable):
+    try:
+        Counter(variable)
+        return True
+    except:
+        return False
+
+
+def is_double(variable):
+    return isinstance(variable, float)
+
+
+def is_float(variable):
+    return isinstance(variable, float)
+
+
+def is_int(variable):
+    return isinstance(variable, int)
+
+
+def is_integer(variable):
+    return isinstance(variable, int)
+
+
+def is_iterable():
+    pass
+
+
+def is_long():
+    pass
+
+
+def is_null(variable):
+    return variable is None
+
+
+def is_numeric(variable):
+    return isinstance(variable, numbers.Number) or variable.isnumeric()
+
+
+def is_object(variable):
+    return isinstance(variable, object)
+
+
+def is_real(variable):
+    return isinstance(variable, float)
+
+
+def is_resource():
+    pass
+
+
+def is_scalar(variable):
+    return isinstance(variable, (type(None), str, int, float, bool))
+
+
+def is_string(variable):
+    return isinstance(variable, str)
+
+
+def isset(variable):
+    try:
+        variable
+        return True
+    except NameError:
+        return False
+
+
+def print_r(variable):
+    pprint.pprint(variable)
+
+
+def serialize(value):
+    return pickle.dump(value)
+
+
+def settype(variable, variable_type):
+    pass
+
+
+def strval(variable):
+    return str(variable)
+
+
+def unserialize():
+    pass
+
+
+def unset(variable):
+    del variable
+
+
+def var_dump(variable):
+    print(variable)
+
+
+def var_export(variable):
+    print(variable)

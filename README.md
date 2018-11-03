@@ -6,15 +6,15 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 
 ## Table of Contents
 * [Array Functions](#array-functions)
-* [String Functions](#string-functions)
-* [Date/Time Functions](#datetime-functions) 
-* [Mathematical Functions](#mathematical-functions) 
-* [Variable handling Functions](#variable-handling-functions)
-* [URL Functions](#url-functions) 
-* [Program execution Functions](#program-execution-functions) 
-* [Network Functions](#network-functions) 
+* [Date/Time Functions](#datetime-functions)
 * [Filesystem Functions](#filesystem-functions) 
+* [Mathematical Functions](#mathematical-functions) 
 * [Misc. Functions](#misc-functions)
+* [Network Functions](#network-functions) 
+* [Program execution Functions](#program-execution-functions) 
+* [String Functions](#string-functions)
+* [URL Functions](#url-functions) 
+* [Variable handling Functions](#variable-handling-functions)
 
 ## Array Functions
 
@@ -37,50 +37,50 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 * [ ] [array_intersect_uassoc](http://php.net/manual/en/function.array-intersect-uassoc.php) — Computes the intersection of arrays with additional index check, compares indexes by a callback function
 * [ ] [array_intersect_ukey](http://php.net/manual/en/function.array-intersect-ukey.php) — Computes the intersection of arrays using a callback function on the keys for comparison
 * [ ] [array_intersect](http://php.net/manual/en/function.array-intersect.php) — Computes the intersection of arrays
-* [ ] [array_key_exists](http://php.net/manual/en/function.array-key-exists.php) — Checks if the given key or index exists in the array
-* [ ] [array_key_first](http://php.net/manual/en/function.array-key-first.php) — Gets the first key of an array
-* [ ] [array_key_last](http://php.net/manual/en/function.array-key-last.php) — Gets the last key of an array
-* [ ] [array_keys](http://php.net/manual/en/function.array-keys.php) — Return all the keys or a subset of the keys of an array
-* [ ] [array_map](http://php.net/manual/en/function.array-map.php) — Applies the callback to the elements of the given arrays
-* [ ] [array_merge_recursive](http://php.net/manual/en/function.array-merge-recursive.php) — Merge one or more arrays recursively
-* [ ] [array_merge](http://php.net/manual/en/function.array-merge.php) — Merge one or more arrays
+* [x] [array_key_exists](http://php.net/manual/en/function.array-key-exists.php) — Checks if the given key or index exists in the array
+* [x] [array_key_first](http://php.net/manual/en/function.array-key-first.php) — Gets the first key of an array
+* [x] [array_key_last](http://php.net/manual/en/function.array-key-last.php) — Gets the last key of an array
+* [x] [array_keys](http://php.net/manual/en/function.array-keys.php) — Return all the keys or a subset of the keys of an array
+* [x] [array_map](http://php.net/manual/en/function.array-map.php) — Applies the callback to the elements of the given arrays
+* [x] [array_merge_recursive](http://php.net/manual/en/function.array-merge-recursive.php) — Merge one or more arrays recursively
+* [x] [array_merge](http://php.net/manual/en/function.array-merge.php) — Merge one or more arrays
 * [ ] [array_multisort](http://php.net/manual/en/function.array-multisort.php) — Sort multiple or multi-dimensional arrays
-* [ ] [array_pad](http://php.net/manual/en/function.array-pad.php) — Pad array to the specified length with a value
-* [ ] [array_pop](http://php.net/manual/en/function.array-pop.php) — Pop the element off the end of array
-* [ ] [array_product](http://php.net/manual/en/function.array-product.php) — Calculate the product of values in an array
-* [ ] [array_push](http://php.net/manual/en/function.array-push.php) — Push one or more elements onto the end of array
+* [x] [array_pad](http://php.net/manual/en/function.array-pad.php) — Pad array to the specified length with a value
+* [x] [array_pop](http://php.net/manual/en/function.array-pop.php) — Pop the element off the end of array
+* [x] [array_product](http://php.net/manual/en/function.array-product.php) — Calculate the product of values in an array
+* [x] [array_push](http://php.net/manual/en/function.array-push.php) — Push one or more elements onto the end of array
 * [ ] [array_rand](http://php.net/manual/en/function.array-rand.php) — Pick one or more random keys out of an array
-* [ ] [array_reduce](http://php.net/manual/en/function.array-reduce.php) — Iteratively reduce the array to a single value using a callback function
-* [ ] [array_replace_recursive](http://php.net/manual/en/function.array-replace-recursive.php) — Replaces elements from passed arrays into the first array recursively
+* [x] [array_reduce](http://php.net/manual/en/function.array-reduce.php) — Iteratively reduce the array to a single value using a callback function
+* [x] [array_replace_recursive](http://php.net/manual/en/function.array-replace-recursive.php) — Replaces elements from passed arrays into the first array recursively
 * [ ] [array_replace](http://php.net/manual/en/function.array-replace.php) — Replaces elements from passed arrays into the first array
-* [ ] [array_reverse](http://php.net/manual/en/function.array-reverse.php) — Return an array with elements in reverse order
+* [x] [array_reverse](http://php.net/manual/en/function.array-reverse.php) — Return an array with elements in reverse order
 * [ ] [array_search](http://php.net/manual/en/function.array-search.php) — Searches the array for a given value and returns the first corresponding key if successful
-* [ ] [array_shift](http://php.net/manual/en/function.array-shift.php) — Shift an element off the beginning of array
-* [ ] [array_slice](http://php.net/manual/en/function.array-slice.php) — Extract a slice of the array
-* [ ] [array_splice](http://php.net/manual/en/function.array-splice.php) — Remove a portion of the array and replace it with something else
-* [ ] [array_sum](http://php.net/manual/en/function.array-sum.php) — Calculate the sum of values in an array
+* [x] [array_shift](http://php.net/manual/en/function.array-shift.php) — Shift an element off the beginning of array
+* [x] [array_slice](http://php.net/manual/en/function.array-slice.php) — Extract a slice of the array
+* [x] [array_splice](http://php.net/manual/en/function.array-splice.php) — Remove a portion of the array and replace it with something else
+* [x] [array_sum](http://php.net/manual/en/function.array-sum.php) — Calculate the sum of values in an array
 * [ ] [array_udiff_assoc](http://php.net/manual/en/function.array-udiff-assoc.php) — Computes the difference of arrays with additional index check, compares data by a callback function
 * [ ] [array_udiff_uassoc](http://php.net/manual/en/function.array-udiff-uassoc.php) — Computes the difference of arrays with additional index check, compares data and indexes by a callback function
 * [ ] [array_udiff](http://php.net/manual/en/function.array-udiff.php) — Computes the difference of arrays by using a callback function for data comparison
 * [ ] [array_uintersect_assoc](http://php.net/manual/en/function.array-uintersect-assoc.php) — Computes the intersection of arrays with additional index check, compares data by a callback function
 * [ ] [array_uintersect_uassoc](http://php.net/manual/en/function.array-uintersect-uassoc.php) — Computes the intersection of arrays with additional index check, compares data and indexes by separate callback functions
 * [ ] [array_uintersect](http://php.net/manual/en/function.array-uintersect.php) — Computes the intersection of arrays, compares data by a callback function
-* [ ] [array_unique](http://php.net/manual/en/function.array-unique.php) — Removes duplicate values from an array
-* [ ] [array_unshift](http://php.net/manual/en/function.array-unshift.php) — Prepend one or more elements to the beginning of an array
-* [ ] [array_values](http://php.net/manual/en/function.array-values.php) — Return all the values of an array
+* [x] [array_unique](http://php.net/manual/en/function.array-unique.php) — Removes duplicate values from an array
+* [x] [array_unshift](http://php.net/manual/en/function.array-unshift.php) — Prepend one or more elements to the beginning of an array
+* [x] [array_values](http://php.net/manual/en/function.array-values.php) — Return all the values of an array
 * [ ] [array_walk_recursive](http://php.net/manual/en/function.array-walk-recursive.php) — Apply a user function recursively to every member of an array
 * [ ] [array_walk](http://php.net/manual/en/function.array-walk.php) — Apply a user supplied function to every member of an array
 * [ ] [array](http://php.net/manual/en/function.array.php) — Create an array
 * [ ] [arsort](http://php.net/manual/en/function.arsort.php) — Sort an array in reverse order and maintain index association
 * [ ] [asort](http://php.net/manual/en/function.asort.php) — Sort an array and maintain index association
-* [ ] [compact](http://php.net/manual/en/function.compact.php) — Create array containing variables and their values
-* [ ] [count](http://php.net/manual/en/function.count.php) — Count all elements in an array, or something in an object
+* [x] [compact](http://php.net/manual/en/function.compact.php) — Create array containing variables and their values
+* [x] [count](http://php.net/manual/en/function.count.php) — Count all elements in an array, or something in an object
 * [ ] [current](http://php.net/manual/en/function.current.php) — Return the current element in an array
 * [ ] [each](http://php.net/manual/en/function.each.php) — Return the current key and value pair from an array and advance the array cursor
 * [ ] [end](http://php.net/manual/en/function.end.php) — Set the internal pointer of an array to its last element
 * [ ] [extract](http://php.net/manual/en/function.extract.php) — Import variables into the current symbol table from an array
-* [ ] [in_array](http://php.net/manual/en/function.in-array.php) — Checks if a value exists in an array
-* [ ] [key_exists](http://php.net/manual/en/function.key-exists.php) — Alias of array_key_exists
+* [x] [in_array](http://php.net/manual/en/function.in-array.php) — Checks if a value exists in an array
+* [x] [key_exists](http://php.net/manual/en/function.key-exists.php) — Alias of array_key_exists
 * [ ] [key](http://php.net/manual/en/function.key.php) — Fetch a key from an array
 * [ ] [krsort](http://php.net/manual/en/function.krsort.php) — Sort an array by key in reverse order
 * [ ] [ksort](http://php.net/manual/en/function.ksort.php) — Sort an array by key
@@ -93,115 +93,12 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 * [ ] <strike>[range](http://php.net/manual/en/function.range.php) — Create an array containing a range of elements</strike>, `Built-in function in Python`
 * [ ] [reset](http://php.net/manual/en/function.reset.php) — Set the internal pointer of an array to its first element
 * [ ] [rsort](http://php.net/manual/en/function.rsort.php) — Sort an array in reverse order
-* [ ] [shuffle](http://php.net/manual/en/function.shuffle.php) — Shuffle an array
-* [ ] [sizeof](http://php.net/manual/en/function.sizeof.php) — Alias of count
+* [x] [shuffle](http://php.net/manual/en/function.shuffle.php) — Shuffle an array
+* [x] [sizeof](http://php.net/manual/en/function.sizeof.php) — Alias of count
 * [ ] [sort](http://php.net/manual/en/function.sort.php) — Sort an array
 * [ ] [uasort](http://php.net/manual/en/function.uasort.php) — Sort an array with a user-defined comparison function and maintain index association
 * [ ] [uksort](http://php.net/manual/en/function.uksort.php) — Sort an array by keys using a user-defined comparison function
 * [ ] [usort](http://php.net/manual/en/function.usort.php) — Sort an array by values using a user-defined comparison function
-
-
-## String Functions
-
-* [ ] [addcslashes](http://php.net/manual/en/function.addcslashes.php) — Quote string with slashes in a C style
-* [ ] [addslashes](http://php.net/manual/en/function.addslashes.php) — Quote string with slashes
-* [ ] [bin2hex](http://php.net/manual/en/function.bin2hex.php) — Convert binary data into hexadecimal representation
-* [ ] [chop](http://php.net/manual/en/function.chop.php) — Alias of rtrim
-* [ ] <strike>[chr](http://php.net/manual/en/function.chr.php) — Generate a single-byte string from a number</strike>, `Built-in function in Python`
-* [ ] [chunk_split](http://php.net/manual/en/function.chunk-split.php) — Split a string into smaller chunks
-* [ ] [convert_cyr_string](http://php.net/manual/en/function.convert-cyr-string.php) — Convert from one Cyrillic character set to another
-* [ ] [convert_uudecode](http://php.net/manual/en/function.convert-uudecode.php) — Decode a uuencoded string
-* [ ] [convert_uuencode](http://php.net/manual/en/function.convert-uuencode.php) — Uuencode a string
-* [ ] [count_chars](http://php.net/manual/en/function.count-chars.php) — Return information about characters used in a string
-* [ ] [crc32](http://php.net/manual/en/function.crc32.php) — Calculates the crc32 polynomial of a string
-* [ ] [crypt](http://php.net/manual/en/function.crypt.php) — One-way string hashing
-* [ ] [echo](http://php.net/manual/en/function.echo.php) — Output one or more strings
-* [ ] [explode](http://php.net/manual/en/function.explode.php) — Split a string by a string
-* [ ] [fprintf](http://php.net/manual/en/function.fprintf.php) — Write a formatted string to a stream
-* [ ] [get_html_translation_table](http://php.net/manual/en/function.get-html-translation-table.php) — Returns the translation table used by htmlspecialchars and htmlentities
-* [ ] [hebrev](http://php.net/manual/en/function.hebrev.php) — Convert logical Hebrew text to visual text
-* [ ] [hebrevc](http://php.net/manual/en/function.hebrevc.php) — Convert logical Hebrew text to visual text with newline conversion
-* [ ] [hex2bin](http://php.net/manual/en/function.hex2bin.php) — Decodes a hexadecimally encoded binary string
-* [ ] [html_entity_decode](http://php.net/manual/en/function.html-entity-decode.php) — Convert HTML entities to their corresponding characters
-* [ ] [htmlentities](http://php.net/manual/en/function.htmlentities.php) — Convert all applicable characters to HTML entities
-* [ ] [htmlspecialchars_decode](http://php.net/manual/en/function.htmlspecialchars-decode.php) — Convert special HTML entities back to characters
-* [ ] [htmlspecialchars](http://php.net/manual/en/function.htmlspecialchars.php) — Convert special characters to HTML entities
-* [ ] [implode](http://php.net/manual/en/function.implode.php) — Join array elements with a string
-* [ ] [join](http://php.net/manual/en/function.join.php) — Alias of implode
-* [ ] [lcfirst](http://php.net/manual/en/function.lcfirst.php) — Make a string's first character lowercase
-* [ ] [levenshtein](http://php.net/manual/en/function.levenshtein.php) — Calculate Levenshtein distance between two strings
-* [ ] [localeconv](http://php.net/manual/en/function.localeconv.php) — Get numeric formatting information
-* [ ] [ltrim](http://php.net/manual/en/function.ltrim.php) — Strip whitespace (or other characters) from the beginning of a string
-* [ ] [md5_file](http://php.net/manual/en/function.md5-file.php) — Calculates the md5 hash of a given file
-* [ ] [md5](http://php.net/manual/en/function.md5.php) — Calculate the md5 hash of a string
-* [ ] [metaphone](http://php.net/manual/en/function.metaphone.php) — Calculate the metaphone key of a string
-* [ ] [money_format](http://php.net/manual/en/function.money-format.php) — Formats a number as a currency string
-* [ ] [nl_langinfo](http://php.net/manual/en/function.nl-langinfo.php) — Query language and locale information
-* [ ] [nl2br](http://php.net/manual/en/function.nl2br.php) — Inserts HTML line breaks before all newlines in a string
-* [ ] [number_format](http://php.net/manual/en/function.number-format.php) — Format a number with grouped thousands
-* [ ] <strike>[ord](http://php.net/manual/en/function.ord.php) — Convert the first byte of a string to a value between 0 and 255</strike>, `Built-in function in Python`
-* [ ] [parse_str](http://php.net/manual/en/function.parse-str.php) — Parses the string into variables
-* [ ] <strike>[print](http://php.net/manual/en/function.print.php) — Output a string</strike>, `Built-in function in Python`
-* [ ] [printf](http://php.net/manual/en/function.printf.php) — Output a formatted string
-* [ ] [quoted_printable_decode](http://php.net/manual/en/function.quoted-printable-decode.php) — Convert a quoted-printable string to an 8 bit string
-* [ ] [quoted_printable_encode](http://php.net/manual/en/function.quoted-printable-encode.php) — Convert a 8 bit string to a quoted-printable string
-* [ ] [quotemeta](http://php.net/manual/en/function.quotemeta.php) — Quote meta characters
-* [ ] [rtrim](http://php.net/manual/en/function.rtrim.php) — Strip whitespace (or other characters) from the end of a string
-* [ ] [setlocale](http://php.net/manual/en/function.setlocale.php) — Set locale information
-* [ ] [sha1_file](http://php.net/manual/en/function.sha1-file.php) — Calculate the sha1 hash of a file
-* [ ] [sha1](http://php.net/manual/en/function.sha1.php) — Calculate the sha1 hash of a string
-* [ ] [similar_text](http://php.net/manual/en/function.similar-text.php) — Calculate the similarity between two strings
-* [ ] [soundex](http://php.net/manual/en/function.soundex.php) — Calculate the soundex key of a string
-* [ ] [sprintf](http://php.net/manual/en/function.sprintf.php) — Return a formatted string
-* [ ] [sscanf](http://php.net/manual/en/function.sscanf.php) — Parses input from a string according to a format
-* [ ] [str_getcsv](http://php.net/manual/en/function.str-getcsv.php) — Parse a CSV string into an array
-* [ ] [str_ireplace](http://php.net/manual/en/function.str-ireplace.php) — Case-insensitive version of str_replace
-* [ ] [str_pad](http://php.net/manual/en/function.str-pad.php) — Pad a string to a certain length with another string
-* [ ] [str_repeat](http://php.net/manual/en/function.str-repeat.php) — Repeat a string
-* [ ] [str_replace](http://php.net/manual/en/function.str-replace.php) — Replace all occurrences of the search string with the replacement string
-* [ ] [str_rot13](http://php.net/manual/en/function.str-rot13.php) — Perform the rot13 transform on a string
-* [ ] [str_shuffle](http://php.net/manual/en/function.str-shuffle.php) — Randomly shuffles a string
-* [ ] [str_split](http://php.net/manual/en/function.str-split.php) — Convert a string to an array
-* [ ] [str_word_count](http://php.net/manual/en/function.str-word-count.php) — Return information about words used in a string
-* [ ] [strcasecmp](http://php.net/manual/en/function.strcasecmp.php) — Binary safe case-insensitive string comparison
-* [ ] [strchr](http://php.net/manual/en/function.strchr.php) — Alias of strstr
-* [ ] [strcmp](http://php.net/manual/en/function.strcmp.php) — Binary safe string comparison
-* [ ] [strcoll](http://php.net/manual/en/function.strcoll.php) — Locale based string comparison
-* [ ] [strcspn](http://php.net/manual/en/function.strcspn.php) — Find length of initial segment not matching mask
-* [ ] [strip_tags](http://php.net/manual/en/function.strip-tags.php) — Strip HTML and PHP tags from a string
-* [ ] [stripcslashes](http://php.net/manual/en/function.stripcslashes.php) — Un-quote string quoted with addcslashes
-* [ ] [stripos](http://php.net/manual/en/function.stripos.php) — Find the position of the first occurrence of a case-insensitive substring in a string
-* [ ] [stripslashes](http://php.net/manual/en/function.stripslashes.php) — Un-quotes a quoted string
-* [ ] [stristr](http://php.net/manual/en/function.stristr.php) — Case-insensitive strstr
-* [ ] [strlen](http://php.net/manual/en/function.strlen.php) — Get string length
-* [ ] [strnatcasecmp](http://php.net/manual/en/function.strnatcasecmp.php) — Case insensitive string comparisons using a "natural order" algorithm
-* [ ] [strnatcmp](http://php.net/manual/en/function.strnatcmp.php) — String comparisons using a "natural order" algorithm
-* [ ] [strncasecmp](http://php.net/manual/en/function.strncasecmp.php) — Binary safe case-insensitive string comparison of the first n characters
-* [ ] [strncmp](http://php.net/manual/en/function.strncmp.php) — Binary safe string comparison of the first n characters
-* [ ] [strpbrk](http://php.net/manual/en/function.strpbrk.php) — Search a string for any of a set of characters
-* [ ] [strpos](http://php.net/manual/en/function.strpos.php) — Find the position of the first occurrence of a substring in a string
-* [ ] [strrchr](http://php.net/manual/en/function.strrchr.php) — Find the last occurrence of a character in a string
-* [ ] [strrev](http://php.net/manual/en/function.strrev.php) — Reverse a string
-* [ ] [strripos](http://php.net/manual/en/function.strripos.php) — Find the position of the last occurrence of a case-insensitive substring in a string
-* [ ] [strrpos](http://php.net/manual/en/function.strrpos.php) — Find the position of the last occurrence of a substring in a string
-* [ ] [strspn](http://php.net/manual/en/function.strspn.php) — Finds the length of the initial segment of a string consisting entirely of characters contained within a given mask
-* [ ] [strstr](http://php.net/manual/en/function.strstr.php) — Find the first occurrence of a string
-* [ ] [strtok](http://php.net/manual/en/function.strtok.php) — Tokenize string
-* [ ] [strtolower](http://php.net/manual/en/function.strtolower.php) — Make a string lowercase
-* [ ] [strtoupper](http://php.net/manual/en/function.strtoupper.php) — Make a string uppercase
-* [ ] [strtr](http://php.net/manual/en/function.strtr.php) — Translate characters or replace substrings
-* [ ] [substr_compare](http://php.net/manual/en/function.substr-compare.php) — Binary safe comparison of two strings from an offset, up to length characters
-* [ ] [substr_count](http://php.net/manual/en/function.substr-count.php) — Count the number of substring occurrences
-* [ ] [substr_replace](http://php.net/manual/en/function.substr-replace.php) — Replace text within a portion of a string
-* [ ] [substr](http://php.net/manual/en/function.substr.php) — Return part of a string
-* [ ] [trim](http://php.net/manual/en/function.trim.php) — Strip whitespace (or other characters) from the beginning and end of a string
-* [ ] [ucfirst](http://php.net/manual/en/function.ucfirst.php) — Make a string's first character uppercase
-* [ ] [ucwords](http://php.net/manual/en/function.ucwords.php) — Uppercase the first character of each word in a string
-* [ ] [vfprintf](http://php.net/manual/en/function.vfprintf.php) — Write a formatted string to a stream
-* [ ] [vprintf](http://php.net/manual/en/function.vprintf.php) — Output a formatted string
-* [ ] [vsprintf](http://php.net/manual/en/function.vsprintf.php) — Return a formatted string
-* [ ] [wordwrap](http://php.net/manual/en/function.wordwrap.php) — Wraps a string to a given number of characters
-
 
 ## Date/Time Functions
 
@@ -257,164 +154,9 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 * [ ] <strike>[timezone_transitions_get](http://php.net/manual/en/function.timezone-transitions-get.php) — Alias of DateTimeZone::getTransitions</strike>
 * [ ] [timezone_version_get](http://php.net/manual/en/function.timezone-version-get.php) — Gets the version of the timezonedb
 
-## Mathematical Functions
-
-* [ ] <strike>[abs](http://php.net/manual/en/function.abs.php) — Absolute value</strike>, `Built-in function in Python`
-* [x] [acos](http://php.net/manual/en/function.acos.php) — Arc cosine
-* [x] [acosh](http://php.net/manual/en/function.acosh.php) — Inverse hyperbolic cosine
-* [x] [asin](http://php.net/manual/en/function.asin.php) — Arc sine
-* [x] [asinh](http://php.net/manual/en/function.asinh.php) — Inverse hyperbolic sine
-* [x] [atan2](http://php.net/manual/en/function.atan2.php) — Arc tangent of two variables
-* [x] [atan](http://php.net/manual/en/function.atan.php) — Arc tangent
-* [x] [atanh](http://php.net/manual/en/function.atanh.php) — Inverse hyperbolic tangent
-* [x] [base_convert](http://php.net/manual/en/function.base-convert.php) — Convert a number between arbitrary bases
-* [x] [bindec](http://php.net/manual/en/function.bindec.php) — Binary to decimal
-* [x] [ceil](http://php.net/manual/en/function.ceil.php) — Round fractions up
-* [x] [cos](http://php.net/manual/en/function.cos.php) — Cosine
-* [x] [cosh](http://php.net/manual/en/function.cosh.php) — Hyperbolic cosine
-* [x] [decbin](http://php.net/manual/en/function.decbin.php) — Decimal to binary
-* [x] [dechex](http://php.net/manual/en/function.dechex.php) — Decimal to hexadecimal
-* [x] [decoct](http://php.net/manual/en/function.decoct.php) — Decimal to octal
-* [x] [deg2rad](http://php.net/manual/en/function.deg2rad.php) — Converts the number in degrees to the radian equivalent
-* [x] [exp](http://php.net/manual/en/function.exp.php) — Calculates the exponent of e
-* [x] [expm1](http://php.net/manual/en/function.expm1.php) — Returns exp(number) - 1, computed in a way that is accurate even when the value of number is close to zero
-* [x] [floor](http://php.net/manual/en/function.floor.php) — Round fractions down
-* [x] [fmod](http://php.net/manual/en/function.fmod.php) — Returns the floating point remainder (modulo) of the division of the arguments
-* [ ] [getrandmax](http://php.net/manual/en/function.getrandmax.php) — Show largest possible random value
-* [x] [hexdec](http://php.net/manual/en/function.hexdec.php) — Hexadecimal to decimal
-* [x] [hypot](http://php.net/manual/en/function.hypot.php) — Calculate the length of the hypotenuse of a right-angle triangle
-* [ ] [intdiv](http://php.net/manual/en/function.intdiv.php) — Integer division
-* [x] [is_finite](http://php.net/manual/en/function.is-finite.php) — Finds whether a value is a legal finite number
-* [x] [is_infinite](http://php.net/manual/en/function.is-infinite.php) — Finds whether a value is infinite
-* [x] [is_nan](http://php.net/manual/en/function.is-nan.php) — Finds whether a value is not a number
-* [ ] [lcg_value](http://php.net/manual/en/function.lcg-value.php) — Combined linear congruential generator
-* [x] [log10](http://php.net/manual/en/function.log10.php) — Base-10 logarithm
-* [x] [log1p](http://php.net/manual/en/function.log1p.php) — Returns log(1 + number), computed in a way that is accurate even when the value of number is close to zero
-* [x] [log](http://php.net/manual/en/function.log.php) — Natural logarithm
-* [ ] <strike>[max](http://php.net/manual/en/function.max.php) — Find highest value</strike>, `Built-in function in Python`
-* [ ] <strike>[min](http://php.net/manual/en/function.min.php) — Find lowest value</strike>, `Built-in function in Python`
-* [ ] [mt_getrandmax](http://php.net/manual/en/function.mt-getrandmax.php) — Show largest possible random value
-* [ ] [mt_rand](http://php.net/manual/en/function.mt-rand.php) — Generate a random value via the Mersenne Twister Random Number Generator
-* [ ] [mt_srand](http://php.net/manual/en/function.mt-srand.php) — Seeds the Mersenne Twister Random Number Generator
-* [x] [octdec](http://php.net/manual/en/function.octdec.php) — Octal to decimal
-* [x] [pi](http://php.net/manual/en/function.pi.php) — Get value of pi
-* [ ] <strike>[pow](http://php.net/manual/en/function.pow.php) — Exponential expression</strike>, `Built-in function in Python`
-* [x] [rad2deg](http://php.net/manual/en/function.rad2deg.php) — Converts the radian number to the equivalent number in degrees
-* [x] [rand](http://php.net/manual/en/function.rand.php) — Generate a random integer
-* [ ] <strike>[round](http://php.net/manual/en/function.round.php) — Rounds a float</strike>, `Built-in function in Python`
-* [x] [sin](http://php.net/manual/en/function.sin.php) — Sine
-* [x] [sinh](http://php.net/manual/en/function.sinh.php) — Hyperbolic sine
-* [x] [sqrt](http://php.net/manual/en/function.sqrt.php) — Square root
-* [x] [srand](http://php.net/manual/en/function.srand.php) — Seed the random number generator
-* [x] [tan](http://php.net/manual/en/function.tan.php) — Tangent
-* [x] [tanh](http://php.net/manual/en/function.tanh.php) — Hyperbolic tangent
-
-## Variable handling Functions
-
-* [x] [boolval](http://php.net/manual/en/function.boolval.php) — Get the boolean value of a variable
-* [ ] [debug_zval_dump](http://php.net/manual/en/function.debug-zval-dump.php) — Dumps a string representation of an internal zend value to output
-* [x] [doubleval](http://php.net/manual/en/function.doubleval.php) — Alias of floatval
-* [x] [empty](http://php.net/manual/en/function.empty.php) — Determine whether a variable is empty
-* [x] [floatval](http://php.net/manual/en/function.floatval.php) — Get float value of a variable
-* [ ] [get_defined_vars](http://php.net/manual/en/function.get-defined-vars.php) — Returns an array of all defined variables
-* [ ] [get_resource_type](http://php.net/manual/en/function.get-resource-type.php) — Returns the resource type
-* [x] [gettype](http://php.net/manual/en/function.gettype.php) — Get the type of a variable
-* [ ] [import_request_variables](http://php.net/manual/en/function.import-request-variables.php) — Import GET/POST/Cookie variables into the global scope
-* [x] [intval](http://php.net/manual/en/function.intval.php) — Get the integer value of a variable
-* [x] [is_array](http://php.net/manual/en/function.is-array.php) — Finds whether a variable is an array
-* [x] [is_bool](http://php.net/manual/en/function.is-bool.php) — Finds out whether a variable is a boolean
-* [ ] [is_callable](http://php.net/manual/en/function.is-callable.php) — Verify that the contents of a variable can be called as a function
-* [ ] [is_countable](http://php.net/manual/en/function.is-countable.php) — Verify that the contents of a variable is a countable value
-* [x] [is_double](http://php.net/manual/en/function.is-double.php) — Alias of is_float
-* [x] [is_float](http://php.net/manual/en/function.is-float.php) — Finds whether the type of a variable is float
-* [x] [is_int](http://php.net/manual/en/function.is-int.php) — Find whether the type of a variable is integer
-* [x] [is_integer](http://php.net/manual/en/function.is-integer.php) — Alias of is_int
-* [ ] [is_iterable](http://php.net/manual/en/function.is-iterable.php) — Verify that the contents of a variable is an iterable value
-* [ ] [is_long](http://php.net/manual/en/function.is-long.php) — Alias of is_int
-* [x] [is_null](http://php.net/manual/en/function.is-null.php) — Finds whether a variable is NULL
-* [x] [is_numeric](http://php.net/manual/en/function.is-numeric.php) — Finds whether a variable is a number or a numeric string
-* [x] [is_object](http://php.net/manual/en/function.is-object.php) — Finds whether a variable is an object
-* [x] [is_real](http://php.net/manual/en/function.is-real.php) — Alias of is_float
-* [ ] [is_resource](http://php.net/manual/en/function.is-resource.php) — Finds whether a variable is a resource
-* [x] [is_scalar](http://php.net/manual/en/function.is-scalar.php) — Finds whether a variable is a scalar
-* [x] [is_string](http://php.net/manual/en/function.is-string.php) — Find whether the type of a variable is string
-* [x] [isset](http://php.net/manual/en/function.isset.php) — Determine if a variable is set and is not NULL
-* [x] [print_r](http://php.net/manual/en/function.print-r.php) — Prints human-readable information about a variable
-* [x] [serialize](http://php.net/manual/en/function.serialize.php) — Generates a storable representation of a value
-* [ ] [settype](http://php.net/manual/en/function.settype.php) — Set the type of a variable
-* [x] [strval](http://php.net/manual/en/function.strval.php) — Get string value of a variable
-* [ ] [unserialize](http://php.net/manual/en/function.unserialize.php) — Creates a PHP value from a stored representation
-* [x] [unset](http://php.net/manual/en/function.unset.php) — Unset a given variable
-* [x] [var_dump](http://php.net/manual/en/function.var-dump.php) — Dumps information about a variable
-* [x] [var_export](http://php.net/manual/en/function.var-export.php) — Outputs or returns a parsable string representation of a variable
-
-## URL Functions
-
-* [x] [base64_decode](http://php.net/manual/en/function.base64-decode.php) — Decodes data encoded with MIME base64
-* [x] [base64_encode](http://php.net/manual/en/function.base64-encode.php) — Encodes data with MIME base64
-* [x] [get_headers](http://php.net/manual/en/function.get-headers.php) — Fetches all the headers sent by the server in response to an HTTP request
-* [x] [get_meta_tags](http://php.net/manual/en/function.get-meta-tags.php) — Extracts all meta tag content attributes from a file and returns an array
-* [x] [http_build_query](http://php.net/manual/en/function.http-build-query.php) — Generate URL-encoded query string
-* [x] [parse_url](http://php.net/manual/en/function.parse-url.php) — Parse a URL and return its components
-* [x] [rawurldecode](http://php.net/manual/en/function.rawurldecode.php) — Decode URL-encoded strings
-* [x] [rawurlencode](http://php.net/manual/en/function.rawurlencode.php) — URL-encode according to RFC 3986
-* [x] [urldecode](http://php.net/manual/en/function.urldecode.php) — Decodes URL-encoded string
-* [x] [urlencode](http://php.net/manual/en/function.urlencode.php) — URL-encodes string
-
-## Program execution Functions
-
-* [x] [escapeshellarg](http://php.net/manual/en/function.escapeshellarg.php) — Escape a string to be used as a shell argument
-* [ ] [escapeshellcmd](http://php.net/manual/en/function.escapeshellcmd.php) — Escape shell metacharacters
-* [ ] <strike>[exec](http://php.net/manual/en/function.exec.php) — Execute an external program</strike>
-* [ ] [passthru](http://php.net/manual/en/function.passthru.php) — Execute an external program and display raw output
-* [ ] [proc_close](http://php.net/manual/en/function.proc-close.php) — Close a process opened by proc_open and return the exit code of that process
-* [ ] [proc_get_status](http://php.net/manual/en/function.proc-get-status.php) — Get information about a process opened by proc_open
-* [ ] [proc_nice](http://php.net/manual/en/function.proc-nice.php) — Change the priority of the current process
-* [ ] [proc_open](http://php.net/manual/en/function.proc-open.php) — Execute a command and open file pointers for input/output
-* [ ] [proc_terminate](http://php.net/manual/en/function.proc-terminate.php) — Kills a process opened by proc_open
-* [x] [shell_exec](http://php.net/manual/en/function.shell-exec.php) — Execute command via shell and return the complete output as a string
-* [x] [system](http://php.net/manual/en/function.system.php) — Execute an external program and display the output
-
-## Network Functions
-
-* [ ] [checkdnsrr](http://php.net/manual/en/function.checkdnsrr.php) — Check DNS records corresponding to a given Internet host name or IP address
-* [ ] [closelog](http://php.net/manual/en/function.closelog.php) — Close connection to system logger
-* [ ] [define_syslog_variables](http://php.net/manual/en/function.define-syslog-variables.php) — Initializes all syslog related variables
-* [ ] [dns_check_record](http://php.net/manual/en/function.dns-check-record.php) — Alias of checkdnsrr
-* [ ] [dns_get_mx](http://php.net/manual/en/function.dns-get-mx.php) — Alias of getmxrr
-* [ ] [dns_get_record](http://php.net/manual/en/function.dns-get-record.php) — Fetch DNS Resource Records associated with a hostname
-* [ ] [fsockopen](http://php.net/manual/en/function.fsockopen.php) — Open Internet or Unix domain socket connection
-* [ ] [gethostbyaddr](http://php.net/manual/en/function.gethostbyaddr.php) — Get the Internet host name corresponding to a given IP address
-* [ ] [gethostbyname](http://php.net/manual/en/function.gethostbyname.php) — Get the IPv4 address corresponding to a given Internet host name
-* [ ] [gethostbynamel](http://php.net/manual/en/function.gethostbynamel.php) — Get a list of IPv4 addresses corresponding to a given Internet host name
-* [ ] [gethostname](http://php.net/manual/en/function.gethostname.php) — Gets the host name
-* [ ] [getmxrr](http://php.net/manual/en/function.getmxrr.php) — Get MX records corresponding to a given Internet host name
-* [ ] [getprotobyname](http://php.net/manual/en/function.getprotobyname.php) — Get protocol number associated with protocol name
-* [ ] [getprotobynumber](http://php.net/manual/en/function.getprotobynumber.php) — Get protocol name associated with protocol number
-* [ ] [getservbyname](http://php.net/manual/en/function.getservbyname.php) — Get port number associated with an Internet service and protocol
-* [ ] [getservbyport](http://php.net/manual/en/function.getservbyport.php) — Get Internet service which corresponds to port and protocol
-* [ ] [header_register_callback](http://php.net/manual/en/function.header-register-callback.php) — Call a header function
-* [ ] [header_remove](http://php.net/manual/en/function.header-remove.php) — Remove previously set headers
-* [ ] [header](http://php.net/manual/en/function.header.php) — Send a raw HTTP header
-* [ ] [headers_list](http://php.net/manual/en/function.headers-list.php) — Returns a list of response headers sent (or ready to send)
-* [ ] [headers_sent](http://php.net/manual/en/function.headers-sent.php) — Checks if or where headers have been sent
-* [ ] [http_response_code](http://php.net/manual/en/function.http-response-code.php) — Get or Set the HTTP response code
-* [ ] [inet_ntop](http://php.net/manual/en/function.inet-ntop.php) — Converts a packed internet address to a human readable representation
-* [ ] [inet_pton](http://php.net/manual/en/function.inet-pton.php) — Converts a human readable IP address to its packed in_addr representation
-* [ ] [ip2long](http://php.net/manual/en/function.ip2long.php) — Converts a string containing an (IPv4) Internet Protocol dotted address into a long integer
-* [ ] [long2ip](http://php.net/manual/en/function.long2ip.php) — Converts an long integer address into a string in (IPv4) Internet standard dotted format
-* [ ] [openlog](http://php.net/manual/en/function.openlog.php) — Open connection to system logger
-* [ ] [pfsockopen](http://php.net/manual/en/function.pfsockopen.php) — Open persistent Internet or Unix domain socket connection
-* [ ] [setcookie](http://php.net/manual/en/function.setcookie.php) — Send a cookie
-* [ ] [setrawcookie](http://php.net/manual/en/function.setrawcookie.php) — Send a cookie without urlencoding the cookie value
-* [ ] [socket_get_status](http://php.net/manual/en/function.socket-get-status.php) — Alias of stream_get_meta_data
-* [ ] [socket_set_blocking](http://php.net/manual/en/function.socket-set-blocking.php) — Alias of stream_set_blocking
-* [ ] [socket_set_timeout](http://php.net/manual/en/function.socket-set-timeout.php) — Alias of stream_set_timeout
-* [ ] [syslog](http://php.net/manual/en/function.syslog.php) — Generate a system log message
-
 ## Filesystem Functions
 
-* [ ] [basename](http://php.net/manual/en/function.basename.php) — Returns trailing name component of path
+* [x] [basename](http://php.net/manual/en/function.basename.php) — Returns trailing name component of path
 * [ ] [chgrp](http://php.net/manual/en/function.chgrp.php) — Changes file group
 * [ ] [chmod](http://php.net/manual/en/function.chmod.php) — Changes file mode
 * [ ] [chown](http://php.net/manual/en/function.chown.php) — Changes file owner
@@ -496,6 +238,58 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 * [x] [umask](http://php.net/manual/en/function.umask.php) — Changes the current umask
 * [x] [unlink](http://php.net/manual/en/function.unlink.php) — Deletes a file
 
+## Mathematical Functions
+
+* [ ] <strike>[abs](http://php.net/manual/en/function.abs.php) — Absolute value</strike>, `Built-in function in Python`
+* [x] [acos](http://php.net/manual/en/function.acos.php) — Arc cosine
+* [x] [acosh](http://php.net/manual/en/function.acosh.php) — Inverse hyperbolic cosine
+* [x] [asin](http://php.net/manual/en/function.asin.php) — Arc sine
+* [x] [asinh](http://php.net/manual/en/function.asinh.php) — Inverse hyperbolic sine
+* [x] [atan2](http://php.net/manual/en/function.atan2.php) — Arc tangent of two variables
+* [x] [atan](http://php.net/manual/en/function.atan.php) — Arc tangent
+* [x] [atanh](http://php.net/manual/en/function.atanh.php) — Inverse hyperbolic tangent
+* [x] [base_convert](http://php.net/manual/en/function.base-convert.php) — Convert a number between arbitrary bases
+* [x] [bindec](http://php.net/manual/en/function.bindec.php) — Binary to decimal
+* [x] [ceil](http://php.net/manual/en/function.ceil.php) — Round fractions up
+* [x] [cos](http://php.net/manual/en/function.cos.php) — Cosine
+* [x] [cosh](http://php.net/manual/en/function.cosh.php) — Hyperbolic cosine
+* [x] [decbin](http://php.net/manual/en/function.decbin.php) — Decimal to binary
+* [x] [dechex](http://php.net/manual/en/function.dechex.php) — Decimal to hexadecimal
+* [x] [decoct](http://php.net/manual/en/function.decoct.php) — Decimal to octal
+* [x] [deg2rad](http://php.net/manual/en/function.deg2rad.php) — Converts the number in degrees to the radian equivalent
+* [x] [exp](http://php.net/manual/en/function.exp.php) — Calculates the exponent of e
+* [x] [expm1](http://php.net/manual/en/function.expm1.php) — Returns exp(number) - 1, computed in a way that is accurate even when the value of number is close to zero
+* [x] [floor](http://php.net/manual/en/function.floor.php) — Round fractions down
+* [x] [fmod](http://php.net/manual/en/function.fmod.php) — Returns the floating point remainder (modulo) of the division of the arguments
+* [ ] [getrandmax](http://php.net/manual/en/function.getrandmax.php) — Show largest possible random value
+* [x] [hexdec](http://php.net/manual/en/function.hexdec.php) — Hexadecimal to decimal
+* [x] [hypot](http://php.net/manual/en/function.hypot.php) — Calculate the length of the hypotenuse of a right-angle triangle
+* [ ] [intdiv](http://php.net/manual/en/function.intdiv.php) — Integer division
+* [x] [is_finite](http://php.net/manual/en/function.is-finite.php) — Finds whether a value is a legal finite number
+* [x] [is_infinite](http://php.net/manual/en/function.is-infinite.php) — Finds whether a value is infinite
+* [x] [is_nan](http://php.net/manual/en/function.is-nan.php) — Finds whether a value is not a number
+* [ ] [lcg_value](http://php.net/manual/en/function.lcg-value.php) — Combined linear congruential generator
+* [x] [log10](http://php.net/manual/en/function.log10.php) — Base-10 logarithm
+* [x] [log1p](http://php.net/manual/en/function.log1p.php) — Returns log(1 + number), computed in a way that is accurate even when the value of number is close to zero
+* [x] [log](http://php.net/manual/en/function.log.php) — Natural logarithm
+* [ ] <strike>[max](http://php.net/manual/en/function.max.php) — Find highest value</strike>, `Built-in function in Python`
+* [ ] <strike>[min](http://php.net/manual/en/function.min.php) — Find lowest value</strike>, `Built-in function in Python`
+* [ ] [mt_getrandmax](http://php.net/manual/en/function.mt-getrandmax.php) — Show largest possible random value
+* [x] [mt_rand](http://php.net/manual/en/function.mt-rand.php) — Generate a random value via the Mersenne Twister Random Number Generator
+* [ ] [mt_srand](http://php.net/manual/en/function.mt-srand.php) — Seeds the Mersenne Twister Random Number Generator
+* [x] [octdec](http://php.net/manual/en/function.octdec.php) — Octal to decimal
+* [x] [pi](http://php.net/manual/en/function.pi.php) — Get value of pi
+* [ ] <strike>[pow](http://php.net/manual/en/function.pow.php) — Exponential expression</strike>, `Built-in function in Python`
+* [x] [rad2deg](http://php.net/manual/en/function.rad2deg.php) — Converts the radian number to the equivalent number in degrees
+* [x] [rand](http://php.net/manual/en/function.rand.php) — Generate a random integer
+* [ ] <strike>[round](http://php.net/manual/en/function.round.php) — Rounds a float</strike>, `Built-in function in Python`
+* [x] [sin](http://php.net/manual/en/function.sin.php) — Sine
+* [x] [sinh](http://php.net/manual/en/function.sinh.php) — Hyperbolic sine
+* [x] [sqrt](http://php.net/manual/en/function.sqrt.php) — Square root
+* [x] [srand](http://php.net/manual/en/function.srand.php) — Seed the random number generator
+* [x] [tan](http://php.net/manual/en/function.tan.php) — Tangent
+* [x] [tanh](http://php.net/manual/en/function.tanh.php) — Hyperbolic tangent
+
 ## Misc. Functions
 
 * [ ] [connection_aborted](http://php.net/manual/en/function.connection-aborted.php) — Check whether client disconnected
@@ -528,3 +322,207 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 * [x] [uniqid](http://php.net/manual/en/function.uniqid.php) — Generate a unique ID
 * [x] [unpack](http://php.net/manual/en/function.unpack.php) — Unpack data from binary string
 * [x] [usleep](http://php.net/manual/en/function.usleep.php) — Delay execution in microseconds
+
+## Network Functions
+
+* [ ] [checkdnsrr](http://php.net/manual/en/function.checkdnsrr.php) — Check DNS records corresponding to a given Internet host name or IP address
+* [ ] [closelog](http://php.net/manual/en/function.closelog.php) — Close connection to system logger
+* [ ] [define_syslog_variables](http://php.net/manual/en/function.define-syslog-variables.php) — Initializes all syslog related variables
+* [ ] [dns_check_record](http://php.net/manual/en/function.dns-check-record.php) — Alias of checkdnsrr
+* [ ] [dns_get_mx](http://php.net/manual/en/function.dns-get-mx.php) — Alias of getmxrr
+* [ ] [dns_get_record](http://php.net/manual/en/function.dns-get-record.php) — Fetch DNS Resource Records associated with a hostname
+* [ ] [fsockopen](http://php.net/manual/en/function.fsockopen.php) — Open Internet or Unix domain socket connection
+* [ ] [gethostbyaddr](http://php.net/manual/en/function.gethostbyaddr.php) — Get the Internet host name corresponding to a given IP address
+* [ ] [gethostbyname](http://php.net/manual/en/function.gethostbyname.php) — Get the IPv4 address corresponding to a given Internet host name
+* [ ] [gethostbynamel](http://php.net/manual/en/function.gethostbynamel.php) — Get a list of IPv4 addresses corresponding to a given Internet host name
+* [ ] [gethostname](http://php.net/manual/en/function.gethostname.php) — Gets the host name
+* [ ] [getmxrr](http://php.net/manual/en/function.getmxrr.php) — Get MX records corresponding to a given Internet host name
+* [ ] [getprotobyname](http://php.net/manual/en/function.getprotobyname.php) — Get protocol number associated with protocol name
+* [ ] [getprotobynumber](http://php.net/manual/en/function.getprotobynumber.php) — Get protocol name associated with protocol number
+* [ ] [getservbyname](http://php.net/manual/en/function.getservbyname.php) — Get port number associated with an Internet service and protocol
+* [ ] [getservbyport](http://php.net/manual/en/function.getservbyport.php) — Get Internet service which corresponds to port and protocol
+* [ ] [header_register_callback](http://php.net/manual/en/function.header-register-callback.php) — Call a header function
+* [ ] [header_remove](http://php.net/manual/en/function.header-remove.php) — Remove previously set headers
+* [ ] [header](http://php.net/manual/en/function.header.php) — Send a raw HTTP header
+* [ ] [headers_list](http://php.net/manual/en/function.headers-list.php) — Returns a list of response headers sent (or ready to send)
+* [ ] [headers_sent](http://php.net/manual/en/function.headers-sent.php) — Checks if or where headers have been sent
+* [ ] [http_response_code](http://php.net/manual/en/function.http-response-code.php) — Get or Set the HTTP response code
+* [ ] [inet_ntop](http://php.net/manual/en/function.inet-ntop.php) — Converts a packed internet address to a human readable representation
+* [ ] [inet_pton](http://php.net/manual/en/function.inet-pton.php) — Converts a human readable IP address to its packed in_addr representation
+* [ ] [ip2long](http://php.net/manual/en/function.ip2long.php) — Converts a string containing an (IPv4) Internet Protocol dotted address into a long integer
+* [ ] [long2ip](http://php.net/manual/en/function.long2ip.php) — Converts an long integer address into a string in (IPv4) Internet standard dotted format
+* [ ] [openlog](http://php.net/manual/en/function.openlog.php) — Open connection to system logger
+* [ ] [pfsockopen](http://php.net/manual/en/function.pfsockopen.php) — Open persistent Internet or Unix domain socket connection
+* [ ] [setcookie](http://php.net/manual/en/function.setcookie.php) — Send a cookie
+* [ ] [setrawcookie](http://php.net/manual/en/function.setrawcookie.php) — Send a cookie without urlencoding the cookie value
+* [ ] [socket_get_status](http://php.net/manual/en/function.socket-get-status.php) — Alias of stream_get_meta_data
+* [ ] [socket_set_blocking](http://php.net/manual/en/function.socket-set-blocking.php) — Alias of stream_set_blocking
+* [ ] [socket_set_timeout](http://php.net/manual/en/function.socket-set-timeout.php) — Alias of stream_set_timeout
+* [ ] [syslog](http://php.net/manual/en/function.syslog.php) — Generate a system log message
+
+## Program execution Functions
+
+* [x] [escapeshellarg](http://php.net/manual/en/function.escapeshellarg.php) — Escape a string to be used as a shell argument
+* [ ] [escapeshellcmd](http://php.net/manual/en/function.escapeshellcmd.php) — Escape shell metacharacters
+* [ ] <strike>[exec](http://php.net/manual/en/function.exec.php) — Execute an external program</strike>
+* [ ] [passthru](http://php.net/manual/en/function.passthru.php) — Execute an external program and display raw output
+* [ ] [proc_close](http://php.net/manual/en/function.proc-close.php) — Close a process opened by proc_open and return the exit code of that process
+* [ ] [proc_get_status](http://php.net/manual/en/function.proc-get-status.php) — Get information about a process opened by proc_open
+* [ ] [proc_nice](http://php.net/manual/en/function.proc-nice.php) — Change the priority of the current process
+* [ ] [proc_open](http://php.net/manual/en/function.proc-open.php) — Execute a command and open file pointers for input/output
+* [ ] [proc_terminate](http://php.net/manual/en/function.proc-terminate.php) — Kills a process opened by proc_open
+* [x] [shell_exec](http://php.net/manual/en/function.shell-exec.php) — Execute command via shell and return the complete output as a string
+* [x] [system](http://php.net/manual/en/function.system.php) — Execute an external program and display the output
+
+## String Functions
+
+* [ ] [addcslashes](http://php.net/manual/en/function.addcslashes.php) — Quote string with slashes in a C style
+* [ ] [addslashes](http://php.net/manual/en/function.addslashes.php) — Quote string with slashes
+* [x] [bin2hex](http://php.net/manual/en/function.bin2hex.php) — Convert binary data into hexadecimal representation
+* [x] [chop](http://php.net/manual/en/function.chop.php) — Alias of rtrim
+* [x] <strike>[chr](http://php.net/manual/en/function.chr.php) — Generate a single-byte string from a number</strike>, `Built-in function in Python`
+* [x] [chunk_split](http://php.net/manual/en/function.chunk-split.php) — Split a string into smaller chunks
+* [ ] [convert_cyr_string](http://php.net/manual/en/function.convert-cyr-string.php) — Convert from one Cyrillic character set to another
+* [ ] [convert_uudecode](http://php.net/manual/en/function.convert-uudecode.php) — Decode a uuencoded string
+* [ ] [convert_uuencode](http://php.net/manual/en/function.convert-uuencode.php) — Uuencode a string
+* [ ] [count_chars](http://php.net/manual/en/function.count-chars.php) — Return information about characters used in a string
+* [x] [crc32](http://php.net/manual/en/function.crc32.php) — Calculates the crc32 polynomial of a string
+* [x] [crypt](http://php.net/manual/en/function.crypt.php) — One-way string hashing
+* [x] [echo](http://php.net/manual/en/function.echo.php) — Output one or more strings
+* [x] [explode](http://php.net/manual/en/function.explode.php) — Split a string by a string
+* [ ] [fprintf](http://php.net/manual/en/function.fprintf.php) — Write a formatted string to a stream
+* [ ] [get_html_translation_table](http://php.net/manual/en/function.get-html-translation-table.php) — Returns the translation table used by htmlspecialchars and htmlentities
+* [ ] [hebrev](http://php.net/manual/en/function.hebrev.php) — Convert logical Hebrew text to visual text
+* [ ] [hebrevc](http://php.net/manual/en/function.hebrevc.php) — Convert logical Hebrew text to visual text with newline conversion
+* [x] [hex2bin](http://php.net/manual/en/function.hex2bin.php) — Decodes a hexadecimally encoded binary string
+* [ ] [html_entity_decode](http://php.net/manual/en/function.html-entity-decode.php) — Convert HTML entities to their corresponding characters
+* [ ] [htmlentities](http://php.net/manual/en/function.htmlentities.php) — Convert all applicable characters to HTML entities
+* [ ] [htmlspecialchars_decode](http://php.net/manual/en/function.htmlspecialchars-decode.php) — Convert special HTML entities back to characters
+* [ ] [htmlspecialchars](http://php.net/manual/en/function.htmlspecialchars.php) — Convert special characters to HTML entities
+* [x] [implode](http://php.net/manual/en/function.implode.php) — Join array elements with a string
+* [x] [join](http://php.net/manual/en/function.join.php) — Alias of implode
+* [x] [lcfirst](http://php.net/manual/en/function.lcfirst.php) — Make a string's first character lowercase
+* [x] [levenshtein](http://php.net/manual/en/function.levenshtein.php) — Calculate Levenshtein distance between two strings
+* [ ] [localeconv](http://php.net/manual/en/function.localeconv.php) — Get numeric formatting information
+* [x] [ltrim](http://php.net/manual/en/function.ltrim.php) — Strip whitespace (or other characters) from the beginning of a string
+* [x] [md5_file](http://php.net/manual/en/function.md5-file.php) — Calculates the md5 hash of a given file
+* [x] [md5](http://php.net/manual/en/function.md5.php) — Calculate the md5 hash of a string
+* [ ] [metaphone](http://php.net/manual/en/function.metaphone.php) — Calculate the metaphone key of a string
+* [ ] [money_format](http://php.net/manual/en/function.money-format.php) — Formats a number as a currency string
+* [ ] [nl_langinfo](http://php.net/manual/en/function.nl-langinfo.php) — Query language and locale information
+* [x] [nl2br](http://php.net/manual/en/function.nl2br.php) — Inserts HTML line breaks before all newlines in a string
+* [x] [number_format](http://php.net/manual/en/function.number-format.php) — Format a number with grouped thousands
+* [ ] <strike>[ord](http://php.net/manual/en/function.ord.php) — Convert the first byte of a string to a value between 0 and 255</strike>, `Built-in function in Python`
+* [ ] [parse_str](http://php.net/manual/en/function.parse-str.php) — Parses the string into variables
+* [ ] <strike>[print](http://php.net/manual/en/function.print.php) — Output a string</strike>, `Built-in function in Python`
+* [x] [printf](http://php.net/manual/en/function.printf.php) — Output a formatted string
+* [ ] [quoted_printable_decode](http://php.net/manual/en/function.quoted-printable-decode.php) — Convert a quoted-printable string to an 8 bit string
+* [ ] [quoted_printable_encode](http://php.net/manual/en/function.quoted-printable-encode.php) — Convert a 8 bit string to a quoted-printable string
+* [ ] [quotemeta](http://php.net/manual/en/function.quotemeta.php) — Quote meta characters
+* [x] [rtrim](http://php.net/manual/en/function.rtrim.php) — Strip whitespace (or other characters) from the end of a string
+* [ ] [setlocale](http://php.net/manual/en/function.setlocale.php) — Set locale information
+* [x] [sha1_file](http://php.net/manual/en/function.sha1-file.php) — Calculate the sha1 hash of a file
+* [x] [sha1](http://php.net/manual/en/function.sha1.php) — Calculate the sha1 hash of a string
+* [ ] [similar_text](http://php.net/manual/en/function.similar-text.php) — Calculate the similarity between two strings
+* [ ] [soundex](http://php.net/manual/en/function.soundex.php) — Calculate the soundex key of a string
+* [ ] [sprintf](http://php.net/manual/en/function.sprintf.php) — Return a formatted string
+* [ ] [sscanf](http://php.net/manual/en/function.sscanf.php) — Parses input from a string according to a format
+* [x] [str_getcsv](http://php.net/manual/en/function.str-getcsv.php) — Parse a CSV string into an array
+* [ ] [str_ireplace](http://php.net/manual/en/function.str-ireplace.php) — Case-insensitive version of str_replace
+* [x] [str_pad](http://php.net/manual/en/function.str-pad.php) — Pad a string to a certain length with another string
+* [x] [str_repeat](http://php.net/manual/en/function.str-repeat.php) — Repeat a string
+* [ ] [str_replace](http://php.net/manual/en/function.str-replace.php) — Replace all occurrences of the search string with the replacement string
+* [ ] [str_rot13](http://php.net/manual/en/function.str-rot13.php) — Perform the rot13 transform on a string
+* [x] [str_shuffle](http://php.net/manual/en/function.xtr-shuffle.php) — Randomly shuffles a string
+* [x] [str_split](http://php.net/manual/en/function.str-split.php) — Convert a string to an array
+* [x] [str_word_count](http://php.net/manual/en/function.str-word-count.php) — Return information about words used in a string
+* [ ] [strcasecmp](http://php.net/manual/en/function.strcasecmp.php) — Binary safe case-insensitive string comparison
+* [ ] [strchr](http://php.net/manual/en/function.strchr.php) — Alias of strstr
+* [x] [strcmp](http://php.net/manual/en/function.strcmp.php) — Binary safe string comparison
+* [ ] [strcoll](http://php.net/manual/en/function.strcoll.php) — Locale based string comparison
+* [x] [strcspn](http://php.net/manual/en/function.strcspn.php) — Find length of initial segment not matching mask
+* [ ] [strip_tags](http://php.net/manual/en/function.strip-tags.php) — Strip HTML and PHP tags from a string
+* [ ] [stripcslashes](http://php.net/manual/en/function.stripcslashes.php) — Un-quote string quoted with addcslashes
+* [x] [stripos](http://php.net/manual/en/function.stripos.php) — Find the position of the first occurrence of a case-insensitive substring in a string
+* [ ] [stripslashes](http://php.net/manual/en/function.stripslashes.php) — Un-quotes a quoted string
+* [x] [stristr](http://php.net/manual/en/function.stristr.php) — Case-insensitive strstr
+* [x] [strlen](http://php.net/manual/en/function.strlen.php) — Get string length
+* [ ] [strnatcasecmp](http://php.net/manual/en/function.strnatcasecmp.php) — Case insensitive string comparisons using a "natural order" algorithm
+* [ ] [strnatcmp](http://php.net/manual/en/function.strnatcmp.php) — String comparisons using a "natural order" algorithm
+* [ ] [strncasecmp](http://php.net/manual/en/function.strncasecmp.php) — Binary safe case-insensitive string comparison of the first n characters
+* [ ] [strncmp](http://php.net/manual/en/function.strncmp.php) — Binary safe string comparison of the first n characters
+* [x] [strpbrk](http://php.net/manual/en/function.strpbrk.php) — Search a string for any of a set of characters
+* [x] [strpos](http://php.net/manual/en/function.strpos.php) — Find the position of the first occurrence of a substring in a string
+* [x] [strrchr](http://php.net/manual/en/function.strrchr.php) — Find the last occurrence of a character in a string
+* [x] [strrev](http://php.net/manual/en/function.strrev.php) — Reverse a string
+* [x] [strripos](http://php.net/manual/en/function.strripos.php) — Find the position of the last occurrence of a case-insensitive substring in a string
+* [x] [strrpos](http://php.net/manual/en/function.strrpos.php) — Find the position of the last occurrence of a substring in a string
+* [x] [strspn](http://php.net/manual/en/function.strspn.php) — Finds the length of the initial segment of a string consisting entirely of characters contained within a given mask
+* [x] [strstr](http://php.net/manual/en/function.strstr.php) — Find the first occurrence of a string
+* [ ] [strtok](http://php.net/manual/en/function.strtok.php) — Tokenize string
+* [x] [strtolower](http://php.net/manual/en/function.strtolower.php) — Make a string lowercase
+* [x] [strtoupper](http://php.net/manual/en/function.strtoupper.php) — Make a string uppercase
+* [x] [strtr](http://php.net/manual/en/function.strtr.php) — Translate characters or replace substrings
+* [ ] [substr_compare](http://php.net/manual/en/function.substr-compare.php) — Binary safe comparison of two strings from an offset, up to length characters
+* [ ] [substr_count](http://php.net/manual/en/function.substr-count.php) — Count the number of substring occurrences
+* [x] [substr_replace](http://php.net/manual/en/function.substr-replace.php) — Replace text within a portion of a string
+* [x] [substr](http://php.net/manual/en/function.substr.php) — Return part of a string
+* [x] [trim](http://php.net/manual/en/function.trim.php) — Strip whitespace (or other characters) from the beginning and end of a string
+* [x] [ucfirst](http://php.net/manual/en/function.ucfirst.php) — Make a string's first character uppercase
+* [x] [ucwords](http://php.net/manual/en/function.ucwords.php) — Uppercase the first character of each word in a string
+* [ ] [vfprintf](http://php.net/manual/en/function.vfprintf.php) — Write a formatted string to a stream
+* [ ] [vprintf](http://php.net/manual/en/function.vprintf.php) — Output a formatted string
+* [ ] [vsprintf](http://php.net/manual/en/function.vsprintf.php) — Return a formatted string
+* [ ] [wordwrap](http://php.net/manual/en/function.wordwrap.php) — Wraps a string to a given number of characters
+
+## URL Functions
+
+* [x] [base64_decode](http://php.net/manual/en/function.base64-decode.php) — Decodes data encoded with MIME base64
+* [x] [base64_encode](http://php.net/manual/en/function.base64-encode.php) — Encodes data with MIME base64
+* [x] [get_headers](http://php.net/manual/en/function.get-headers.php) — Fetches all the headers sent by the server in response to an HTTP request
+* [x] [get_meta_tags](http://php.net/manual/en/function.get-meta-tags.php) — Extracts all meta tag content attributes from a file and returns an array
+* [x] [http_build_query](http://php.net/manual/en/function.http-build-query.php) — Generate URL-encoded query string
+* [x] [parse_url](http://php.net/manual/en/function.parse-url.php) — Parse a URL and return its components
+* [x] [rawurldecode](http://php.net/manual/en/function.rawurldecode.php) — Decode URL-encoded strings
+* [x] [rawurlencode](http://php.net/manual/en/function.rawurlencode.php) — URL-encode according to RFC 3986
+* [x] [urldecode](http://php.net/manual/en/function.urldecode.php) — Decodes URL-encoded string
+* [x] [urlencode](http://php.net/manual/en/function.urlencode.php) — URL-encodes string
+
+## Variable handling Functions
+
+* [x] [boolval](http://php.net/manual/en/function.boolval.php) — Get the boolean value of a variable
+* [ ] [debug_zval_dump](http://php.net/manual/en/function.debug-zval-dump.php) — Dumps a string representation of an internal zend value to output
+* [x] [doubleval](http://php.net/manual/en/function.doubleval.php) — Alias of floatval
+* [x] [empty](http://php.net/manual/en/function.empty.php) — Determine whether a variable is empty
+* [x] [floatval](http://php.net/manual/en/function.floatval.php) — Get float value of a variable
+* [ ] [get_defined_vars](http://php.net/manual/en/function.get-defined-vars.php) — Returns an array of all defined variables
+* [ ] [get_resource_type](http://php.net/manual/en/function.get-resource-type.php) — Returns the resource type
+* [x] [gettype](http://php.net/manual/en/function.gettype.php) — Get the type of a variable
+* [ ] [import_request_variables](http://php.net/manual/en/function.import-request-variables.php) — Import GET/POST/Cookie variables into the global scope
+* [x] [intval](http://php.net/manual/en/function.intval.php) — Get the integer value of a variable
+* [x] [is_array](http://php.net/manual/en/function.is-array.php) — Finds whether a variable is an array
+* [x] [is_bool](http://php.net/manual/en/function.is-bool.php) — Finds out whether a variable is a boolean
+* [ ] [is_callable](http://php.net/manual/en/function.is-callable.php) — Verify that the contents of a variable can be called as a function
+* [ ] [is_countable](http://php.net/manual/en/function.is-countable.php) — Verify that the contents of a variable is a countable value
+* [x] [is_double](http://php.net/manual/en/function.is-double.php) — Alias of is_float
+* [x] [is_float](http://php.net/manual/en/function.is-float.php) — Finds whether the type of a variable is float
+* [x] [is_int](http://php.net/manual/en/function.is-int.php) — Find whether the type of a variable is integer
+* [x] [is_integer](http://php.net/manual/en/function.is-integer.php) — Alias of is_int
+* [ ] [is_iterable](http://php.net/manual/en/function.is-iterable.php) — Verify that the contents of a variable is an iterable value
+* [ ] [is_long](http://php.net/manual/en/function.is-long.php) — Alias of is_int
+* [x] [is_null](http://php.net/manual/en/function.is-null.php) — Finds whether a variable is NULL
+* [x] [is_numeric](http://php.net/manual/en/function.is-numeric.php) — Finds whether a variable is a number or a numeric string
+* [x] [is_object](http://php.net/manual/en/function.is-object.php) — Finds whether a variable is an object
+* [x] [is_real](http://php.net/manual/en/function.is-real.php) — Alias of is_float
+* [ ] [is_resource](http://php.net/manual/en/function.is-resource.php) — Finds whether a variable is a resource
+* [x] [is_scalar](http://php.net/manual/en/function.is-scalar.php) — Finds whether a variable is a scalar
+* [x] [is_string](http://php.net/manual/en/function.is-string.php) — Find whether the type of a variable is string
+* [x] [isset](http://php.net/manual/en/function.isset.php) — Determine if a variable is set and is not NULL
+* [x] [print_r](http://php.net/manual/en/function.print-r.php) — Prints human-readable information about a variable
+* [x] [serialize](http://php.net/manual/en/function.serialize.php) — Generates a storable representation of a value
+* [ ] [settype](http://php.net/manual/en/function.settype.php) — Set the type of a variable
+* [x] [strval](http://php.net/manual/en/function.strval.php) — Get string value of a variable
+* [ ] [unserialize](http://php.net/manual/en/function.unserialize.php) — Creates a PHP value from a stored representation
+* [x] [unset](http://php.net/manual/en/function.unset.php) — Unset a given variable
+* [x] [var_dump](http://php.net/manual/en/function.var-dump.php) — Dumps information about a variable
+* [x] [var_export](http://php.net/manual/en/function.var-export.php) — Outputs or returns a parsable string representation of a variable
