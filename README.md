@@ -102,7 +102,7 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 
 ## Date/Time Functions
 
-* [ ] [checkdate](http://php.net/manual/en/function.checkdate.php) — Validate a Gregorian date
+* [x] [checkdate](http://php.net/manual/en/function.checkdate.php) — Validate a Gregorian date
 * [ ] <strike>[date_add](http://php.net/manual/en/function.date-add.php) — Alias of DateTime::add</strike>
 * [ ] <strike>[date_create_from_format](http://php.net/manual/en/function.date-create-from-format.php) — Alias of DateTime::createFromFormat</strike>
 * [ ] <strike>[date_create_immutable_from_format](http://php.net/manual/en/function.date-create-immutable-from-format.php) — Alias of DateTimeImmutable::createFromFormat</strike>
@@ -130,20 +130,20 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 * [ ] <strike>[date_timestamp_set](http://php.net/manual/en/function.date-timestamp-set.php) — Alias of DateTime::setTimestamp</strike>
 * [ ] <strike>[date_timezone_get](http://php.net/manual/en/function.date-timezone-get.php) — Alias of DateTime::getTimezone</strike>
 * [ ] <strike>[date_timezone_set](http://php.net/manual/en/function.date-timezone-set.php) — Alias of DateTime::setTimezone</strike>
-* [ ] [date](http://php.net/manual/en/function.date.php) — Format a local time/date
+* [x] [date](http://php.net/manual/en/function.date.php) — Format a local time/date
 * [ ] [getdate](http://php.net/manual/en/function.getdate.php) — Get date/time information
 * [ ] [gettimeofday](http://php.net/manual/en/function.gettimeofday.php) — Get current time
 * [ ] [gmdate](http://php.net/manual/en/function.gmdate.php) — Format a GMT/UTC date/time
 * [ ] [gmmktime](http://php.net/manual/en/function.gmmktime.php) — Get Unix timestamp for a GMT date
 * [ ] [gmstrftime](http://php.net/manual/en/function.gmstrftime.php) — Format a GMT/UTC time/date according to locale settings
 * [ ] [idate](http://php.net/manual/en/function.idate.php) — Format a local time/date as integer
-* [ ] [localtime](http://php.net/manual/en/function.localtime.php) — Get the local time
-* [ ] [microtime](http://php.net/manual/en/function.microtime.php) — Return current Unix timestamp with microseconds
-* [ ] [mktime](http://php.net/manual/en/function.mktime.php) — Get Unix timestamp for a date
+* [x] [localtime](http://php.net/manual/en/function.localtime.php) — Get the local time
+* [x] [microtime](http://php.net/manual/en/function.microtime.php) — Return current Unix timestamp with microseconds
+* [x] [mktime](http://php.net/manual/en/function.mktime.php) — Get Unix timestamp for a date
 * [ ] [strftime](http://php.net/manual/en/function.strftime.php) — Format a local time/date according to locale settings
 * [ ] [strptime](http://php.net/manual/en/function.strptime.php) — Parse a time/date generated with strftime
 * [ ] [strtotime](http://php.net/manual/en/function.strtotime.php) — Parse about any English textual datetime description into a Unix timestamp
-* [ ] [time](http://php.net/manual/en/function.time.php) — Return current Unix timestamp
+* [x] [time](http://php.net/manual/en/function.time.php) — Return current Unix timestamp
 * [ ] <strike>[timezone_abbreviations_list](http://php.net/manual/en/function.timezone-abbreviations-list.php) — Alias of DateTimeZone::listAbbreviations</strike>
 * [ ] <strike>[timezone_identifiers_list](http://php.net/manual/en/function.timezone-identifiers-list.php) — Alias of DateTimeZone::listIdentifiers</strike>
 * [ ] <strike>[timezone_location_get](http://php.net/manual/en/function.timezone-location-get.php) — Alias of DateTimeZone::getLocation</strike>
@@ -157,81 +157,81 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 ## Filesystem Functions
 
 * [x] [basename](http://php.net/manual/en/function.basename.php) — Returns trailing name component of path
-* [ ] [chgrp](http://php.net/manual/en/function.chgrp.php) — Changes file group
-* [ ] [chmod](http://php.net/manual/en/function.chmod.php) — Changes file mode
-* [ ] [chown](http://php.net/manual/en/function.chown.php) — Changes file owner
+* [x] [chgrp](http://php.net/manual/en/function.chgrp.php) — Changes file group
+* [x] [chmod](http://php.net/manual/en/function.chmod.php) — Changes file mode
+* [x] [chown](http://php.net/manual/en/function.chown.php) — Changes file owner
 * [ ] [clearstatcache](http://php.net/manual/en/function.clearstatcache.php) — Clears file status cache
-* [ ] [copy](http://php.net/manual/en/function.copy.php) — Copies file
-* [ ] [delete](http://php.net/manual/en/function.delete.php) — See unlink or unset
-* [ ] [dirname](http://php.net/manual/en/function.dirname.php) — Returns a parent directory's path
+* [x] [copy](http://php.net/manual/en/function.copy.php) — Copies file
+* [x] [delete](http://php.net/manual/en/function.delete.php) — See unlink or unset
+* [x] [dirname](http://php.net/manual/en/function.dirname.php) — Returns a parent directory's path
 * [ ] [disk_free_space](http://php.net/manual/en/function.disk-free-space.php) — Returns available space on filesystem or disk partition
 * [ ] [disk_total_space](http://php.net/manual/en/function.disk-total-space.php) — Returns the total size of a filesystem or disk partition
 * [ ] [diskfreespace](http://php.net/manual/en/function.diskfreespace.php) — Alias of disk_free_space
 * [ ] [fclose](http://php.net/manual/en/function.fclose.php) — Closes an open file pointer
 * [ ] [feof](http://php.net/manual/en/function.feof.php) — Tests for end-of-file on a file pointer
-* [ ] [fflush](http://php.net/manual/en/function.fflush.php) — Flushes the output to a file
+* [x] [fflush](http://php.net/manual/en/function.fflush.php) — Flushes the output to a file
 * [ ] [fgetc](http://php.net/manual/en/function.fgetc.php) — Gets character from file pointer
 * [ ] [fgetcsv](http://php.net/manual/en/function.fgetcsv.php) — Gets line from file pointer and parse for CSV fields
 * [ ] [fgets](http://php.net/manual/en/function.fgets.php) — Gets line from file pointer
 * [ ] [fgetss](http://php.net/manual/en/function.fgetss.php) — Gets line from file pointer and strip HTML tags
-* [ ] [file_exists](http://php.net/manual/en/function.file-exists.php) — Checks whether a file or directory exists
+* [x] [file_exists](http://php.net/manual/en/function.file-exists.php) — Checks whether a file or directory exists
 * [ ] [file_get_contents](http://php.net/manual/en/function.file-get-contents.php) — Reads entire file into a string
-* [ ] [file_put_contents](http://php.net/manual/en/function.file-put-contents.php) — Write data to a file
+* [x] [file_put_contents](http://php.net/manual/en/function.file-put-contents.php) — Write data to a file
 * [ ] [file](http://php.net/manual/en/function.file.php) — Reads entire file into an array
-* [ ] [fileatime](http://php.net/manual/en/function.fileatime.php) — Gets last access time of file
-* [ ] [filectime](http://php.net/manual/en/function.filectime.php) — Gets inode change time of file
-* [ ] [filegroup](http://php.net/manual/en/function.filegroup.php) — Gets file group
-* [ ] [fileinode](http://php.net/manual/en/function.fileinode.php) — Gets file inode
-* [ ] [filemtime](http://php.net/manual/en/function.filemtime.php) — Gets file modification time
-* [ ] [fileowner](http://php.net/manual/en/function.fileowner.php) — Gets file owner
-* [ ] [fileperms](http://php.net/manual/en/function.fileperms.php) — Gets file permissions
-* [ ] [filesize](http://php.net/manual/en/function.filesize.php) — Gets file size
+* [x] [fileatime](http://php.net/manual/en/function.fileatime.php) — Gets last access time of file
+* [x] [filectime](http://php.net/manual/en/function.filectime.php) — Gets inode change time of file
+* [x] [filegroup](http://php.net/manual/en/function.filegroup.php) — Gets file group
+* [x] [fileinode](http://php.net/manual/en/function.fileinode.php) — Gets file inode
+* [x] [filemtime](http://php.net/manual/en/function.filemtime.php) — Gets file modification time
+* [x] [fileowner](http://php.net/manual/en/function.fileowner.php) — Gets file owner
+* [x] [fileperms](http://php.net/manual/en/function.fileperms.php) — Gets file permissions
+* [x] [filesize](http://php.net/manual/en/function.filesize.php) — Gets file size
 * [ ] [filetype](http://php.net/manual/en/function.filetype.php) — Gets file type
-* [ ] [flock](http://php.net/manual/en/function.flock.php) — Portable advisory file locking
-* [ ] [fnmatch](http://php.net/manual/en/function.fnmatch.php) — Match filename against a pattern
+* [x] [flock](http://php.net/manual/en/function.flock.php) — Portable advisory file locking
+* [x] [fnmatch](http://php.net/manual/en/function.fnmatch.php) — Match filename against a pattern
 * [ ] [fopen](http://php.net/manual/en/function.fopen.php) — Opens file or URL
 * [ ] [fpassthru](http://php.net/manual/en/function.fpassthru.php) — Output all remaining data on a file pointer
 * [ ] [fputcsv](http://php.net/manual/en/function.fputcsv.php) — Format line as CSV and write to file pointer
 * [ ] [fputs](http://php.net/manual/en/function.fputs.php) — Alias of fwrite
-* [ ] [fread](http://php.net/manual/en/function.fread.php) — Binary-safe file read
+* [x] [fread](http://php.net/manual/en/function.fread.php) — Binary-safe file read
 * [ ] [fscanf](http://php.net/manual/en/function.fscanf.php) — Parses input from a file according to a format
-* [ ] [fseek](http://php.net/manual/en/function.fseek.php) — Seeks on a file pointer
-* [ ] [fstat](http://php.net/manual/en/function.fstat.php) — Gets information about a file using an open file pointer
-* [ ] [ftell](http://php.net/manual/en/function.ftell.php) — Returns the current position of the file read/write pointer
-* [ ] [ftruncate](http://php.net/manual/en/function.ftruncate.php) — Truncates a file to a given length
+* [x] [fseek](http://php.net/manual/en/function.fseek.php) — Seeks on a file pointer
+* [x] [fstat](http://php.net/manual/en/function.fstat.php) — Gets information about a file using an open file pointer
+* [x] [ftell](http://php.net/manual/en/function.ftell.php) — Returns the current position of the file read/write pointer
+* [x] [ftruncate](http://php.net/manual/en/function.ftruncate.php) — Truncates a file to a given length
 * [ ] [fwrite](http://php.net/manual/en/function.fwrite.php) — Binary-safe file write
-* [ ] [glob](http://php.net/manual/en/function.glob.php) — Find pathnames matching a pattern
-* [ ] [is_dir](http://php.net/manual/en/function.is-dir.php) — Tells whether the filename is a directory
-* [ ] [is_executable](http://php.net/manual/en/function.is-executable.php) — Tells whether the filename is executable
-* [ ] [is_file](http://php.net/manual/en/function.is-file.php) — Tells whether the filename is a regular file
-* [ ] [is_link](http://php.net/manual/en/function.is-link.php) — Tells whether the filename is a symbolic link
-* [ ] [is_readable](http://php.net/manual/en/function.is-readable.php) — Tells whether a file exists and is readable
+* [x] [glob](http://php.net/manual/en/function.glob.php) — Find pathnames matching a pattern
+* [x] [is_dir](http://php.net/manual/en/function.is-dir.php) — Tells whether the filename is a directory
+* [x] [is_executable](http://php.net/manual/en/function.is-executable.php) — Tells whether the filename is executable
+* [x] [is_file](http://php.net/manual/en/function.is-file.php) — Tells whether the filename is a regular file
+* [x] [is_link](http://php.net/manual/en/function.is-link.php) — Tells whether the filename is a symbolic link
+* [x] [is_readable](http://php.net/manual/en/function.is-readable.php) — Tells whether a file exists and is readable
 * [ ] [is_uploaded_file](http://php.net/manual/en/function.is-uploaded-file.php) — Tells whether the file was uploaded via HTTP POST
-* [ ] [is_writable](http://php.net/manual/en/function.is-writable.php) — Tells whether the filename is writable
-* [ ] [is_writeable](http://php.net/manual/en/function.is-writeable.php) — Alias of is_writable
-* [ ] [lchgrp](http://php.net/manual/en/function.lchgrp.php) — Changes group ownership of symlink
-* [ ] [lchown](http://php.net/manual/en/function.lchown.php) — Changes user ownership of symlink
-* [ ] [link](http://php.net/manual/en/function.link.php) — Create a hard link
-* [ ] [linkinfo](http://php.net/manual/en/function.linkinfo.php) — Gets information about a link
-* [ ] [lstat](http://php.net/manual/en/function.lstat.php) — Gives information about a file or symbolic link
-* [ ] [mkdir](http://php.net/manual/en/function.mkdir.php) — Makes directory
+* [x] [is_writable](http://php.net/manual/en/function.is-writable.php) — Tells whether the filename is writable
+* [x] [is_writeable](http://php.net/manual/en/function.is-writeable.php) — Alias of is_writable
+* [x] [lchgrp](http://php.net/manual/en/function.lchgrp.php) — Changes group ownership of symlink
+* [x] [lchown](http://php.net/manual/en/function.lchown.php) — Changes user ownership of symlink
+* [x] [link](http://php.net/manual/en/function.link.php) — Create a hard link
+* [x] [linkinfo](http://php.net/manual/en/function.linkinfo.php) — Gets information about a link
+* [x] [lstat](http://php.net/manual/en/function.lstat.php) — Gives information about a file or symbolic link
+* [x] [mkdir](http://php.net/manual/en/function.mkdir.php) — Makes directory
 * [ ] [move_uploaded_file](http://php.net/manual/en/function.move-uploaded-file.php) — Moves an uploaded file to a new location
 * [ ] [parse_ini_file](http://php.net/manual/en/function.parse-ini-file.php) — Parse a configuration file
 * [ ] [parse_ini_string](http://php.net/manual/en/function.parse-ini-string.php) — Parse a configuration string
 * [ ] [pathinfo](http://php.net/manual/en/function.pathinfo.php) — Returns information about a file path
 * [ ] [pclose](http://php.net/manual/en/function.pclose.php) — Closes process file pointer
 * [ ] [popen](http://php.net/manual/en/function.popen.php) — Opens process file pointer
-* [ ] [readfile](http://php.net/manual/en/function.readfile.php) — Outputs a file
-* [ ] [readlink](http://php.net/manual/en/function.readlink.php) — Returns the target of a symbolic link
+* [x] [readfile](http://php.net/manual/en/function.readfile.php) — Outputs a file
+* [x] [readlink](http://php.net/manual/en/function.readlink.php) — Returns the target of a symbolic link
 * [ ] [realpath_cache_get](http://php.net/manual/en/function.realpath-cache-get.php) — Get realpath cache entries
 * [ ] [realpath_cache_size](http://php.net/manual/en/function.realpath-cache-size.php) — Get realpath cache size
-* [ ] [realpath](http://php.net/manual/en/function.realpath.php) — Returns canonicalized absolute pathname
-* [ ] [rename](http://php.net/manual/en/function.rename.php) — Renames a file or directory
+* [x] [realpath](http://php.net/manual/en/function.realpath.php) — Returns canonicalized absolute pathname
+* [x] [rename](http://php.net/manual/en/function.rename.php) — Renames a file or directory
 * [ ] [rewind](http://php.net/manual/en/function.rewind.php) — Rewind the position of a file pointer
-* [ ] [rmdir](http://php.net/manual/en/function.rmdir.php) — Removes directory
+* [x] [rmdir](http://php.net/manual/en/function.rmdir.php) — Removes directory
 * [ ] [set_file_buffer](http://php.net/manual/en/function.set-file-buffer.php) — Alias of stream_set_write_buffer
-* [ ] [stat](http://php.net/manual/en/function.stat.php) — Gives information about a file
-* [ ] [symlink](http://php.net/manual/en/function.symlink.php) — Creates a symbolic link
+* [x] [stat](http://php.net/manual/en/function.stat.php) — Gives information about a file
+* [x] [symlink](http://php.net/manual/en/function.symlink.php) — Creates a symbolic link
 * [ ] [tempnam](http://php.net/manual/en/function.tempnam.php) — Create file with unique file name
 * [ ] [tmpfile](http://php.net/manual/en/function.tmpfile.php) — Creates a temporary file
 * [x] [touch](http://php.net/manual/en/function.touch.php) — Sets access and modification time of file
