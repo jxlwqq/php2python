@@ -33,6 +33,7 @@ import syslog as py_syslog
 import fcntl
 import fnmatch as py_fnmatch
 import shutil
+import collections
 
 """
 Array Functions
@@ -2186,12 +2187,12 @@ def is_integer(variable):
     return isinstance(variable, int)
 
 
-def is_iterable():
-    pass
+def is_iterable(variable):
+    return is_array(variable) or isinstance(variable, collections.Iterable)
 
 
-def is_long():
-    pass
+def is_long(variable):
+    return isinstance(variable, int)
 
 
 def is_null(variable):
