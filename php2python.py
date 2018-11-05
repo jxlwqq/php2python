@@ -34,6 +34,10 @@ import fcntl
 import fnmatch as py_fnmatch
 import shutil
 import collections
+from socket import inet_ntoa
+from socket import inet_aton
+from struct import pack
+from struct import unpack
 
 """
 Array Functions
@@ -1437,12 +1441,12 @@ def inet_pton():
     pass
 
 
-def ip2long():
-    pass
+def ip2long(ip_addr):
+    return unpack("!L", inet_aton(ip_addr))[0]
 
 
-def long2ip():
-    pass
+def long2ip(ip):
+    return inet_ntoa(pack("!L", ip))
 
 
 def openlog():
