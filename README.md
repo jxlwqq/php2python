@@ -385,7 +385,7 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 * [ ] [convert_cyr_string](http://php.net/manual/en/function.convert-cyr-string.php) — Convert from one Cyrillic character set to another
 * [ ] [convert_uudecode](http://php.net/manual/en/function.convert-uudecode.php) — Decode a uuencoded string
 * [ ] [convert_uuencode](http://php.net/manual/en/function.convert-uuencode.php) — Uuencode a string
-* [ ] [count_chars](http://php.net/manual/en/function.count-chars.php) — Return information about characters used in a string
+* [x] [count_chars](http://php.net/manual/en/function.count-chars.php) — Return information about characters used in a string
 * [x] [crc32](http://php.net/manual/en/function.crc32.php) — Calculates the crc32 polynomial of a string
 * [x] [crypt](http://php.net/manual/en/function.crypt.php) — One-way string hashing
 * [x] [echo](http://php.net/manual/en/function.echo.php) — Output one or more strings
@@ -464,7 +464,7 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 * [x] [strtoupper](http://php.net/manual/en/function.strtoupper.php) — Make a string uppercase
 * [x] [strtr](http://php.net/manual/en/function.strtr.php) — Translate characters or replace substrings
 * [ ] [substr_compare](http://php.net/manual/en/function.substr-compare.php) — Binary safe comparison of two strings from an offset, up to length characters
-* [ ] [substr_count](http://php.net/manual/en/function.substr-count.php) — Count the number of substring occurrences
+* [x] [substr_count](http://php.net/manual/en/function.substr-count.php) — Count the number of substring occurrences
 * [x] [substr_replace](http://php.net/manual/en/function.substr-replace.php) — Replace text within a portion of a string
 * [x] [substr](http://php.net/manual/en/function.substr.php) — Return part of a string
 * [x] [trim](http://php.net/manual/en/function.trim.php) — Strip whitespace (or other characters) from the beginning and end of a string

@@ -1560,7 +1560,40 @@ def convert_uuencode(string):
 
 
 def count_chars(s, mode=0):
-    pass
+    temp = {chr(_x): 0 for _x in range(256)}
+    if mode == 0:
+        temp.update(Counter(s))
+        return temp
+    elif mode == 1:
+        temp.update(Counter(s))
+        res = temp.copy()
+        for i, j in temp.items():
+            if not j:
+                res.pop(i)
+        return res
+    elif mode == 2:
+        temp.update(Counter(s))
+        res = temp.copy()
+        for i, j in temp.items():
+            if j:
+                res.pop(i)
+        return res
+    elif mode == 3:
+        res = ""
+        temp.update(Counter(s))
+        for i, j in temp.items():
+            if j:
+                res += i
+        return res
+    elif mode == 4:
+        res = ""
+        temp.update(Counter(s))
+        for i, j in temp.items():
+            if not j:
+                res += i
+        return res
+    else:
+        raise ValueError("Incorrect value of mode (%d)" % (mode,))
 
 
 def crc32(string):
@@ -1985,8 +2018,14 @@ def substr_compare(string):
     pass
 
 
-def substr_count(string):
-    pass
+def substr_count(haystack, needle, offset=0, length=0):
+    if offset == 0:
+        return haystack.count(needle)
+    else:
+        if length == 0:
+            return haystack.count(needle, offset)
+        else:
+            return haystack.count(needle, offset, offset + length)
 
 
 def substr_replace(subject, replace, start, length=None):
