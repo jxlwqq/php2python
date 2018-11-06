@@ -8,4 +8,7 @@ setup(name='php2python',
       author_email='jxlwqq@gmail.com',
       license='MIT',
       python_requires='>=3',
+      requires=[
+            'tzlocal>=1.5'
+      ],
       zip_safe=False)

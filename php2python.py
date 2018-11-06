@@ -50,10 +50,6 @@ Array Functions
 
 
 def array_change_key_case(array, case=0):
-    """
-    array_change_key_case — Changes the case of all keys in an array
-    http://php.net/manual/en/function.array-change-key-case.php
-    """
     if case == 0:
         f = str.lower
     elif case == 1:
@@ -64,10 +60,6 @@ def array_change_key_case(array, case=0):
 
 
 def array_chunk(array, size):
-    """
-    array_chunk — Split an array into chunks
-    http://php.net/manual/zh/function.array-chunk.php
-    """
     return [array[i: i + size] for i in range(0, len(array), size)]
 
 
@@ -82,10 +74,6 @@ def array_column(array, column_key, index_key=None):
 
 
 def array_combine(keys, values):
-    """
-    array_combine — Creates an array by using one array for keys and another for its values
-    http://php.net/manual/zh/function.array-combine.php
-    """
     return dict(zip(keys, values))
 
 
@@ -126,27 +114,14 @@ def array_fill(start_index, num, value):
 
 
 def array_filter(array, callback=None):
-    """
-    array_filter — Filters elements of an array using a callback function
-    http://php.net/manual/en/function.array-filter.php
-    """
     filter(callback, array)
 
 
 def array_flip(array):
-    """
-    array_flip — Exchanges all keys with their associated values in an array
-    http://php.net/manual/en/function.array-flip.php
-    """
     return dict((v, k) for k, v in array.items())
 
 
 def array_intersect_assoc(array1, array2):
-    """
-    array_intersect_assoc — Computes the intersection of arrays with additional index check
-    http://php.net/manual/en/function.array-intersect-assoc.php
-    """
-    # todo
     pass
 
 
@@ -205,10 +180,6 @@ def array_merge_recursive(array1, *arrays):
 
 
 def array_merge(array1, array2):
-    """
-    array_merge — Merge one or more arrays
-    http://php.net/manual/en/function.array-merge.php
-    """
     if isinstance(array1, list) and isinstance(array2, list):
         return array1 + array2
     elif isinstance(array1, dict) and isinstance(array2, dict):
@@ -588,8 +559,10 @@ def date(format, timestamp=None):
     return py_time.strftime(format, timestamp)
 
 
-def getdate():
-    pass
+def getdate(timestamp=None):
+    if timestamp is None:
+        timestamp = py_time.time()
+
 
 
 def gettimeofday():
@@ -1839,13 +1812,6 @@ def str_pad(string, pad_length, pad_string=' ', pad_type=1):
 
 
 def str_repeat(string, multiplier):
-    """
-    str_repeat — Repeat a string
-    http://php.net/manual/en/function.str-repeat.php
-    :param string:
-    :param multiplier:
-    :return:
-    """
     return string * multiplier
 
 
@@ -1859,22 +1825,12 @@ def str_rot13(string):
 
 
 def str_shuffle(string):
-    """
-    str_shuffle — Randomly shuffles a string
-    http://php.net/manual/en/function.str-shuffle.php
-    :param string:
-    :return:
-    """
     chars = list(string)
     random.shuffle(chars)
     return ''.join(chars)
 
 
 def str_split(string, split_length=1):
-    """
-    str_split — Convert a string to an array
-    http://php.net/manual/en/function.str-split.php
-    """
     return filter(None, re.split('(.{1,%d})' % split_length, string))
 
 
@@ -2073,22 +2029,10 @@ def trim(string, character_mask=None):
 
 
 def ucfirst(string):
-    """
-    ucfirst — Make a string's first character uppercase
-    http://php.net/manual/en/function.ucfirst.php
-    :param string:
-    :return:
-    """
     return string[0].upper() + string[1:]
 
 
 def ucwords(words):
-    """
-    ucwords — Uppercase the first character of each word in a string
-    http://php.net/manual/en/function.ucwords.php
-    :param string:
-    :return:
-    """
     return string.capwords(words)
 
 
