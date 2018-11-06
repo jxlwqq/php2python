@@ -18,6 +18,11 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 
 ## Array Functions
 
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+
 * [x] [array_change_key_case](http://php.net/manual/en/function.array-change-key-case.php) — Changes the case of all keys in an array
 * [x] [array_chunk](http://php.net/manual/en/function.array-chunk.php) — Split an array into chunks
 * [x] [array_column](http://php.net/manual/en/function.array-column.php) — Return the values from a single column in the input array
