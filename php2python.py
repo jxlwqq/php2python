@@ -213,8 +213,8 @@ def array_merge(array1, array2):
     return False
 
 
-def array_multisort():
-    pass
+def array_multisort(array):
+    return sorted(array, key=lambda x: (x[1], x[2]))
 
 
 def array_pad(array, size, value):
@@ -347,11 +347,11 @@ def array(array):
 
 
 def arsort(array):
-    pass
+    return sorted(array.items(), key=lambda x: x[1], reverse=True)
 
 
 def asort(array):
-    pass
+    return sorted(array.items(), key=lambda x: x[1])
 
 
 def compact(*names):
@@ -398,11 +398,11 @@ def key(array):
 
 
 def krsort(array):
-    pass
+    return [(k, array[k]) for k in sorted(array.keys(), reverse=True)]
 
 
 def ksort(array):
-    pass
+    return [(k, array[k]) for k in sorted(array.keys())]
 
 
 def natcasesort(array):
@@ -426,7 +426,7 @@ def reset(array):
 
 
 def rsort(array):
-    pass
+    return array.sort(reverse=True)
 
 
 def shuffle(array):
@@ -438,7 +438,7 @@ def sizeof(array):
 
 
 def sort(array):
-    pass
+    return array.sort()
 
 
 def uasort(array):
