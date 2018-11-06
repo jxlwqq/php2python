@@ -40,6 +40,7 @@ import socket
 from struct import pack
 from struct import unpack
 import http.cookies
+import codecs
 
 """
 Array Functions
@@ -1396,6 +1397,7 @@ def gethostname():
 def getmxrr():
     pass
 
+
 def getprotobyname(name):
     return socket.getprotobyname(name)
 
@@ -1404,12 +1406,14 @@ def getprotobynumber(number):
     table = {num: name[8:] for name, num in vars(socket).items() if name.startswith("IPPROTO")}
     return table[number]
 
+
 def getservbyname(service, protocol):
     return socket.getservbyname(service, protocol)
 
 
 def getservbyport(port, protocol):
     return socket.getservbyport(port, protocol)
+
 
 def header_register_callback():
     pass
@@ -1815,8 +1819,9 @@ def str_getcsv(string, delimiter=',', enclosure='"', escape="\\"):
         return next(reader)
 
 
-def str_ireplace(string):
-    pass
+def str_ireplace(search, replace, subject, count=0):
+    pattern = re.compile(search, re.IGNORECASE)
+    return pattern.sub(replace, subject, count)
 
 
 def str_pad(string, pad_length, pad_string=' ', pad_type=1):
@@ -1842,20 +1847,13 @@ def str_repeat(string, multiplier):
     return string * multiplier
 
 
-def str_replace(search, replace, subject, count):
-    """
-    str_replace — Replace all occurrences of the search string with the replacement string
-    :param search:
-    :param replace:
-    :param subject:
-    :param count:
-    :return:
-    """
-    pass
+def str_replace(search, replace, subject, count=-1):
+    return subject.replace(search, replace, count)
 
 
 def str_rot13(string):
-    pass
+    enc = codecs.getencoder("rot-13")
+    return enc(string)[0]
 
 
 def str_shuffle(string):
@@ -1898,8 +1896,12 @@ def strcasecmp(string):
     pass
 
 
-def strchr(string):
-    pass
+def strchr(haystack, needle):
+    pos = haystack.find(needle)
+    if pos < 0:
+        return None
+    else:
+        return haystack[pos:]
 
 
 def strcmp(string1, string2):
@@ -2100,8 +2102,8 @@ def vsprintf(string):
     pass
 
 
-def wordwrap(string):
-    pass
+def wordwrap(string, width):
+    return textwrap.wrap(string, width)
 
 
 '''

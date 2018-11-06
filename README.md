@@ -428,16 +428,16 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 * [ ] [sprintf](http://php.net/manual/en/function.sprintf.php) — Return a formatted string
 * [ ] [sscanf](http://php.net/manual/en/function.sscanf.php) — Parses input from a string according to a format
 * [x] [str_getcsv](http://php.net/manual/en/function.str-getcsv.php) — Parse a CSV string into an array
-* [ ] [str_ireplace](http://php.net/manual/en/function.str-ireplace.php) — Case-insensitive version of str_replace
+* [x] [str_ireplace](http://php.net/manual/en/function.str-ireplace.php) — Case-insensitive version of str_replace
 * [x] [str_pad](http://php.net/manual/en/function.str-pad.php) — Pad a string to a certain length with another string
 * [x] [str_repeat](http://php.net/manual/en/function.str-repeat.php) — Repeat a string
-* [ ] [str_replace](http://php.net/manual/en/function.str-replace.php) — Replace all occurrences of the search string with the replacement string
-* [ ] [str_rot13](http://php.net/manual/en/function.str-rot13.php) — Perform the rot13 transform on a string
+* [x] [str_replace](http://php.net/manual/en/function.str-replace.php) — Replace all occurrences of the search string with the replacement string
+* [x] [str_rot13](http://php.net/manual/en/function.str-rot13.php) — Perform the rot13 transform on a string
 * [x] [str_shuffle](http://php.net/manual/en/function.xtr-shuffle.php) — Randomly shuffles a string
 * [x] [str_split](http://php.net/manual/en/function.str-split.php) — Convert a string to an array
 * [x] [str_word_count](http://php.net/manual/en/function.str-word-count.php) — Return information about words used in a string
 * [ ] [strcasecmp](http://php.net/manual/en/function.strcasecmp.php) — Binary safe case-insensitive string comparison
-* [ ] [strchr](http://php.net/manual/en/function.strchr.php) — Alias of strstr
+* [x] [strchr](http://php.net/manual/en/function.strchr.php) — Alias of strstr
 * [x] [strcmp](http://php.net/manual/en/function.strcmp.php) — Binary safe string comparison
 * [ ] [strcoll](http://php.net/manual/en/function.strcoll.php) — Locale based string comparison
 * [x] [strcspn](http://php.net/manual/en/function.strcspn.php) — Find length of initial segment not matching mask
@@ -473,7 +473,7 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 * [ ] [vfprintf](http://php.net/manual/en/function.vfprintf.php) — Write a formatted string to a stream
 * [ ] [vprintf](http://php.net/manual/en/function.vprintf.php) — Output a formatted string
 * [ ] [vsprintf](http://php.net/manual/en/function.vsprintf.php) — Return a formatted string
-* [ ] [wordwrap](http://php.net/manual/en/function.wordwrap.php) — Wraps a string to a given number of characters
+* [x] [wordwrap](http://php.net/manual/en/function.wordwrap.php) — Wraps a string to a given number of characters
 
 ## URL Functions
 
@@ -491,7 +491,7 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 ## Variable handling Functions
 
 * [x] [boolval](http://php.net/manual/en/function.boolval.php) — Get the boolean value of a variable
-* [ ] [debug_zval_dump](http://php.net/manual/en/function.debug-zval-dump.php) — Dumps a string representation of an internal zend value to output
+* [ ] <strike>[debug_zval_dump](http://php.net/manual/en/function.debug-zval-dump.php) — Dumps a string representation of an internal zend value to output</strike>
 * [x] [doubleval](http://php.net/manual/en/function.doubleval.php) — Alias of floatval
 * [x] [empty](http://php.net/manual/en/function.empty.php) — Determine whether a variable is empty
 * [x] [floatval](http://php.net/manual/en/function.floatval.php) — Get float value of a variable
@@ -502,14 +502,14 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 * [x] [intval](http://php.net/manual/en/function.intval.php) — Get the integer value of a variable
 * [x] [is_array](http://php.net/manual/en/function.is-array.php) — Finds whether a variable is an array
 * [x] [is_bool](http://php.net/manual/en/function.is-bool.php) — Finds out whether a variable is a boolean
-* [ ] [is_callable](http://php.net/manual/en/function.is-callable.php) — Verify that the contents of a variable can be called as a function
-* [ ] [is_countable](http://php.net/manual/en/function.is-countable.php) — Verify that the contents of a variable is a countable value
+* [x] [is_callable](http://php.net/manual/en/function.is-callable.php) — Verify that the contents of a variable can be called as a function
+* [x] [is_countable](http://php.net/manual/en/function.is-countable.php) — Verify that the contents of a variable is a countable value
 * [x] [is_double](http://php.net/manual/en/function.is-double.php) — Alias of is_float
 * [x] [is_float](http://php.net/manual/en/function.is-float.php) — Finds whether the type of a variable is float
 * [x] [is_int](http://php.net/manual/en/function.is-int.php) — Find whether the type of a variable is integer
 * [x] [is_integer](http://php.net/manual/en/function.is-integer.php) — Alias of is_int
-* [ ] [is_iterable](http://php.net/manual/en/function.is-iterable.php) — Verify that the contents of a variable is an iterable value
-* [ ] [is_long](http://php.net/manual/en/function.is-long.php) — Alias of is_int
+* [x] [is_iterable](http://php.net/manual/en/function.is-iterable.php) — Verify that the contents of a variable is an iterable value
+* [x] [is_long](http://php.net/manual/en/function.is-long.php) — Alias of is_int
 * [x] [is_null](http://php.net/manual/en/function.is-null.php) — Finds whether a variable is NULL
 * [x] [is_numeric](http://php.net/manual/en/function.is-numeric.php) — Finds whether a variable is a number or a numeric string
 * [x] [is_object](http://php.net/manual/en/function.is-object.php) — Finds whether a variable is an object
