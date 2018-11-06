@@ -42,6 +42,8 @@ from struct import unpack
 import http.cookies
 import codecs
 
+import tzlocal
+
 """
 Array Functions
 """
@@ -497,10 +499,10 @@ def date_date_set():
 
 
 def date_default_timezone_get():
-    pass
+    return tzlocal.get_localzone().zone
 
 
-def date_default_timezone_set():
+def date_default_timezone_set(timezone_identifier):
     pass
 
 

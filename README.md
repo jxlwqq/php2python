@@ -109,7 +109,7 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 * [ ] <strike>[date_create_immutable](http://php.net/manual/en/function.date-create-immutable.php) — Alias of DateTimeImmutable::__construct</strike>
 * [ ] <strike>[date_create](http://php.net/manual/en/function.date-create.php) — Alias of DateTime::__construct</strike>
 * [ ] <strike>[date_date_set](http://php.net/manual/en/function.date-date-set.php) — Alias of DateTime::setDate</strike>
-* [ ] [date_default_timezone_get](http://php.net/manual/en/function.date-default-timezone-get.php) — Gets the default timezone used by all date/time functions in a script
+* [x] [date_default_timezone_get](http://php.net/manual/en/function.date-default-timezone-get.php) — Gets the default timezone used by all date/time functions in a script
 * [ ] [date_default_timezone_set](http://php.net/manual/en/function.date-default-timezone-set.php) — Sets the default timezone used by all date/time functions in a script
 * [ ] <strike>[date_diff](http://php.net/manual/en/function.date-diff.php) — Alias of DateTime::diff</strike>
 * [ ] <strike>[date_format](http://php.net/manual/en/function.date-format.php) — Alias of DateTime::format</strike>
