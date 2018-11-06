@@ -36,8 +36,10 @@ import shutil
 import collections
 from socket import inet_ntoa
 from socket import inet_aton
+import socket
 from struct import pack
 from struct import unpack
+import http.cookies
 
 """
 Array Functions
@@ -1350,7 +1352,7 @@ def checkdnsrr():
 
 
 def closelog():
-    pass
+    return py_syslog.closelog()
 
 
 def define_syslog_variables():
@@ -1361,7 +1363,7 @@ def dns_check_record():
     pass
 
 
-def dns_get_mx():
+def dns_get_mx(hostname):
     pass
 
 
@@ -1369,45 +1371,45 @@ def dns_get_record():
     pass
 
 
-def fsockopen():
-    pass
+def fsockopen(hostname, port):
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.connect((hostname, port))
+    return sock.makefile()
 
 
-def gethostbyaddr():
-    pass
+def gethostbyaddr(ip_address):
+    return socket.gethostbyaddr(ip_address)
 
 
-def gethostbyname():
-    pass
+def gethostbyname(hostname):
+    return socket.gethostbyname(hostname)
 
 
-def gethostbynamel():
-    pass
+def gethostbynamel(hostname):
+    return socket.gethostbyname(hostname)
 
 
 def gethostname():
-    pass
+    return socket.gethostname()
 
 
 def getmxrr():
     pass
 
-
-def getprotobyname():
-    pass
-
-
-def getprotobynumber():
-    pass
+def getprotobyname(name):
+    return socket.getprotobyname(name)
 
 
-def getservbyname():
-    pass
+def getprotobynumber(number):
+    table = {num: name[8:] for name, num in vars(socket).items() if name.startswith("IPPROTO")}
+    return table[number]
+
+def getservbyname(service, protocol):
+    return socket.getservbyname(service, protocol)
 
 
-def getservbyport():
-    pass
-
+def getservbyport(port, protocol):
+    return socket.getservbyport(port, protocol)
 
 def header_register_callback():
     pass
@@ -1433,12 +1435,12 @@ def http_response_code():
     pass
 
 
-def inet_ntop():
-    pass
+def inet_ntop(in_addr):
+    return socket.inet_ntop(socket.AF_INET, in_addr)
 
 
-def inet_pton():
-    pass
+def inet_pton(address):
+    return socket.inet_pton(socket.AF_INET, address)
 
 
 def ip2long(ip_addr):
@@ -1449,16 +1451,21 @@ def long2ip(ip):
     return inet_ntoa(pack("!L", ip))
 
 
-def openlog():
-    pass
+def openlog(ident, option, facility):
+    return py_syslog.openlog(ident, option, facility)
 
 
 def pfsockopen():
     pass
 
 
-def setcookie():
-    pass
+def setcookie(name, value='', expire=0, path='', domain=''):
+    cookie = http.cookies.SimpleCookie()
+    cookie[name] = value
+    cookie[name]['domain'] = domain
+    cookie[name]['path'] = path
+    cookie[name]['expires'] = expire if expire != 0 else py_time.strftime("%a, %d-%b-%Y %H:%M:%S GMT")
+    return cookie.output()
 
 
 def setrawcookie():

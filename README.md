@@ -326,39 +326,39 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 ## Network Functions
 
 * [ ] [checkdnsrr](http://php.net/manual/en/function.checkdnsrr.php) — Check DNS records corresponding to a given Internet host name or IP address
-* [ ] [closelog](http://php.net/manual/en/function.closelog.php) — Close connection to system logger
+* [x] [closelog](http://php.net/manual/en/function.closelog.php) — Close connection to system logger
 * [ ] [define_syslog_variables](http://php.net/manual/en/function.define-syslog-variables.php) — Initializes all syslog related variables
 * [ ] [dns_check_record](http://php.net/manual/en/function.dns-check-record.php) — Alias of checkdnsrr
 * [ ] [dns_get_mx](http://php.net/manual/en/function.dns-get-mx.php) — Alias of getmxrr
 * [ ] [dns_get_record](http://php.net/manual/en/function.dns-get-record.php) — Fetch DNS Resource Records associated with a hostname
-* [ ] [fsockopen](http://php.net/manual/en/function.fsockopen.php) — Open Internet or Unix domain socket connection
-* [ ] [gethostbyaddr](http://php.net/manual/en/function.gethostbyaddr.php) — Get the Internet host name corresponding to a given IP address
-* [ ] [gethostbyname](http://php.net/manual/en/function.gethostbyname.php) — Get the IPv4 address corresponding to a given Internet host name
-* [ ] [gethostbynamel](http://php.net/manual/en/function.gethostbynamel.php) — Get a list of IPv4 addresses corresponding to a given Internet host name
-* [ ] [gethostname](http://php.net/manual/en/function.gethostname.php) — Gets the host name
+* [x] [fsockopen](http://php.net/manual/en/function.fsockopen.php) — Open Internet or Unix domain socket connection
+* [x] [gethostbyaddr](http://php.net/manual/en/function.gethostbyaddr.php) — Get the Internet host name corresponding to a given IP address
+* [x] [gethostbyname](http://php.net/manual/en/function.gethostbyname.php) — Get the IPv4 address corresponding to a given Internet host name
+* [x] [gethostbynamel](http://php.net/manual/en/function.gethostbynamel.php) — Get a list of IPv4 addresses corresponding to a given Internet host name
+* [x] [gethostname](http://php.net/manual/en/function.gethostname.php) — Gets the host name
 * [ ] [getmxrr](http://php.net/manual/en/function.getmxrr.php) — Get MX records corresponding to a given Internet host name
-* [ ] [getprotobyname](http://php.net/manual/en/function.getprotobyname.php) — Get protocol number associated with protocol name
-* [ ] [getprotobynumber](http://php.net/manual/en/function.getprotobynumber.php) — Get protocol name associated with protocol number
-* [ ] [getservbyname](http://php.net/manual/en/function.getservbyname.php) — Get port number associated with an Internet service and protocol
-* [ ] [getservbyport](http://php.net/manual/en/function.getservbyport.php) — Get Internet service which corresponds to port and protocol
+* [x] [getprotobyname](http://php.net/manual/en/function.getprotobyname.php) — Get protocol number associated with protocol name
+* [x] [getprotobynumber](http://php.net/manual/en/function.getprotobynumber.php) — Get protocol name associated with protocol number
+* [x] [getservbyname](http://php.net/manual/en/function.getservbyname.php) — Get port number associated with an Internet service and protocol
+* [x] [getservbyport](http://php.net/manual/en/function.getservbyport.php) — Get Internet service which corresponds to port and protocol
 * [ ] [header_register_callback](http://php.net/manual/en/function.header-register-callback.php) — Call a header function
 * [ ] [header_remove](http://php.net/manual/en/function.header-remove.php) — Remove previously set headers
 * [ ] [header](http://php.net/manual/en/function.header.php) — Send a raw HTTP header
 * [ ] [headers_list](http://php.net/manual/en/function.headers-list.php) — Returns a list of response headers sent (or ready to send)
 * [ ] [headers_sent](http://php.net/manual/en/function.headers-sent.php) — Checks if or where headers have been sent
 * [ ] [http_response_code](http://php.net/manual/en/function.http-response-code.php) — Get or Set the HTTP response code
-* [ ] [inet_ntop](http://php.net/manual/en/function.inet-ntop.php) — Converts a packed internet address to a human readable representation
-* [ ] [inet_pton](http://php.net/manual/en/function.inet-pton.php) — Converts a human readable IP address to its packed in_addr representation
-* [ ] [ip2long](http://php.net/manual/en/function.ip2long.php) — Converts a string containing an (IPv4) Internet Protocol dotted address into a long integer
-* [ ] [long2ip](http://php.net/manual/en/function.long2ip.php) — Converts an long integer address into a string in (IPv4) Internet standard dotted format
-* [ ] [openlog](http://php.net/manual/en/function.openlog.php) — Open connection to system logger
+* [x] [inet_ntop](http://php.net/manual/en/function.inet-ntop.php) — Converts a packed internet address to a human readable representation
+* [x] [inet_pton](http://php.net/manual/en/function.inet-pton.php) — Converts a human readable IP address to its packed in_addr representation
+* [x] [ip2long](http://php.net/manual/en/function.ip2long.php) — Converts a string containing an (IPv4) Internet Protocol dotted address into a long integer
+* [x] [long2ip](http://php.net/manual/en/function.long2ip.php) — Converts an long integer address into a string in (IPv4) Internet standard dotted format
+* [x] [openlog](http://php.net/manual/en/function.openlog.php) — Open connection to system logger
 * [ ] [pfsockopen](http://php.net/manual/en/function.pfsockopen.php) — Open persistent Internet or Unix domain socket connection
-* [ ] [setcookie](http://php.net/manual/en/function.setcookie.php) — Send a cookie
+* [x] [setcookie](http://php.net/manual/en/function.setcookie.php) — Send a cookie
 * [ ] [setrawcookie](http://php.net/manual/en/function.setrawcookie.php) — Send a cookie without urlencoding the cookie value
 * [ ] [socket_get_status](http://php.net/manual/en/function.socket-get-status.php) — Alias of stream_get_meta_data
 * [ ] [socket_set_blocking](http://php.net/manual/en/function.socket-set-blocking.php) — Alias of stream_set_blocking
 * [ ] [socket_set_timeout](http://php.net/manual/en/function.socket-set-timeout.php) — Alias of stream_set_timeout
-* [ ] [syslog](http://php.net/manual/en/function.syslog.php) — Generate a system log message
+* [x] [syslog](http://php.net/manual/en/function.syslog.php) — Generate a system log message
 
 ## Program execution Functions
 
