@@ -149,7 +149,7 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 * [ ] <strike>[timezone_location_get](http://php.net/manual/en/function.timezone-location-get.php) — Alias of DateTimeZone::getLocation</strike>
 * [ ] [timezone_name_from_abbr](http://php.net/manual/en/function.timezone-name-from-abbr.php) — Returns the timezone name from abbreviation
 * [ ] <strike>[timezone_name_get](http://php.net/manual/en/function.timezone-name-get.php) — Alias of DateTimeZone::getName</strike>
-* [ ] [timezone_offset_get](http://php.net/manual/en/function.timezone-offset-get.php) — Alias of DateTimeZone::getOffset
+* [ ] <strike>[timezone_offset_get](http://php.net/manual/en/function.timezone-offset-get.php) — Alias of DateTimeZone::getOffset</strike>
 * [ ] <strike>[timezone_open](http://php.net/manual/en/function.timezone-open.php) — Alias of DateTimeZone::__construct</strike>
 * [ ] <strike>[timezone_transitions_get](http://php.net/manual/en/function.timezone-transitions-get.php) — Alias of DateTimeZone::getTransitions</strike>
 * [ ] [timezone_version_get](http://php.net/manual/en/function.timezone-version-get.php) — Gets the version of the timezonedb
