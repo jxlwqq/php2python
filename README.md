@@ -19,7 +19,7 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 ## Array Functions
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#php2python">↥ back to top</a></b>
 </div>
 
 
@@ -107,6 +107,10 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 
 ## Date/Time Functions
 
+<div align="right">
+    <b><a href="#php2python">↥ back to top</a></b>
+</div>
+
 * [x] [checkdate](http://php.net/manual/en/function.checkdate.php) — Validate a Gregorian date
 * [ ] <strike>[date_add](http://php.net/manual/en/function.date-add.php) — Alias of DateTime::add</strike>
 * [ ] <strike>[date_create_from_format](http://php.net/manual/en/function.date-create-from-format.php) — Alias of DateTime::createFromFormat</strike>
@@ -160,6 +164,10 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 * [ ] [timezone_version_get](http://php.net/manual/en/function.timezone-version-get.php) — Gets the version of the timezonedb
 
 ## Filesystem Functions
+
+<div align="right">
+    <b><a href="#php2python">↥ back to top</a></b>
+</div>
 
 * [x] [basename](http://php.net/manual/en/function.basename.php) — Returns trailing name component of path
 * [x] [chgrp](http://php.net/manual/en/function.chgrp.php) — Changes file group
@@ -245,6 +253,10 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 
 ## Mathematical Functions
 
+<div align="right">
+    <b><a href="#php2python">↥ back to top</a></b>
+</div>
+
 * [ ] <strike>[abs](http://php.net/manual/en/function.abs.php) — Absolute value</strike>, `Built-in function in Python`
 * [x] [acos](http://php.net/manual/en/function.acos.php) — Arc cosine
 * [x] [acosh](http://php.net/manual/en/function.acosh.php) — Inverse hyperbolic cosine
@@ -297,6 +309,10 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 
 ## Misc. Functions
 
+<div align="right">
+    <b><a href="#php2python">↥ back to top</a></b>
+</div>
+
 * [ ] [connection_aborted](http://php.net/manual/en/function.connection-aborted.php) — Check whether client disconnected
 * [ ] [connection_status](http://php.net/manual/en/function.connection-status.php) — Returns connection status bitfield
 * [ ] [constant](http://php.net/manual/en/function.constant.php) — Returns the value of a constant
@@ -329,6 +345,10 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 * [x] [usleep](http://php.net/manual/en/function.usleep.php) — Delay execution in microseconds
 
 ## Network Functions
+
+<div align="right">
+    <b><a href="#php2python">↥ back to top</a></b>
+</div>
 
 * [ ] [checkdnsrr](http://php.net/manual/en/function.checkdnsrr.php) — Check DNS records corresponding to a given Internet host name or IP address
 * [x] [closelog](http://php.net/manual/en/function.closelog.php) — Close connection to system logger
@@ -367,6 +387,10 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 
 ## Program execution Functions
 
+<div align="right">
+    <b><a href="#php2python">↥ back to top</a></b>
+</div>
+
 * [x] [escapeshellarg](http://php.net/manual/en/function.escapeshellarg.php) — Escape a string to be used as a shell argument
 * [ ] [escapeshellcmd](http://php.net/manual/en/function.escapeshellcmd.php) — Escape shell metacharacters
 * [ ] <strike>[exec](http://php.net/manual/en/function.exec.php) — Execute an external program</strike>
@@ -380,6 +404,10 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 * [x] [system](http://php.net/manual/en/function.system.php) — Execute an external program and display the output
 
 ## String Functions
+
+<div align="right">
+    <b><a href="#php2python">↥ back to top</a></b>
+</div>
 
 * [ ] [addcslashes](http://php.net/manual/en/function.addcslashes.php) — Quote string with slashes in a C style
 * [ ] [addslashes](http://php.net/manual/en/function.addslashes.php) — Quote string with slashes
@@ -482,6 +510,10 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 
 ## URL Functions
 
+<div align="right">
+    <b><a href="#php2python">↥ back to top</a></b>
+</div>
+
 * [x] [base64_decode](http://php.net/manual/en/function.base64-decode.php) — Decodes data encoded with MIME base64
 * [x] [base64_encode](http://php.net/manual/en/function.base64-encode.php) — Encodes data with MIME base64
 * [x] [get_headers](http://php.net/manual/en/function.get-headers.php) — Fetches all the headers sent by the server in response to an HTTP request
@@ -494,6 +526,10 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 * [x] [urlencode](http://php.net/manual/en/function.urlencode.php) — URL-encodes string
 
 ## Variable handling Functions
+
+<div align="right">
+    <b><a href="#php2python">↥ back to top</a></b>
+</div>
 
 * [x] [boolval](http://php.net/manual/en/function.boolval.php) — Get the boolean value of a variable
 * [ ] <strike>[debug_zval_dump](http://php.net/manual/en/function.debug-zval-dump.php) — Dumps a string representation of an internal zend value to output</strike>
