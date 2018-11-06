@@ -30,8 +30,8 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 * [x] [array_diff](http://php.net/manual/en/function.array-diff.php) — Computes the difference of arrays
 * [x] [array_fill_keys](http://php.net/manual/en/function.array-fill-keys.php) — Fill an array with values, specifying keys
 * [x] [array_fill](http://php.net/manual/en/function.array-fill.php) — Fill an array with values
-* [ ] [array_filter](http://php.net/manual/en/function.array-filter.php) — Filters elements of an array using a callback function
-* [ ] [array_flip](http://php.net/manual/en/function.array-flip.php) — Exchanges all keys with their associated values in an array
+* [x] [array_filter](http://php.net/manual/en/function.array-filter.php) — Filters elements of an array using a callback function
+* [x] [array_flip](http://php.net/manual/en/function.array-flip.php) — Exchanges all keys with their associated values in an array
 * [ ] [array_intersect_assoc](http://php.net/manual/en/function.array-intersect-assoc.php) — Computes the intersection of arrays with additional index check
 * [ ] [array_intersect_key](http://php.net/manual/en/function.array-intersect-key.php) — Computes the intersection of arrays using keys for comparison
 * [ ] [array_intersect_uassoc](http://php.net/manual/en/function.array-intersect-uassoc.php) — Computes the intersection of arrays with additional index check, compares indexes by a callback function
@@ -77,13 +77,13 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 * [x] [count](http://php.net/manual/en/function.count.php) — Count all elements in an array, or something in an object
 * [ ] [current](http://php.net/manual/en/function.current.php) — Return the current element in an array
 * [ ] [each](http://php.net/manual/en/function.each.php) — Return the current key and value pair from an array and advance the array cursor
-* [ ] [end](http://php.net/manual/en/function.end.php) — Set the internal pointer of an array to its last element
+* [x] [end](http://php.net/manual/en/function.end.php) — Set the internal pointer of an array to its last element
 * [ ] [extract](http://php.net/manual/en/function.extract.php) — Import variables into the current symbol table from an array
 * [x] [in_array](http://php.net/manual/en/function.in-array.php) — Checks if a value exists in an array
 * [x] [key_exists](http://php.net/manual/en/function.key-exists.php) — Alias of array_key_exists
 * [ ] [key](http://php.net/manual/en/function.key.php) — Fetch a key from an array
-* [ ] [krsort](http://php.net/manual/en/function.krsort.php) — Sort an array by key in reverse order
-* [ ] [ksort](http://php.net/manual/en/function.ksort.php) — Sort an array by key
+* [x] [krsort](http://php.net/manual/en/function.krsort.php) — Sort an array by key in reverse order
+* [x] [ksort](http://php.net/manual/en/function.ksort.php) — Sort an array by key
 * [ ] <strike>[list](http://php.net/manual/en/function.list.php) — Assign variables as if they were an array</strike>, `Built-in function in Python`
 * [ ] [natcasesort](http://php.net/manual/en/function.natcasesort.php) — Sort an array using a case insensitive "natural order" algorithm
 * [ ] [natsort](http://php.net/manual/en/function.natsort.php) — Sort an array using a "natural order" algorithm
@@ -92,10 +92,10 @@ Python alternatives for PHP internal (built-in) functions. Support Python 3 Only
 * [ ] [prev](http://php.net/manual/en/function.prev.php) — Rewind the internal array pointer
 * [ ] <strike>[range](http://php.net/manual/en/function.range.php) — Create an array containing a range of elements</strike>, `Built-in function in Python`
 * [ ] [reset](http://php.net/manual/en/function.reset.php) — Set the internal pointer of an array to its first element
-* [ ] [rsort](http://php.net/manual/en/function.rsort.php) — Sort an array in reverse order
+* [x] [rsort](http://php.net/manual/en/function.rsort.php) — Sort an array in reverse order
 * [x] [shuffle](http://php.net/manual/en/function.shuffle.php) — Shuffle an array
 * [x] [sizeof](http://php.net/manual/en/function.sizeof.php) — Alias of count
-* [ ] [sort](http://php.net/manual/en/function.sort.php) — Sort an array
+* [x] [sort](http://php.net/manual/en/function.sort.php) — Sort an array
 * [ ] [uasort](http://php.net/manual/en/function.uasort.php) — Sort an array with a user-defined comparison function and maintain index association
 * [ ] [uksort](http://php.net/manual/en/function.uksort.php) — Sort an array by keys using a user-defined comparison function
 * [ ] [usort](http://php.net/manual/en/function.usort.php) — Sort an array by values using a user-defined comparison function
