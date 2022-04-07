@@ -153,9 +153,5 @@ def unset(variable):
     del variable
 
 
-def var_dump(variable):
-    print(variable)
-
-
 def var_export(variable):
-    print(variable)
+    return repr(variable)
