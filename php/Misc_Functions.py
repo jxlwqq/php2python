@@ -28,8 +28,8 @@ def defined():
     pass
 
 
-def die():
-    sys.exit()
+def die(msg=""):
+    exit(msg)
 
 
 def get_browser():
