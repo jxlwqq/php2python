@@ -94,18 +94,13 @@ def crypt(string, salt):
     return py_crypt.crypt(string, salt)
 
 
-def echo(string):
-    print(string)
+def echo(*string):
+    print(*string, end="")
 
 
-def explode(delimiter, string, limit):
-    if limit == 0:
-        limit = 1
-
-    if limit > 0:
-        return string.split(delimiter, limit)
-    else:
-        return string.split(delimiter)[:limit]
+def explode(delimiter, string, max=-1):
+    string = str(string)
+    return string.split(delimiter, max)
 
 
 def fprintf(handle, format):
