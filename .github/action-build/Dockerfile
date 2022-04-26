@@ -1,7 +1,7 @@
 FROM python:3.6
 
 RUN apt update -yqq
-RUN apt install git
+RUN apt install git -yqq
 
 COPY entrypoint /usr/local/bin/entrypoint
 COPY requirements.txt ./requirements.txt

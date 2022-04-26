@@ -2,8 +2,9 @@
 # -*- coding: utf8 -*-
 import re
 import sys
+import os
 
-path = ""
+path = os.path.abspath(os.path.dirname(sys.argv[0]))
 header_file_template = """
 #! /usr/bin/env python
 # -*- coding: utf8 -*-
@@ -35,11 +36,15 @@ class file(object):
     def write(fil, content, mode="w"):
         f = open(fil, mode)
         return f.write(content)
+    def list(mypath):
+        from os.path import isfile, isdir, join
+        ret = [f for f in os.listdir(mypath) if isfile(join(mypath, f))]
+        return ret
     
 def reformater():
 	batas = '"""\n.*\n"""'
 	nama  = '"""\n(.*)\n"""'
-	code  = file.read(path.dir+"/php2python.py")
+	code  = file.read(path+"/php2python.py")
 	batas_reg = re.compile(batas)
 	batas = re.split(batas_reg,code)
 	nama_reg = re.compile(nama)
@@ -62,7 +67,7 @@ def reformater():
 		nf = nf.replace("/","_")
 		nf = nf.replace(" ","_")
 		nf = nf.replace(".","")
-		nf = path.dir+"/php/"+nf+".py"
+		nf = path+"/php/"+nf+".py"
 		print("processing", nf)
 		file.write(nf,header_file_template.strip()+"\n")
 		for mk,mv in mls.items():
@@ -76,15 +81,15 @@ def reformater():
 def gen_init():
 	tmp_add = "from .{0} import {1}\n"
 	res = ""
-	ls = file.list(path.dir+"/php")
+	ls = file.list(path+"/php")
 	for fn in ls:
 		if fn != "__init__.py":
 		    print("processing", fn)
-		    code = file.read(path.dir+"/php/"+fn)
+		    code = file.read(path+"/php/"+fn)
 		    mod = re.findall("def\s(.*)\(", code)
 		    res = res + tmp_add.format(fn.replace(".py",""), ",".join(mod))
-	file.write(path.dir+"/php/__init__.py",res)
-	file.write(path.dir+"/php/__init__.py","from var_dump import var_dump\n",mode = "a")
+	file.write(path+"/php/__init__.py",res)
+	file.write(path+"/php/__init__.py","from var_dump import var_dump\n",mode = "a")
 	print("complete!")
 
 def gen_setup():
