@@ -1,9 +1,9 @@
 #! /usr/bin/env python
 # -*- coding: utf8 -*-
 import re
-from kawan import file, path
 import sys
 
+path = ""
 header_file_template = """
 #! /usr/bin/env python
 # -*- coding: utf8 -*-
@@ -26,6 +26,16 @@ setup(name='php2python',
       ],
       zip_safe=False)
 """
+
+class file(object):
+    def read(fil, mode="r"):
+        with open(fil, mode) as f:
+            f = f.read()
+        return f
+    def write(fil, content, mode="w"):
+        f = open(fil, mode)
+        return f.write(content)
+    
 def reformater():
 	batas = '"""\n.*\n"""'
 	nama  = '"""\n(.*)\n"""'
