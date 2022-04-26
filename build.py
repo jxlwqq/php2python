@@ -103,10 +103,10 @@ def gen_setup():
     from gitbinding import Git
     import os
     sha = "'{}'".format(os.getenv('GITHUB_SHA'))
-    git = Git()
+    git = Git(direct_output=False)
     has = git.rev_parse("--short", sha)
     tx = setup_file_template.format(has)
-    file.write("setup.py", has)
+    file.write("setup.py", tx)
     print("complete!")
 
 
