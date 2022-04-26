@@ -4,6 +4,7 @@ import re
 import sys
 import os
 
+
 def escapeshellarg(arg):
     return "\\'".join("'" + p + "'" for p in arg.split("'"))
 

@@ -4,6 +4,7 @@ import random
 import math
 import os
 
+
 def acos(arg):
     return math.acos(arg)
 

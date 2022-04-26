@@ -8,6 +8,7 @@ import struct
 import os
 from struct import pack
 
+
 def connection_aborted():
     pass
 

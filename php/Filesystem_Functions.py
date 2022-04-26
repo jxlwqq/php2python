@@ -9,6 +9,7 @@ import fcntl
 import string
 import os
 
+
 def basename(path, suffix=None):
     base_name = os.path.basename(path)
     if suffix is not None and basename.endswith(suffix):

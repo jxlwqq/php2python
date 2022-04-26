@@ -5,6 +5,7 @@ import string
 import time as py_time
 import tzlocal
 
+
 def checkdate(month, day, year):
     import datetime
     try:
@@ -133,7 +134,6 @@ def date(format, timestamp=None):
 def getdate(timestamp=None):
     if timestamp is None:
         timestamp = py_time.time()
-
 
 
 def gettimeofday():

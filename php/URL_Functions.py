@@ -5,6 +5,7 @@ import re
 import urllib.parse
 import urllib.request
 
+
 def base64_decode(data):
     return base64.b64decode(data)
 

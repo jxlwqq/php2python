@@ -17,6 +17,7 @@ from collections import Counter
 import quopri
 import os
 
+
 def addcslashes(string):
     pass
 
@@ -285,7 +286,8 @@ def sscanf(string):
 
 def str_getcsv(string, delimiter=',', enclosure='"', escape="\\"):
     with io.StringIO(string) as f:
-        reader = csv.reader(f, delimiter=delimiter, quotechar=enclosure, escapechar=escape)
+        reader = csv.reader(f, delimiter=delimiter,
+                            quotechar=enclosure, escapechar=escape)
         return next(reader)
 
 
@@ -450,7 +452,8 @@ def strrpos(haystack, needle, offset=0):
 
 
 def strspn(subject, mask, start=0, length=None):
-    if not length: length = len(subject)
+    if not length:
+        length = len(subject)
     return len(re.search('^[' + mask + ']*', subject[start:start + length]).group(0))
 
 

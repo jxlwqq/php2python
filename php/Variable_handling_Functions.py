@@ -7,6 +7,7 @@ import string
 import pickle
 from collections import Counter
 
+
 def boolval(variable):
     return bool(variable)
 

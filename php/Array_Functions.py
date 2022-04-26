@@ -6,6 +6,7 @@ import inspect
 from collections import Counter
 import os
 
+
 def array_change_key_case(array, case=0):
     if case == 0:
         f = str.lower

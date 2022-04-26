@@ -10,6 +10,7 @@ from struct import unpack
 import socket
 from struct import pack
 
+
 def checkdnsrr():
     pass
 
@@ -65,7 +66,8 @@ def getprotobyname(name):
 
 
 def getprotobynumber(number):
-    table = {num: name[8:] for name, num in vars(socket).items() if name.startswith("IPPROTO")}
+    table = {num: name[8:] for name, num in vars(
+        socket).items() if name.startswith("IPPROTO")}
     return table[number]
 
 
@@ -130,7 +132,8 @@ def setcookie(name, value='', expire=0, path='', domain=''):
     cookie[name] = value
     cookie[name]['domain'] = domain
     cookie[name]['path'] = path
-    cookie[name]['expires'] = expire if expire != 0 else py_time.strftime("%a, %d-%b-%Y %H:%M:%S GMT")
+    cookie[name]['expires'] = expire if expire != 0 else py_time.strftime(
+        "%a, %d-%b-%Y %H:%M:%S GMT")
     return cookie.output()
 
 
