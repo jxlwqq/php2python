@@ -105,8 +105,8 @@ def gen_setup():
     sha = "'{}'".format(os.getenv('GITHUB_SHA'))
     git = Git(direct_output=False)
     has = git.rev_parse("--short", sha)
-    tx = setup_file_template.format(has)
-    file.write("setup.py", tx.strip())
+    tx = setup_file_template.format(has.strip())
+    file.write("setup.py", tx)
     print("complete!")
 
 
