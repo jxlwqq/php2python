@@ -1,8 +1,7 @@
 FROM python:3.6
 
-RUN pip install autopep8 var_dump kawan gitbindindg tzlocal
-
-RUN apk add git
+RUN apt update -yqq
+RUN apt install git
 
 COPY entrypoint /usr/local/bin/entrypoint
 COPY requirements.txt ./requirements.txt
