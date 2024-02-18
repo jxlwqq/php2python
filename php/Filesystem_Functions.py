@@ -1,19 +1,15 @@
 #! /usr/bin/env python
-# -*- coding: utf8 -*-
-import shutil
-import fnmatch as py_fnmatch
-import re
-import csv
-import glob as py_glob
 import fcntl
-import string
+import fnmatch as py_fnmatch
+import glob as py_glob
 import os
+import shutil
 
 
 def basename(path, suffix=None):
     base_name = os.path.basename(path)
-    if suffix is not None and basename.endswith(suffix):
-        return base_name[:-len(suffix)]
+    if suffix is not None and base_name.endswith(suffix):
+        return base_name[: -len(suffix)]
     return base_name
 
 
@@ -42,7 +38,7 @@ def delete(filename):
 
 
 def dirname(path):
-    return os.path.dirname(path.rstrip(os.pathsep)) or '.'
+    return os.path.dirname(path.rstrip(os.pathsep)) or "."
 
 
 def disk_free_space():
@@ -280,7 +276,7 @@ def popen():
 
 
 def readfile(filename):
-    return open(filename, 'r').read()
+    return open(filename).read()
 
 
 def readlink(path):

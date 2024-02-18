@@ -1,12 +1,8 @@
 #! /usr/bin/env python
-# -*- coding: utf8 -*-
-import string
-import time as py_time
-import sys
-from struct import unpack
-import struct
 import os
-from struct import pack
+import struct
+import sys
+import time as py_time
 
 
 def connection_aborted():
@@ -30,7 +26,7 @@ def defined():
 
 
 def die(msg=""):
-    exit(msg)
+    sys.exit(msg)
 
 
 def get_browser():
@@ -109,8 +105,12 @@ def time_sleep_until(timestamp):
     py_time.sleep(timestamp - py_time.time())
 
 
-def uniqid(prefix=''):
-    return prefix + hex(int(py_time.time()))[2:10] + hex(int(py_time.time() * 1000000) % 0x100000)[2:7]
+def uniqid(prefix=""):
+    return (
+        prefix
+        + hex(int(py_time.time()))[2:10]
+        + hex(int(py_time.time() * 1000000) % 0x100000)[2:7]
+    )
 
 
 def unpack(format_codes, data):

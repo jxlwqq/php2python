@@ -1,10 +1,10 @@
 #! /usr/bin/env python
-# -*- coding: utf8 -*-
-import random
-from functools import reduce
 import inspect
+import random
 from collections import Counter
-import os
+from functools import reduce
+
+from .Variable_handling_Functions import is_array
 
 
 def array_change_key_case(array, case=0):
@@ -14,11 +14,11 @@ def array_change_key_case(array, case=0):
         f = str.upper
     else:
         raise ValueError()
-    return dict((f(k), v) for k, v in array.items())
+    return {f(k): v for k, v in array.items()}
 
 
 def array_chunk(array, size):
-    return [array[i: i + size] for i in range(0, len(array), size)]
+    return [array[i : i + size] for i in range(0, len(array), size)]
 
 
 def array_column(array, column_key, index_key=None):
@@ -76,7 +76,7 @@ def array_filter(array, callback=None):
 
 
 def array_flip(array):
-    return dict((v, k) for k, v in array.items())
+    return {v: k for k, v in array.items()}
 
 
 def array_intersect_assoc(array1, array2):
@@ -166,7 +166,7 @@ def array_product(array):
     if not array:
         return 0
     else:
-        reduce(lambda a, b: a * b, array)
+        return reduce(lambda a, b: a * b, array)
 
 
 def array_push(array, *values):
@@ -185,7 +185,7 @@ def array_reduce(array, callback, initial=None):
     if initial is None:
         return reduce(callback, array)
     else:
-        return reduce(function, array, initial)
+        return reduce(callback, array, initial)
 
 
 def array_replace_recursive():
@@ -219,9 +219,9 @@ def array_slice(array, offset, length=None):
 
 def array_splice(array, offset, length, replacement=None):
     if replacement is None:
-        del array[offset: offset + length]
+        del array[offset : offset + length]
     else:
-        array[offset: offset + length] = replacement
+        array[offset : offset + length] = replacement
     return array
 
 
@@ -290,13 +290,13 @@ def asort(array):
 
 def compact(*names):
     caller = inspect.stack()[1][0]
-    vars = {}
+    var_map = {}
     for n in names:
         if n in caller.f_locals:
-            vars[n] = caller.f_locals[n]
+            var_map[n] = caller.f_locals[n]
         elif n in caller.f_globals:
-            vars[n] = caller.f_globals[n]
-    return vars
+            var_map[n] = caller.f_globals[n]
+    return var_map
 
 
 def count(array):

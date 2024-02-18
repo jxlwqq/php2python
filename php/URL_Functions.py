@@ -1,5 +1,4 @@
 #! /usr/bin/env python
-# -*- coding: utf8 -*-
 import base64
 import re
 import urllib.parse
@@ -15,13 +14,13 @@ def base64_encode(data):
 
 
 def get_headers(url):
-    return urllib.request.urlopen('%s' % url).headers
+    return urllib.request.urlopen("%s" % url).headers
 
 
 def get_meta_tags(url):
     out = {}
-    html = urllib.request.urlopen('%s' % url).read()
-    m = re.findall("name=\"([^\"]*)\" content=\"([^\"]*)\"", html)
+    html = urllib.request.urlopen("%s" % url).read()
+    m = re.findall('name="([^"]*)" content="([^"]*)"', html)
     for i in m:
         out[i[0]] = i[1]
     return out

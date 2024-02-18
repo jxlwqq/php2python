@@ -1,14 +1,10 @@
 #! /usr/bin/env python
-# -*- coding: utf8 -*-
-import syslog as py_syslog
-from socket import inet_aton
-import time as py_time
-import sys
 import http.cookies
-from socket import inet_ntoa
-from struct import unpack
 import socket
-from struct import pack
+import syslog as py_syslog
+import time as py_time
+from socket import inet_aton, inet_ntoa
+from struct import pack, unpack
 
 
 def checkdnsrr():
@@ -66,8 +62,11 @@ def getprotobyname(name):
 
 
 def getprotobynumber(number):
-    table = {num: name[8:] for name, num in vars(
-        socket).items() if name.startswith("IPPROTO")}
+    table = {
+        num: name[8:]
+        for name, num in vars(socket).items()
+        if name.startswith("IPPROTO")
+    }
     return table[number]
 
 
@@ -127,13 +126,16 @@ def pfsockopen():
     pass
 
 
-def setcookie(name, value='', expire=0, path='', domain=''):
+def setcookie(name, value="", expire=0, path="", domain=""):
     cookie = http.cookies.SimpleCookie()
     cookie[name] = value
-    cookie[name]['domain'] = domain
-    cookie[name]['path'] = path
-    cookie[name]['expires'] = expire if expire != 0 else py_time.strftime(
-        "%a, %d-%b-%Y %H:%M:%S GMT")
+    cookie[name]["domain"] = domain
+    cookie[name]["path"] = path
+    cookie[name]["expires"] = (
+        expire
+        if expire != 0
+        else py_time.strftime("%a, %d-%b-%Y %H:%M:%S GMT")
+    )
     return cookie.output()
 
 

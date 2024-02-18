@@ -1,21 +1,21 @@
 #! /usr/bin/env python
-# -*- coding: utf8 -*-
-import locale
-import codecs
-import random
-import io
-from itertools import takewhile
-import crypt as py_crypt
 import binascii
-import re
+import codecs
+import crypt as py_crypt
 import csv
-import urllib.parse
+import hashlib
+import io
+import locale
+import quopri
+import random
+import re
 import string
 import textwrap
-import hashlib
+import urllib.parse
 from collections import Counter
-import quopri
-import os
+from itertools import takewhile
+
+from .Variable_handling_Functions import is_array
 
 
 def addcslashes(string):
@@ -88,7 +88,7 @@ def count_chars(s, mode=0):
 
 
 def crc32(string):
-    return binascii.crc32(string) & 0xffffffff
+    return binascii.crc32(string) & 0xFFFFFFFF
 
 
 def crypt(string, salt):
@@ -99,12 +99,12 @@ def echo(*string):
     print(*string, end="")
 
 
-def explode(delimiter, string, max=-1):
+def explode(delimiter, string, max_val=-1):
     string = str(string)
-    return string.split(delimiter, max)
+    return string.split(delimiter, max_val)
 
 
-def fprintf(handle, format):
+def fprintf(handle, format_str):
     pass
 
 
@@ -140,11 +140,11 @@ def htmlspecialchars(string):
     pass
 
 
-def implode(glue='', pieces=[]):
+def implode(glue="", pieces=[]):
     return glue.join(pieces)
 
 
-def join(glue='', pieces=[]):
+def join(glue="", pieces=[]):
     return glue.join(pieces)
 
 
@@ -183,7 +183,7 @@ def ltrim(string, character_mask=None):
 
 def md5_file(filename, raw_output=False):
     crc = hashlib.md5()
-    fp = open(filename, 'rb')
+    fp = open(filename, "rb")
     for i in fp:
         crc.update(i)
     fp.close()
@@ -192,8 +192,8 @@ def md5_file(filename, raw_output=False):
     return crc.hexdigest()
 
 
-def md5(str, raw_output=False):
-    res = hashlib.md5(str.encode())
+def md5(s, raw_output=False):
+    res = hashlib.md5(s.encode())
     if raw_output:
         return res.digest()
     return res.hexdigest()
@@ -213,13 +213,13 @@ def nl_langinfo(string):
 
 def nl2br(string, is_xhtml=True):
     if is_xhtml:
-        return string.replace('\n', '<br />\n')
+        return string.replace("\n", "<br />\n")
     else:
-        return string.replace('\n', '<br>\n')
+        return string.replace("\n", "<br>\n")
 
 
 def number_format(number, decimals):
-    locale.setlocale(locale.LC_NUMERIC, '')
+    locale.setlocale(locale.LC_NUMERIC, "")
     return locale.format("%.*f", (decimals, number), True)
 
 
@@ -255,7 +255,7 @@ def setlocale(string):
 
 def sha1_file(filename, raw_output=False):
     crc = hashlib.sha1()
-    fp = open(filename, 'rb')
+    fp = open(filename, "rb")
     for i in fp:
         crc.update(i)
     fp.close()
@@ -284,10 +284,11 @@ def sscanf(string):
     pass
 
 
-def str_getcsv(string, delimiter=',', enclosure='"', escape="\\"):
+def str_getcsv(string, delimiter=",", enclosure='"', escape="\\"):
     with io.StringIO(string) as f:
-        reader = csv.reader(f, delimiter=delimiter,
-                            quotechar=enclosure, escapechar=escape)
+        reader = csv.reader(
+            f, delimiter=delimiter, quotechar=enclosure, escapechar=escape
+        )
         return next(reader)
 
 
@@ -296,7 +297,7 @@ def str_ireplace(search, replace, subject, count=0):
     return pattern.sub(replace, subject, count)
 
 
-def str_pad(string, pad_length, pad_string=' ', pad_type=1):
+def str_pad(string, pad_length, pad_string=" ", pad_type=1):
     # STR_PAD_LEFT = 0
     # STR_PAD_RIGHT = 1
     # STR_PAD_BOTH = 2
@@ -324,22 +325,22 @@ def str_rot13(string):
 def str_shuffle(string):
     chars = list(string)
     random.shuffle(chars)
-    return ''.join(chars)
+    return "".join(chars)
 
 
 def str_split(string, split_length=1):
-    return filter(None, re.split('(.{1,%d})' % split_length, string))
+    return filter(None, re.split("(.{1,%d})" % split_length, string))
 
 
-def str_word_count(string, format=0, charlist=''):
+def str_word_count(string, format_type=0, charlist=""):
     if isinstance(string, str):
-        words = re.sub('[^\w ' + charlist + ']', '', string)
-        words = words.replace('  ', ' ').split(' ')
-        if format == 0:
+        words = re.sub(r"[^\w " + charlist + "]", "", string)
+        words = words.replace("  ", " ").split(" ")
+        if format_type == 0:
             return len(words)
-        elif format == 1:
+        elif format_type == 1:
             return words
-        elif format == 2:
+        elif format_type == 2:
             result = {}
             for word in words:
                 result[string.find(word)] = word
@@ -454,7 +455,9 @@ def strrpos(haystack, needle, offset=0):
 def strspn(subject, mask, start=0, length=None):
     if not length:
         length = len(subject)
-    return len(re.search('^[' + mask + ']*', subject[start:start + length]).group(0))
+    return len(
+        re.search("^[" + mask + "]*", subject[start : start + length]).group(0)
+    )
 
 
 def strstr(haystack, needle):
@@ -503,7 +506,7 @@ def substr_replace(subject, replace, start, length=None):
     elif length < 0:
         return subject[:start] + replace + subject[length:]
     else:
-        return subject[:start] + replace + subject[start + length:]
+        return subject[:start] + replace + subject[start + length :]
 
 
 def substr(string, start, length=None):
@@ -515,7 +518,7 @@ def substr(string, start, length=None):
     if not length:
         return string[start:]
     elif length > 0:
-        return string[start:start + length]
+        return string[start : start + length]
     else:
         return string[start:length]
 

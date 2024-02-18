@@ -1,10 +1,9 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
 import unittest
 
 
 def coba():
     try:
-        import php
         return True
     except BaseException as e:
         print("ERROR:", e)
@@ -16,5 +15,5 @@ class DummyTest(unittest.TestCase):
         self.assertTrue(coba())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

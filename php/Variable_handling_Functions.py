@@ -1,10 +1,8 @@
 #! /usr/bin/env python
-# -*- coding: utf8 -*-
-import numbers
-import pprint
 import collections
-import string
+import numbers
 import pickle
+import pprint
 from collections import Counter
 
 
@@ -87,7 +85,7 @@ def is_integer(variable):
 
 
 def is_iterable(variable):
-    return is_array(variable) or isinstance(variable, collections.Iterable)
+    return is_array(variable) or isinstance(variable, collections.abc.Iterable)
 
 
 def is_long(variable):

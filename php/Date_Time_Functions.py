@@ -1,20 +1,17 @@
 #! /usr/bin/env python
-# -*- coding: utf8 -*-
 import datetime
-import string
 import time as py_time
+
 import tzlocal
 
 
 def checkdate(month, day, year):
-    import datetime
     try:
         month, day, year = map(int, (month, day, year))
         datetime.date(year, month, day)
         return True
     except ValueError:
         return False
-    pass
 
 
 def date_add():
@@ -125,10 +122,10 @@ def date_timezone_set():
     pass
 
 
-def date(format, timestamp=None):
+def date(format_str, timestamp=None):
     if timestamp is None:
         timestamp = py_time.time()
-    return py_time.strftime(format, timestamp)
+    return py_time.strftime(format_str, timestamp)
 
 
 def getdate(timestamp=None):
@@ -166,8 +163,8 @@ def microtime(get_as_float=False):
     if get_as_float:
         return t
     else:
-        ms = d.microsecond / 1000000.
-        return '%f %d' % (ms, t)
+        ms = d.microsecond / 1000000.0
+        return "%f %d" % (ms, t)
 
 
 def mktime(hour, minute, second, month, day, year):

@@ -1,8 +1,6 @@
 #! /usr/bin/env python
-# -*- coding: utf8 -*-
-import random
 import math
-import os
+import random
 
 
 def acos(arg):
@@ -43,15 +41,15 @@ def base_convert(number, from_base, to_base):
         raise NotImplementedError
 
     digits = "0123456789abcdefghijklmnopqrstuvwxyz"
-    sign = ''
+    sign = ""
 
     if base10 == 0:
-        return '0'
+        return "0"
     elif base10 < 0:
-        sign = '-'
+        sign = "-"
         base10 = -base10
 
-    s = ''
+    s = ""
     while base10 != 0:
         r = base10 % to_base
         r = int(r)
