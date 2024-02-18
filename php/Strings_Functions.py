@@ -456,7 +456,7 @@ def strspn(subject, mask, start=0, length=None):
     if not length:
         length = len(subject)
     return len(
-        re.search("^[" + mask + "]*", subject[start : start + length]).group(0)
+        re.search("^[" + mask + "]*", subject[start: start + length]).group(0)
     )
 
 
@@ -506,7 +506,7 @@ def substr_replace(subject, replace, start, length=None):
     elif length < 0:
         return subject[:start] + replace + subject[length:]
     else:
-        return subject[:start] + replace + subject[start + length :]
+        return subject[:start] + replace + subject[start + length:]
 
 
 def substr(string, start, length=None):
@@ -518,7 +518,7 @@ def substr(string, start, length=None):
     if not length:
         return string[start:]
     elif length > 0:
-        return string[start : start + length]
+        return string[start: start + length]
     else:
         return string[start:length]
 

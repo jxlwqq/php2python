@@ -18,7 +18,7 @@ def array_change_key_case(array, case=0):
 
 
 def array_chunk(array, size):
-    return [array[i : i + size] for i in range(0, len(array), size)]
+    return [array[i: i + size] for i in range(0, len(array), size)]
 
 
 def array_column(array, column_key, index_key=None):
@@ -219,9 +219,9 @@ def array_slice(array, offset, length=None):
 
 def array_splice(array, offset, length, replacement=None):
     if replacement is None:
-        del array[offset : offset + length]
+        del array[offset: offset + length]
     else:
-        array[offset : offset + length] = replacement
+        array[offset: offset + length] = replacement
     return array
 
 
