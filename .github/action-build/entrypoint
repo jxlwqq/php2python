@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+find . -name '*.py' -exec autopep8 --in-place '{}' \;
+python build.py init
+python build.py setup
+python test.py

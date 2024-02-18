@@ -1,0 +1,158 @@
+---
+files: ^(.*\.(py|json|md|sh|yaml|cfg|txt))$
+exclude: ^(\.[^/]*cache/.*)$
+repos:
+  - repo: https://github.com/executablebooks/mdformat
+    # Do this before other tools "fixing" the line endings
+    rev: 0.7.17
+    hooks:
+      - id: mdformat
+        name: Format Markdown
+        entry: mdformat
+        language: python
+        types: [markdown]
+        args: [--wrap, "75", --number]
+        additional_dependencies:
+          - mdformat-toc
+          - mdformat-beautysh
+          # - mdformat-shfmt
+          # - mdformat-tables
+          - mdformat-config
+          - mdformat-black
+          - mdformat-web
+          - mdformat-gfm
+          - setuptools
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: no-commit-to-branch
+        args: [--branch, main]
+      - id: check-yaml
+        args: [--unsafe]
+      - id: debug-statements
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-json
+      - id: mixed-line-ending
+      - id: check-builtin-literals
+      - id: check-ast
+      - id: check-merge-conflict
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
+      - id: check-docstring-first
+      - id: fix-byte-order-marker
+      - id: check-case-conflict
+      # - id: check-toml
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.32.0
+    hooks:
+      - id: yamllint
+        args:
+          - --no-warnings
+          - -d
+          - "{extends: relaxed, rules: {line-length: {max: 90}}}"
+  - repo: https://github.com/lovesegfault/beautysh.git
+    rev: v6.2.1
+    hooks:
+      - id: beautysh
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.2.6
+    hooks:
+      - id: codespell
+        args:
+          # - --builtin=clear,rare,informal,usage,code,names,en-GB_to_en-US
+          - --builtin=clear,rare,informal,usage,code,names
+          - --ignore-words-list=master
+          - --skip="./.*"
+          - --quiet-level=2
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.15.0
+    hooks:
+      - id: pyupgrade
+        args: [--py39-plus]
+  - repo: https://github.com/Lucas-C/pre-commit-hooks-bandit
+    rev: v1.0.6
+    hooks:
+      - id: python-bandit-vulnerability-check
+        #args: [--skip, 'B101,B311', --recursive, .]
+        args:
+          [--recursive, ., --skip, "B101,B310,B311,B324,B403,B404,B603,B605"]
+  - repo: https://github.com/fsouza/autoflake8
+    rev: v0.4.1
+    hooks:
+      - id: autoflake8
+        args: [-i, -r, --expand-star-imports]
+  - repo: https://github.com/psf/black
+    rev: 23.11.0
+    hooks:
+      - id: black
+        args: [--safe, --quiet, -l 79]
+  - repo: https://github.com/PyCQA/flake8
+    rev: 6.1.0
+    hooks:
+      - id: flake8
+        args: [--ignore, "E203,W503"]
+        additional_dependencies:
+          - flake8-bugbear
+          - flake8-comprehensions
+          - flake8_2020
+          - mccabe
+          - pycodestyle
+          - pyflakes
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+        args: [--profile, black]
+  - repo: https://github.com/pylint-dev/pylint
+    rev: v3.0.3
+    hooks:
+      - id: pylint
+        args:
+          [
+            --py-version=3.9,
+            -j=0,
+            -d=broad-exception-caught,
+            -d=duplicate-code,
+            -d=invalid-name,
+            -d=missing-class-docstring,
+            -d=missing-function-docstring,
+            -d=missing-module-docstring,
+            -d=unused-argument,
+            -d=bare-except,
+            -d=pointless-statement,
+            -d=no-value-for-parameter,
+            -d=consider-using-with,
+            -d=consider-using-f-string,
+            -d=too-many-branches,
+            -d=too-many-arguments,
+            -d=unspecified-encoding,
+            -d=deprecated-method,
+            -d=try-except-raise,
+            -d=redefined-outer-name, # Skipping but should be fixed
+            -d=no-else-return,
+          ]
+
+        additional_dependencies: [gitbinding]
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.7.1
+    hooks:
+      - id: mypy
+        args:
+          - --ignore-missing-imports
+          - --install-types
+          - --non-interactive
+          - --check-untyped-defs
+          - --show-error-codes
+          - --show-error-context
+          - --disable-error-code=name-defined
+        # additional_dependencies: []
+  - repo: local
+    hooks:
+      - id: test
+        name: test
+        entry: ./test.py
+        language: python
+        pass_filenames: false
+        always_run: true
+        # additional_dependencies: []

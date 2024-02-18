@@ -1,0 +1,6 @@
+name: Action Build
+description: just another GitHub action 
+
+runs:
+  using: docker
+  image: Dockerfile
